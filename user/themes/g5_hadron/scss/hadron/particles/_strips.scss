@@ -1,0 +1,181 @@
+.g-owlcarousel-strips-slider {
+  .g-owlcarousel {
+
+    .owl-item {
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      .strips-image-container {
+        position: relative;
+        border: 2px solid transparent;
+        border-radius: $base-border-radius;
+
+        img {
+          border-radius: $base-border-radius;
+        }
+
+        &:hover {
+          .strips-image-overlay:before,
+          .strips-image-overlay:after {
+            opacity: 1;
+            @include transition(opacity 0.2s ease-in-out);
+
+            .rt-overlay-dark & {
+              border: 2px solid darken($white, 12%);
+            }
+            .rt-overlay-light & {
+              border: 2px solid $dark-grey;
+            }
+          }
+        }
+
+        .strips-image-overlay {
+          display: block;
+          &:before {
+            background-color: rgba(0,0,0,0.5) !important;
+            background-image: linear-gradient(to right,rgba(0,0,0,0.5),rgba(0,0,0,0.5)) !important;
+            position: absolute;
+            top: 0;
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: $base-border-radius;
+            opacity: 0;
+          }
+          &:after {
+            position: absolute;
+            content: "+";
+            font-size: 3em;
+            top: 50%;
+            left: 50%;
+            margin-top: -25px;
+            margin-left: -25px;
+            display: block;
+            width: 50px;
+            height: 50px;
+            line-height: 45px;
+            border-radius: $base-border-radius;
+            background: darken($white, 12%);
+            color: $dark-grey;
+            border: 1px solid darken($white, 12%);
+            text-align: center;
+            opacity: 0;
+          }
+        }
+      }
+
+      .g-owlcarousel-content {
+        text-align: center;
+      }
+
+      .g-owlcarousel-item-title {
+        margin-top: 15px;
+
+        a {
+          .rt-overlay-dark & {
+            color: $white;
+          }
+          .rt-overlay-light & {
+            color: $dark-grey;
+          }
+          &:hover {
+            color: $accent-color-1;
+          }
+        }
+      }
+
+      .g-owlcarousel-item-desc {
+        padding: 0 15px 15px;
+      }
+    }
+
+    .owl-dots {
+      position: relative;
+      margin-bottom: 25px;
+
+      .owl-dot {
+        display: inline-block;
+        padding: 7px;
+        margin: 0 3px;
+        width: 0;
+        height: 0;
+        border-radius: 1em;
+        cursor: pointer;
+        background: $accent-color-1;
+        border: 2px solid transparent;
+        opacity: 1;
+        @include transition(opacity 0.2s ease-in);
+
+        &.active {
+          background: none;
+          border: 2px solid $accent-color-1;
+          padding: 7px;
+          opacity: 1;
+        }
+
+        &:not(.active) {
+          &:hover {
+            background: $accent-color-1;
+          }
+        }
+
+        span {
+          display: none;
+        }
+      }  
+    }
+
+    .owl-nav {
+      button.owl-prev, button.owl-next {
+          position: absolute;
+          width: 45px;
+          height: 45px;
+          line-height: 40px;
+          font-size: 25px;
+          border: 2px solid;
+          border-radius: $base-border-radius;
+          @include transition(all 0.2s ease-in-out);
+
+        .rt-overlay-dark & {
+          color: $white;
+          border: 2px solid $white;
+        }
+        .rt-overlay-light & {
+          color: $dark-grey;
+          border: 2px solid $dark-grey;
+        }
+
+        &:hover {
+          color: $button-text-color;
+          background-color: $button-background; 
+          border: 2px solid $button-background;
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+        span {
+          display: none;
+        }
+      }
+
+      .owl-next {
+        right: -65px;  
+        &:before {
+          content: '\f105';
+          font-family: FontAwesome;
+        }
+      }
+
+      .owl-prev {
+        left: -65px;
+        &:before {
+          content: '\f104';
+          font-family: FontAwesome;
+        }
+      }
+    }
+  }
+}

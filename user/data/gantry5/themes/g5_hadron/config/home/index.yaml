@@ -1,0 +1,93 @@
+name: home
+timestamp: 1549562891
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1547685902
+positions:
+  top-a: 'Top A'
+  top-b: 'Top B'
+  top-c: 'Top C'
+  top-d: 'Top D'
+  sidebar-a: 'Sidebar A'
+sections:
+  navigation: Navigation
+  top: Top
+  utility: Utility
+  showcase: Showcase
+  breadcrumb: Breadcrumb
+  feature: Feature
+  maintop: Maintop
+  expandedtop: Expandedtop
+  mainbody: Mainbody
+  sidebar: Sidebar
+  expandedbottom: Expandedbottom
+  mainbottom: Mainbottom
+  extension: Extension
+  bottom: Bottom
+  copyright: Copyright
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  logo:
+    logo-8561: Logo
+  menu:
+    menu-2135: Menu
+  position:
+    position-position-9550: 'Top A'
+    position-position-2536: 'Top B'
+    position-position-8224: 'Top C'
+    position-position-4116: 'Top D'
+    position-position-8870: 'Sidebar A'
+  custom:
+    custom-2314: 'FP Utility'
+    custom-8900: 'FP MainTop'
+    custom-1259: 'FP Expanded Top'
+    custom-6774: 'FP Bottom'
+    custom-5916: 'FP Footer A'
+  social:
+    social-7117: Social
+  showcase:
+    showcase-4247: Showcase
+  headlines:
+    headlines-9763: Headlines
+  featureblocks:
+    featureblocks-7606: 'Feature Blocks'
+  content:
+    system-content-3340: 'Page Content'
+  stripsslider:
+    stripsslider-5044: 'Strips Slider'
+  slider:
+    slider-6732: Slider
+  contenttabs:
+    contenttabs-9016: 'Content Tabs'
+  lists:
+    lists-5875: Lists
+  mailchimp:
+    mailchimp-6273: MailChimp
+  branding:
+    branding-5437: Branding
+  totop:
+    totop-6040: 'To Top'
+  mobile-menu:
+    mobile-menu-7793: 'Mobile Menu'
+inherit:
+  default:
+    navigation: navigation
+    logo-8561: logo-5679
+    menu-2135: menu-2875
+    top: top
+    position-position-9550: position-position-5939
+    position-position-2536: position-position-7490
+    position-position-8224: position-position-2336
+    position-position-4116: position-position-7291
+    mainbody: mainbody
+    system-content-3340: system-content-6489
+    sidebar: sidebar
+    position-position-8870: position-position-7684
+    copyright: copyright
+    branding-5437: branding-7391
+    totop-6040: totop-7311
+    offcanvas: offcanvas
+    mobile-menu-7793: mobile-menu-4892

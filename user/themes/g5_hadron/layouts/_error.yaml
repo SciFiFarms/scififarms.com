@@ -1,0 +1,347 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: _error
+  timestamp: 1551405330
+layout:
+  navigation: {  }
+  /top/: {  }
+  /utility/:
+    -
+      - 'position-position-3724 25'
+      - 'position-position-2653 25'
+      - 'position-position-3401 25'
+      - 'position-position-1491 25'
+  /showcase/:
+    -
+      - custom-3279
+  /breadcrumb/:
+    -
+      - position-position-5071
+  /feature/:
+    -
+      - 'position-position-4543 25'
+      - 'position-position-5434 25'
+      - 'position-position-5489 25'
+      - 'position-position-8898 25'
+  /maintop/:
+    -
+      - 'position-position-2723 25'
+      - 'position-position-7137 25'
+      - 'position-position-3102 25'
+      - 'position-position-1823 25'
+  /expandedtop/:
+    -
+      - 'position-position-1000 25'
+      - 'position-position-7873 25'
+      - 'position-position-6835 25'
+      - 'position-position-3436 25'
+  /main/:
+    -
+      -
+        'mainbody 60': {  }
+      -
+        'sidebar 40':
+          -
+            - position-position-7684
+  /expandedbottom/:
+    -
+      - 'position-position-5349 25'
+      - 'position-position-9431 25'
+      - 'position-position-9746 25'
+      - 'position-position-9170 25'
+  /mainbottom/:
+    -
+      - 'position-position-7827 25'
+      - 'position-position-4155 25'
+      - 'position-position-2697 25'
+      - 'position-position-1720 25'
+  /extension/:
+    -
+      - 'position-position-3769 25'
+      - 'position-position-2063 25'
+      - 'position-position-6577 25'
+      - 'position-position-1027 25'
+  /bottom/:
+    -
+      - 'position-position-2796 25'
+      - 'position-position-7267 25'
+      - 'position-position-5690 25'
+      - 'position-position-7655 25'
+  /footer/:
+    -
+      - 'position-position-4077 25'
+      - 'position-position-4480 25'
+      - 'position-position-9100 25'
+      - 'position-position-6570 25'
+  /copyright/: {  }
+  offcanvas:
+    -
+      - mobile-menu-4892
+structure:
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  top:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  utility:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  showcase:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  breadcrumb:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  feature:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  maintop:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  expandedtop:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  mainbody:
+    type: section
+  sidebar:
+    type: section
+  main:
+    type: container
+    attributes:
+      boxed: ''
+      class: ''
+      extra: {  }
+  expandedbottom:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  mainbottom:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  extension:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  bottom:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  footer:
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  copyright:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  offcanvas:
+    attributes:
+      position: g-offcanvas-left
+      class: ''
+      extra: {  }
+      swipe: '0'
+      css3animation: '1'
+content:
+  position-position-3724:
+    title: 'Utility A'
+    attributes:
+      key: utility-a
+  position-position-2653:
+    title: 'Utility B'
+    attributes:
+      key: utility-b
+  position-position-3401:
+    title: 'Utility C'
+    attributes:
+      key: utility-c
+  position-position-1491:
+    title: 'Utility D'
+    attributes:
+      key: utility-d
+  custom-3279:
+    title: 'Custom HTML'
+    attributes:
+      title: ''
+      titletag: ''
+      html: '<div class="rt-error-body"><div class="rt-error-header"><div class="rt-error-code">404</div><div class="rt-error-code-desc">Component not found.</div></div><div class="rt-error-content"><div class="rt-error-title">Oh My Gosh! You Found It!!!</div><div class="rt-error-message">Looks like the page you''re trying to visit doesn''t exist.<br>Please check the URL and try your luck again.</div><div class="rt-error-button"><a href="#" class="readon"><span>Take Me Home</span></a></div></div><div class="clear"></div></div>'
+      twig: '0'
+      filter: '0'
+    block:
+      variations: center
+  position-position-5071:
+    title: Breadcrumb
+    attributes:
+      key: breadcrumb
+  position-position-4543:
+    title: 'Feature A'
+    attributes:
+      key: feature-a
+  position-position-5434:
+    title: 'Feature B'
+    attributes:
+      key: feature-b
+  position-position-5489:
+    title: 'Feature C'
+    attributes:
+      key: feature-c
+  position-position-8898:
+    title: 'Feature D'
+    attributes:
+      key: feature-d
+  position-position-2723:
+    title: 'Maintop A'
+    attributes:
+      key: maintop-a
+  position-position-7137:
+    title: 'MainTop B'
+    attributes:
+      key: maintop-b
+  position-position-3102:
+    title: 'MainTop C'
+    attributes:
+      key: maintop-c
+  position-position-1823:
+    title: 'MainTop D'
+    attributes:
+      key: maintop-d
+  position-position-1000:
+    title: 'ExpandedTop A'
+    attributes:
+      key: expandedtop-a
+  position-position-7873:
+    title: 'ExpandedTop B'
+    attributes:
+      key: expandedtop-b
+  position-position-6835:
+    title: 'ExpandedTop C'
+    attributes:
+      key: expandedtop-c
+  position-position-3436:
+    title: 'ExpandedTop D'
+    attributes:
+      key: expandedtop-d
+  position-position-7684:
+    title: 'Sidebar A'
+    attributes:
+      key: sidebar-a
+  position-position-5349:
+    title: 'ExpandedBottom A'
+    attributes:
+      key: expandedbottom-a
+  position-position-9431:
+    title: 'ExpandedBottom B'
+    attributes:
+      key: expandedbottom-b
+  position-position-9746:
+    title: 'ExpandedBottom C'
+    attributes:
+      key: expandedbottom-c
+  position-position-9170:
+    title: 'ExpandedBottom D'
+    attributes:
+      key: expandedbottom-d
+  position-position-7827:
+    title: 'MainBottom A'
+    attributes:
+      key: mainbottom-a
+  position-position-4155:
+    title: 'MainBottom B'
+    attributes:
+      key: mainbottom-b
+  position-position-2697:
+    title: 'MainBottom C'
+    attributes:
+      key: mainbottom-c
+  position-position-1720:
+    title: 'MainBottom D'
+    attributes:
+      key: mainbottom-d
+  position-position-3769:
+    title: 'Extension A'
+    attributes:
+      key: extension-a
+  position-position-2063:
+    title: 'Extension B'
+    attributes:
+      key: extension-b
+  position-position-6577:
+    title: 'Extension C'
+    attributes:
+      key: extension-c
+  position-position-1027:
+    title: 'Extension D'
+    attributes:
+      key: extension-d
+  position-position-2796:
+    title: 'Bottom A'
+    attributes:
+      key: bottom-a
+  position-position-7267:
+    title: 'Bottom B'
+    attributes:
+      key: bottom-b
+  position-position-5690:
+    title: 'Bottom C'
+    attributes:
+      key: bottom-c
+  position-position-7655:
+    title: 'Bottom D'
+    attributes:
+      key: bottom-d
+  position-position-4077:
+    title: 'Footer A'
+    attributes:
+      key: footer-a
+  position-position-4480:
+    title: 'Footer B'
+    attributes:
+      key: footer-b
+  position-position-9100:
+    title: 'Footer C'
+    attributes:
+      key: footer-c
+  position-position-6570:
+    title: 'Footer D'
+    attributes:
+      key: footer-d
+  mobile-menu-4892:
+    title: 'Mobile Menu'

@@ -1,0 +1,79 @@
+name: features_-_overview
+timestamp: 1549562164
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1523567954
+positions:
+  utility-a: 'Utility A'
+  showcase: Showcase
+  breadcrumb-a: 'Breadcrumb A'
+  feature-a: 'Feature A'
+  maintop-a: MainTop
+  expandedtop-a: ExpandedTop
+  sidebar-a: 'Sidebar A'
+  expandedbottom-a: ExpandedBottom
+  mainbottom-a: MainBottom
+  extension-a: Extension
+  bottom-a: Bottom
+sections:
+  navigation: Navigation
+  top: Top
+  utility: Utility
+  showcase: Showcase
+  breadcrumb: Breadcrumb
+  feature: Feature
+  maintop: Maintop
+  expandedtop: Expandedtop
+  mainbody: Mainbody
+  sidebar: Sidebar
+  expandedbottom: Expandedbottom
+  mainbottom: Mainbottom
+  extension: Extension
+  bottom: Bottom
+  copyright: Copyright
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  logo:
+    logo-8725: Logo
+  menu:
+    menu-4281: Menu
+  custom:
+    custom-5283: 'Custom HTML'
+    custom-9141: 'Custom HTML'
+  position:
+    position-position-5798: 'Utility A'
+    position-position-6038: Showcase
+    position-position-5168: 'Breadcrumb A'
+    position-position-8324: 'Feature A'
+    position-position-3278: MainTop
+    position-position-8368: ExpandedTop
+    position-position-3427: 'Sidebar A'
+    position-position-1604: ExpandedBottom
+    position-position-2329: MainBottom
+    position-position-6823: Extension
+    position-position-4077: Bottom
+  content:
+    system-content-3491: 'Page Content'
+  branding:
+    branding-8331: Branding
+  totop:
+    totop-4434: 'To Top'
+  mobile-menu:
+    mobile-menu-3954: 'Mobile Menu'
+inherit:
+  default:
+    navigation: navigation
+    logo-8725: logo-5679
+    menu-4281: menu-2875
+    mainbody: mainbody
+    system-content-3491: system-content-6489
+    sidebar: sidebar
+    position-position-3427: position-position-7684
+    copyright: copyright
+    branding-8331: branding-7391
+    totop-4434: totop-7311
+    offcanvas: offcanvas
+    mobile-menu-3954: mobile-menu-4892

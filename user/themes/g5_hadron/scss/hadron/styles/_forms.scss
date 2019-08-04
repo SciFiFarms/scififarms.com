@@ -1,0 +1,159 @@
+form {
+    margin: 0 0 20px;
+}
+
+.rt-blog-form {
+    .inputbox {
+        width: 60%;
+        border: none;
+    }
+    .readon {
+        width: 35%;
+    }
+}
+
+textarea {
+	width: 100%;
+	box-sizing: border-box !important;
+}
+
+fieldset.input {
+	margin: 0;
+	padding: 0;
+}
+
+#{$all-text-inputs} {
+    color: $main-text-color;
+    border-radius: $base-border-radius;
+    padding: 12px 15px;
+    margin: 0;
+    vertical-align: middle;
+    box-sizing: border-box;
+
+    .rt-overlay-dark & {
+        border: 1px solid fadeout($white, 50%);
+        background: fadeout($white, 80%);
+    }
+    .rt-overlay-light & {
+        border: 1px solid $dark-grey;
+        background: fadeout($dark-grey, 80%);
+    }
+    &:focus {
+        border-color: $accent-color-1;
+    }
+}
+
+input, button, select, textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+input, textarea, .uneditable-input {
+    width: 206px;
+}
+
+input[type="file"], input[type="image"], input[type="submit"], input[type="reset"], input[type="button"], input[type="radio"], input[type="checkbox"] {
+    width: auto;
+}
+
+.form-search .input-append, .form-inline .input-append, .form-search .input-prepend, .form-inline .input-prepend {
+    margin-bottom: 0;
+}
+
+.search-input {
+    width: 100%;
+}
+
+.input-append, .input-prepend {
+    margin-bottom: 5px;
+    white-space: nowrap;
+    font-size: 0;
+
+   	.add-on {
+   		color: #686868;
+    	background: #f2f2f2;
+    	border: 1px solid #d5d5d5;
+    	display: inline-block;
+    	width: auto;
+    	min-width: 16px;
+    	font-size: 14px;
+   	}
+}
+
+.input-append {
+	.add-on {
+		vertical-align: top;
+    	border-radius: 0;	
+		margin-left: -1px;
+    	height: 45px;
+    	padding: 0 15px;
+    	line-height: 45px;
+    	box-sizing: border-box;
+
+		&:last-child {
+			border-radius: 0 3px 3px 0;
+		}
+	}
+
+	.btn {
+		vertical-align: top;
+    	border-radius: 0;	
+		margin-left: -1px;
+		height: 45px;
+    	padding: 0 15px;
+    	line-height: 45px;
+    	box-sizing: border-box;
+
+		&:last-child {
+			border-radius: 0 3px 3px 0;
+		}
+	}
+}
+
+.input-prepend {
+	.add-on {
+		vertical-align: top;
+    	border-radius: 0;	
+		margin-right: -1px;
+    	height: 45px;
+    	padding: 0 15px;
+    	line-height: 45px;
+    	box-sizing: border-box;		
+
+		&:first-child {
+			border-radius: 3px 0 0 3px;
+		}		
+	}
+
+	.btn {
+		vertical-align: top;
+    	border-radius: 0;		
+		margin-right: -1px;
+    	height: 45px;
+    	padding: 0 15px;
+    	line-height: 45px;
+    	box-sizing: border-box;		
+
+		&:first-child {
+			border-radius: 3px 0 0 3px;
+		}
+	}
+}
+
+.form-search .input-append .btn {
+    border-radius: 0 14px 14px 0;
+}
+
+.form-search .input-prepend .btn {
+    border-radius: 14px 0 0 14px;
+}
+
+input.span2, textarea.span2, .uneditable-input.span2 {
+    width: 156px !important;
+}
+
+.gantry-example .input-append .add-on, .gantry-example .input-prepend .add-on, .gantry-example .input-append .btn, .gantry-example .input-prepend .btn {
+    height: 45px;
+    padding: 0 15px;
+    line-height: 45px;
+    box-sizing: border-box;
+}

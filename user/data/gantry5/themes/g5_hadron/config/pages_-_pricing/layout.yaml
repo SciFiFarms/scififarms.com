@@ -1,0 +1,305 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1523567954
+layout:
+  navigation: {  }
+  /showcase/:
+    -
+      - custom-3952
+  /utility/:
+    -
+      - position-position-5798
+  /feature/:
+    -
+      - position-position-8324
+  /maintop/:
+    -
+      - custom-1381
+  /container-main/:
+    -
+      -
+        'sidebar 33': {  }
+      -
+        'main 34':
+          -
+            - pricingtable-2273
+      -
+        'aside 33': {  }
+  /mainbottom/:
+    -
+      - custom-6893
+  /extension/:
+    -
+      - 'custom-7231 50'
+      - 'custom-1784 50'
+  bottom: {  }
+  footer: {  }
+  copyright: {  }
+  offcanvas: {  }
+structure:
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  showcase:
+    type: section
+    attributes:
+      boxed: ''
+  utility:
+    type: section
+    attributes:
+      boxed: ''
+  feature:
+    type: section
+    attributes:
+      boxed: ''
+  maintop:
+    type: section
+    attributes:
+      boxed: ''
+  sidebar:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  main:
+    attributes:
+      class: ''
+      variations: ''
+    block:
+      variations: 'xlargemargintop xlargemarginbottom'
+  aside:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  container-main:
+    attributes:
+      boxed: ''
+  mainbottom:
+    type: section
+    attributes:
+      boxed: ''
+  extension:
+    type: section
+    attributes:
+      boxed: ''
+  bottom:
+    type: section
+    inherit:
+      outline: pages_-_overview
+      include:
+        - attributes
+        - children
+  footer:
+    inherit:
+      outline: pages_-_overview
+      include:
+        - attributes
+        - children
+  copyright:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+content:
+  custom-3952:
+    title: Pricing
+    attributes:
+      title: Pricing
+      titletag: 'More Value For Money'
+      html: ''
+      twig: '0'
+      filter: '0'
+    block:
+      class: rt-big-title
+      variations: center
+  position-position-5798:
+    title: 'Utility A'
+    attributes:
+      key: utility-a
+  position-position-8324:
+    title: 'Feature A'
+    attributes:
+      key: feature-a
+  custom-1381:
+    title: 'Try it Out for 10 Days Free'
+    attributes:
+      title: 'Try it Out for 10 Days Free'
+      titletag: 'Pick A Plan That Fits You And Try Us Out'
+      html: ''
+      twig: '0'
+      filter: '0'
+    block:
+      class: rt-big-title
+      variations: center
+  pricingtable-2273:
+    title: 'Pricing Table'
+    attributes:
+      class: ''
+      title: ''
+      headertext: ''
+      footertext: ''
+      columns: g-pricingtable-4-col
+      tables:
+        -
+          class: ''
+          plan: BASIC
+          price: $18
+          decimal: '.00'
+          period: /month
+          desc: ''
+          items:
+            -
+              text: 'Limited Products'
+              title: 'Item 1'
+            -
+              text: '30 Staff Login'
+              title: 'Item 2'
+            -
+              text: '150 Files Upload'
+              title: 'Item 3'
+            -
+              text: 'No Technical Support'
+              title: 'Item 4'
+            -
+              text: 'Easy Control'
+              title: 'Item 5'
+          buttontext: 'Subscribe Now'
+          buttonlink: '#'
+          buttontarget: _self
+          buttonclass: readon
+          name: 'Item 1'
+        -
+          class: rt-table-highlight
+          plan: PREMIUM
+          price: $24
+          decimal: '.00'
+          period: /month
+          desc: ''
+          items:
+            -
+              text: 'Limited Products'
+              title: 'Item 1'
+            -
+              text: '30 Staff Login'
+              title: 'Item 2'
+            -
+              text: '150 Files Upload'
+              title: 'Item 3'
+            -
+              text: 'No Technical Support'
+              title: 'Item 4'
+            -
+              text: 'Easy Control'
+              title: 'Item 5'
+          buttontext: 'Subscribe Now'
+          buttonlink: '#'
+          buttontarget: _self
+          buttonclass: readon
+          name: 'Item 2'
+        -
+          class: ''
+          plan: CORPORATE
+          price: $135
+          decimal: '.00'
+          period: /month
+          desc: ''
+          items:
+            -
+              text: 'Limited Products'
+              title: 'Item 1'
+            -
+              text: '30 Staff Login'
+              title: 'Item 2'
+            -
+              text: '150 Files Upload'
+              title: 'Item 3'
+            -
+              text: 'No Technical Support'
+              title: 'Item 4'
+            -
+              text: 'Easy Control'
+              title: 'Item 5'
+          buttontext: 'Subscribe Now'
+          buttonlink: '#'
+          buttontarget: _self
+          buttonclass: readon
+          name: 'Item 3'
+        -
+          class: ''
+          plan: ULTIMATE
+          price: $199
+          decimal: '.00'
+          period: /month
+          desc: ''
+          items:
+            -
+              text: 'Limited Products'
+              title: 'Item 1'
+            -
+              text: '30 Staff Login'
+              title: 'Item 2'
+            -
+              text: '150 Files Upload'
+              title: 'Item 3'
+            -
+              text: 'No Technical Support'
+              title: 'Item 4'
+            -
+              text: 'Easy Control'
+              title: 'Item 5'
+          buttontext: 'Subscribe Now'
+          buttonlink: '#'
+          buttontarget: _self
+          buttonclass: readon
+          name: 'Item 4'
+  custom-6893:
+    title: 'Frequently Asked Questions'
+    attributes:
+      title: 'Frequently Asked Questions'
+      titletag: ''
+      html: ''
+      twig: '0'
+      filter: '0'
+    block:
+      class: rt-big-title
+      variations: 'nomargintop nomarginbottom center'
+  custom-7231:
+    title: 'Pricing FAQ 1'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<h3>What prices are our services?</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, suscipit, tempora tenetur nisi quo dignissimos et quidem quam blanditiis hic exercitationem explicabo a beatae. Dicta, quia cupiditate incidunt reiciendis eveniet.</p>\n\n<br />\n\n<h3>What is our refund policy?</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, suscipit, tempora tenetur nisi quo dignissimos et quidem quam blanditiis hic exercitationem explicabo a beatae. Dicta, quia cupiditate incidunt reiciendis eveniet.</p>\n\n<br />\n\n<h3>What payments methods do we accept?</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, suscipit, tempora tenetur nisi quo dignissimos et quidem quam blanditiis hic exercitationem explicabo a beatae. Dicta, quia cupiditate incidunt reiciendis eveniet.</p>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: nomargintop
+  custom-1784:
+    title: 'Pricing FAQ 2'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<h3>What delivery options do we offer?</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, suscipit, tempora tenetur nisi quo dignissimos et quidem quam blanditiis hic exercitationem explicabo a beatae. Dicta, quia cupiditate incidunt reiciendis eveniet.</p>\n\n<br />\n\n<h3>What support options are available?</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, suscipit, tempora tenetur nisi quo dignissimos et quidem quam blanditiis hic exercitationem explicabo a beatae. Dicta, quia cupiditate incidunt reiciendis eveniet.</p>\n\n<br />\n\n<h3>What additional services are available?</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, suscipit, tempora tenetur nisi quo dignissimos et quidem quam blanditiis hic exercitationem explicabo a beatae. Dicta, quia cupiditate incidunt reiciendis eveniet.</p>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: nomargintop

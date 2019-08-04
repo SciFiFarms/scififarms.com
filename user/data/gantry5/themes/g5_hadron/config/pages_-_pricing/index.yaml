@@ -1,0 +1,81 @@
+name: pages_-_pricing
+timestamp: 1549564014
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1523567954
+positions:
+  utility-a: 'Utility A'
+  showcase: Showcase
+  breadcrumb: Breadcrumb
+  feature-a: 'Feature A'
+  expandedtop-a: 'Expanded Top A'
+  sidebar-a: Sidebar
+  mainbottom-a: MainBottom
+  bottom-a: Bottom
+sections:
+  navigation: Navigation
+  top: Top
+  utility: Utility
+  showcase: Showcase
+  breadcrumb: Breadcrumb
+  feature: Feature
+  maintop: Maintop
+  expandedtop: Expandedtop
+  mainbody: Mainbody
+  sidebar: Sidebar
+  expandedbottom: Expandedbottom
+  mainbottom: Mainbottom
+  extension: Extension
+  bottom: Bottom
+  copyright: Copyright
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  logo:
+    logo-5590: Logo
+  menu:
+    menu-1792: Menu
+  custom:
+    custom-3952: 'Custom HTML'
+    custom-2633: 'Custom HTML'
+    custom-4530: 'Custom HTML'
+    custom-5997: 'Custom HTML'
+  position:
+    position-position-5798: 'Utility A'
+    position-position-9411: Showcase
+    position-position-9994: Breadcrumb
+    position-position-8324: 'Feature A'
+    position-position-4195: 'Expanded Top A'
+    position-position-7684: Sidebar
+    position-position-2329: MainBottom
+    position-position-8774: Bottom
+  content:
+    system-content-6489: 'Page Content'
+  pricingtable:
+    pricingtable-7524: 'Pricing Table'
+  branding:
+    branding-4384: Branding
+  totop:
+    totop-5675: 'To Top'
+  mobile-menu:
+    mobile-menu-2216: 'Mobile Menu'
+inherit:
+  default:
+    navigation: navigation
+    logo-5590: logo-5679
+    menu-1792: menu-2875
+    copyright: copyright
+    branding-4384: branding-7391
+    totop-5675: totop-7311
+    offcanvas: offcanvas
+    mobile-menu-2216: mobile-menu-4892
+  pages_-_overview:
+    breadcrumb: breadcrumb
+    position-position-9994: position-position-3611
+    bottom: bottom
+    position-position-8774: position-position-4077
+    footer: footer
+    custom-4530: custom-7934
+    custom-5997: custom-1158

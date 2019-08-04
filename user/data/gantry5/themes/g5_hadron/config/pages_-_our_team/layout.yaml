@@ -1,0 +1,152 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1523567954
+layout:
+  navigation: {  }
+  /showcase/:
+    -
+      - custom-3952
+  /utility/:
+    -
+      - custom-8878
+  /feature/:
+    -
+      - position-position-8324
+  /maintop/:
+    -
+      - position-position-2729
+  /container-main/:
+    -
+      -
+        'sidebar 33': {  }
+      -
+        'main 34': {  }
+      -
+        'aside 33': {  }
+  mainbottom: {  }
+  extension: {  }
+  bottom: {  }
+  footer: {  }
+  copyright: {  }
+  offcanvas: {  }
+structure:
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  showcase:
+    type: section
+    attributes:
+      boxed: ''
+  utility:
+    type: section
+    attributes:
+      boxed: ''
+  feature:
+    type: section
+    attributes:
+      boxed: ''
+  maintop:
+    type: section
+    attributes:
+      boxed: ''
+  sidebar:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  main:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  aside:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  container-main:
+    attributes:
+      boxed: ''
+  mainbottom:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  extension:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  bottom:
+    type: section
+    inherit:
+      outline: pages_-_overview
+      include:
+        - attributes
+        - children
+  footer:
+    inherit:
+      outline: pages_-_overview
+      include:
+        - attributes
+        - children
+  copyright:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+content:
+  custom-3952:
+    title: 'Custom HTML'
+    attributes:
+      title: 'The Team'
+      titletag: 'Meet the People Behind Hadron'
+      html: ''
+      twig: '0'
+      filter: '0'
+    block:
+      class: rt-big-title
+      variations: center
+  custom-8878:
+    title: 'Greetings from Our CEO'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<p class=\"promo2\"><span class=\"fa fa-quote-left\"></span> Hadron is a template designed and inspired by recent visual trends, blending subtle backgrounds and overlays, with text set by custom fonts, to create an alluring experience for your visitors, whilst maintaining a professional and functional look <span class=\"fa fa-quote-right\"></span> </p>\n\n<p>- <em><a href=\"#\">Greetings from Our CEO, Robert Smith</a></em> -</p>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: center
+  position-position-8324:
+    title: 'Feature A'
+    attributes:
+      key: feature-a
+  position-position-2729:
+    title: Maintop
+    attributes:
+      key: maintop

@@ -1,0 +1,78 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+<div class="{{ particle.class|e }} g-mosaic" data-mosaic-id="{{ id }}">
+
+    <div class="g-mosaic-header">
+        {% if particle.title %}
+            <div class="g-mosaic-title">
+                {{ particle.title }}
+            </div>
+        {% endif %}
+        <div class="g-mosaic-nav">
+            <div class="g-mosaic-nav-container">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            {% if particle.allposition == 'left' %}
+                <div class="g-mosaic-nav-item {% if particle.selected == 'all' %}selected{% endif %}" data-group="all">
+                        {{ particle.allitems|default('All')|e }}
+                </div>
+            {% endif %}
+                {% for item in particle.cases %}
+                    <div class="g-mosaic-nav-item {% if particle.selected == 'first' %}{% if loop.first %}selected{% endif %}{% elseif particle.selected == 'last' %}{% if loop.last %}selected{% endif %}{% endif %}" data-group="{{ loop.index }}">
+                        {{ item.title }}
+                    </div>
+                {% endfor %}
+            {% if particle.allposition == 'right' %}
+                <div class="g-mosaic-nav-item {% if particle.selected == 'all' %}selected{% endif %}" data-group="all">
+                        {{ particle.allitems|default('All')|e }}
+                </div>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="g-mosaic-grid {{ particle.cols }}">
+        <div class="g-mosaic-grid-sizer"></div>
+        {% for case in particle.cases %}
+            {% set case_index = loop.index %}
+                {% for item in case.items %}
+                    <div class="g-mosaic-grid-item" data-groups='["{{ case_index }}"]'>
+                        <div class="g-mosaic-grid-item-wrapper g-mosaic-variation-{{ item.variation }} g-mosaic-layout-{{ item.layout }}">
+                            <div class="g-mosaic-grid-item-content">
+                                <h2 class="g-mosaic-grid-item-title">
+                                    {% if item.url %}<a href="{{ item.url }}">{% endif %}{{ item.title|html|raw }}{% if item.url %}</a>{% endif %}
+                                </h2>
+                                <div class="g-mosaic-grid-item-subtitle">
+                                    {{ item.subtitle|html|raw }}
+                                </div>
+                                {% if item.linklabel %}
+                                    <a href="{{ item.url }}" class="{{ item.buttonclass|e|default('readon') }}" target="{{ item.target|default('_blank') }}">{{ item.linklabel|default('Read More') }}</a>
+                                {% endif %}
+                                <div class="g-mosaic-tag">{{ case.title }}</div>
+                            </div>
+                            <div class="g-mosaic-image-container">
+                                {% if item.url %}<a href="{{ item.url }}">{% endif %}
+                                <img src="{{ url(item.image)|e }}" alt="{{ item.title }}" />
+                                    {% if particle.overlay %}
+                                    <span class="g-mosaic-hover"></span>
+                                    <span class="g-mosaic-hovercontent">{{ item.linklabel|default('Read More') }}</span>
+                                    {% endif %}
+                                {% if item.url %}</a>{% endif %}
+                            </div>    
+                        </div>
+
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+</div>
+{% endblock %}
+
+{% block javascript_footer %}
+{% do gantry.load('jquery') %}
+<script src="{{ url('//cdn.polyfill.io/v2/polyfill.min.js?features=default,fetch,Array.prototype.includes') }}"></script>
+<script src="{{ url('gantry-theme://js/imagesloaded.pkgd.min.js') }}"></script>
+<script src="{{ url('gantry-theme://js/shuffle.js') }}"></script>
+<script src="{{ url('gantry-theme://js/masonry.pkgd.min.js') }}"></script>
+<script src="{{ url('gantry-theme://js/mosaic.init.js') }}"></script>
+{% endblock %}

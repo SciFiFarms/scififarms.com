@@ -1,0 +1,256 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1523567954
+layout:
+  navigation: {  }
+  /showcase/:
+    -
+      - position-position-2755
+  /utility/:
+    -
+      - position-position-5798
+  /feature/:
+    -
+      - position-position-8324
+  /maintop/:
+    -
+      - position-position-3278
+  /container-main/:
+    -
+      -
+        'main 67':
+          -
+            - system-content-6489
+          -
+            - 'custom-7059 50'
+            - 'custom-2584 50'
+          -
+            - 'custom-2024 50'
+            - 'custom-5781 50'
+          -
+            - 'custom-9663 50'
+            - 'custom-8824 50'
+          -
+            - 'custom-7453 50'
+            - 'custom-7455 50'
+      -
+        'sidebar 33':
+          -
+            - custom-4144
+          -
+            - custom-2307
+          -
+            - custom-8919
+          -
+            - custom-6530
+  /mainbottom/:
+    -
+      - position-position-2329
+  /extension/:
+    -
+      - position-position-6823
+  /bottom/:
+    -
+      - position-position-4077
+  /footer/:
+    -
+      - custom-7970
+  copyright: {  }
+  offcanvas: {  }
+structure:
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  showcase:
+    type: section
+    attributes:
+      boxed: ''
+  utility:
+    type: section
+    attributes:
+      boxed: ''
+  feature:
+    type: section
+    attributes:
+      boxed: ''
+  maintop:
+    type: section
+    attributes:
+      boxed: ''
+  main:
+    attributes:
+      class: ''
+      variations: ''
+  sidebar:
+    type: section
+    attributes:
+      class: ''
+      variations: ''
+  container-main:
+    attributes:
+      boxed: ''
+  mainbottom:
+    type: section
+    attributes:
+      boxed: ''
+  extension:
+    type: section
+    attributes:
+      boxed: ''
+  bottom:
+    type: section
+    attributes:
+      boxed: ''
+  footer:
+    attributes:
+      boxed: ''
+      class: ''
+  copyright:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+content:
+  position-position-2755:
+    title: 'Showcase A'
+    attributes:
+      key: showcase-a
+  position-position-5798:
+    title: 'Utility A'
+    attributes:
+      key: utility-a
+  position-position-8324:
+    title: 'Feature A'
+    attributes:
+      key: feature-a
+  position-position-3278:
+    title: MainTop
+    attributes:
+      key: maintop-a
+  custom-7059:
+    title: 'Custom HTML'
+    attributes:
+      html: "<h2 class=\"title\">title1</h2>\n\n<p>An <a href=\"#\">example</a> particle using the <strong>title1</strong> variation.</p>\n<p>Lorem ipsum dolor sit amet, consecetur adipiscing elit donec sit amet nibh.</p>\n<a href=\"#\" class=\"readon\">Read More</a>"
+    block:
+      variations: title1
+  custom-2584:
+    title: 'Custom HTML'
+    attributes:
+      html: "<h2 class=\"title\">title2</h2>\n\n<p>An <a href=\"#\">example</a> particle using the <strong>title2</strong> variation.</p>\n<p>Lorem ipsum dolor sit amet, consecetur adipiscing elit donec sit amet nibh.</p>\n<a href=\"#\" class=\"readon\">Read More</a>"
+    block:
+      variations: title2
+  custom-2024:
+    title: 'Custom HTML'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<h2 class=\"title\">title3</h2>\n\n<p>An <a href=\"#\">example</a> particle using the <strong>title3</strong> variation.</p>\n<p>Lorem ipsum dolor sit amet, consecetur adipiscing elit donec sit amet nibh.</p>\n<a href=\"#\" class=\"readon\">Read More</a>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: title3
+  custom-5781:
+    title: 'Custom HTML'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<h2 class=\"title\">title4</h2>\n\n<p>An <a href=\"#\">example</a> particle using the <strong>title4</strong> variation.</p>\n<p>Lorem ipsum dolor sit amet, consecetur adipiscing elit donec sit amet nibh.</p>\n<a href=\"#\" class=\"readon\">Read More</a>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: title4
+  custom-9663:
+    title: 'Custom HTML'
+    attributes:
+      html: "<h2 class=\"title\">box1</h2>\n\n<p>An <a href=\"#\">example</a> particle using the <strong>box1</strong> variation.</p>\n<p>Lorem ipsum dolor sit amet, consecetur adipiscing elit donec sit amet nibh.</p>\n<a href=\"#\" class=\"readon\">Read More</a>"
+    block:
+      variations: box1
+  custom-8824:
+    title: 'Custom HTML'
+    attributes:
+      html: "<h2 class=\"title\">box2</h2>\n\n<p>An <a href=\"#\">example</a> particle using the <strong>box2</strong> variation.</p>\n<p>Lorem ipsum dolor sit amet, consecetur adipiscing elit donec sit amet nibh.</p>\n<a href=\"#\" class=\"readon\">Read More</a>"
+    block:
+      variations: box2
+  custom-7453:
+    title: 'Custom HTML'
+    attributes:
+      html: "<h2 class=\"title\">box3</h2>\n\n<p>An <a href=\"#\">example</a> particle using the <strong>box3</strong> variation.</p>\n<p>Lorem ipsum dolor sit amet, consecetur adipiscing elit donec sit amet nibh.</p>\n<a href=\"#\" class=\"readon\">Read More</a>"
+    block:
+      variations: box3
+  custom-7455:
+    title: 'Custom HTML'
+    attributes:
+      html: "<h2 class=\"title\">box4</h2>\n\n<p>An <a href=\"#\">example</a> particle using the <strong>box4</strong> variation.</p>\n<p>Lorem ipsum dolor sit amet, consecetur adipiscing elit donec sit amet nibh.</p>\n<a href=\"#\" class=\"readon\">Read More</a>"
+    block:
+      variations: box4
+  custom-4144:
+    title: 'Custom HTML'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<h2 class=\"title\">Using a Suffix</h2>\n\n<p>Enter any available suffixes at <strong>Layout Manager &rarr; Particles &rarr; Example Particle &rarr; Block &rarr; <em>Variations and/or CSS Class</em></strong>.</p>\n<p>You can compound multiple suffixes together such as: <strong><em>box4 title4</em></strong>.</p>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: 'title1 nomarginbottom'
+  custom-2307:
+    title: 'Custom HTML'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<h2 class=\"title\">box4 title2</h2>\n\n<p>An <a href=\"#\">example</a> particle using the <strong>box4 title2</strong> variation.</p>\n<p>Lorem ipsum dolor sit amet, consecetur adipiscing elit donec sit amet nibh.</p>\n<a href=\"#\" class=\"readon\">Read More</a>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: 'title2 box4 nomargintop'
+  custom-8919:
+    title: 'Custom HTML'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<h2 class=\"title\">box2 title1</h2>\n\n<p>An <a href=\"#\">example</a> particle using the <strong>box2 title1</strong> variation.</p>\n<p>Lorem ipsum dolor sit amet, consecetur adipiscing elit donec sit amet nibh.</p>\n<a href=\"#\" class=\"readon\">Read More</a>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: 'nomargintop title1 box2'
+  custom-6530:
+    title: 'Custom HTML'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<h2 class=\"title\">No Suffix</h2>\n\n<p>An <a href=\"#\">example</a> particle using the <strong>no variation.</strong></p>\n<p>Lorem ipsum dolor sit amet, consecetur adipiscing elit donec sit amet nibh.</p>\n<a href=\"#\" class=\"readon\">Read More</a>"
+      twig: '0'
+      filter: '0'
+    block:
+      class: nosuffix
+      variations: 'nomargintop nopaddingtop'
+  position-position-2329:
+    title: MainBottom
+    attributes:
+      key: mainbottom-a
+  position-position-6823:
+    title: Extension
+    attributes:
+      key: extension-a
+  position-position-4077:
+    title: Bottom
+    attributes:
+      key: bottom-a
+  custom-7970:
+    title: 'Custom HTML'
+    attributes:
+      html: "<h2 class=\"title\">Additional Classes</h2>\n\n<ul>\n  <li><strong>rt-center:</strong> centres the content of the particle.</li>\n  <li><strong>rt-uppercase, rt-lowercase:</strong> change the case of the particle title.</li>  \n  <li><strong>nomargintop, nomarginright, nomarginbottom, nomarginleft, nomarginall:</strong> removes the various margins around the particle.</li>    \n  <li><strong>nopaddingtop, nopaddingright, nopaddingbottom, nopaddingleft, nopaddingall:</strong> removes the various paddings around the particle.</li>    \n    <li><strong>(small/med/large)margintop, (small/med/large)marginright, (small/med/large)marginbottom, (small/med/large)marginleft:</strong> increase the margins around the particle.</li>\n\t    <li><strong>(small/med/large)paddingtop, (small/med/large)paddingright, (small/med/large)paddingbottom, (small/med/large)paddingleft:</strong> increase the paddings around the particle.</li>\n  <li><strong>(subsmall/submed/sublarge)margintop, (subsmall/submed/sublarge)marginright, (subsmall/submed/sublarge)marginbottom, (subsmall/submed/sublarge)marginleft, (subsmall/submed/sublarge)marginall:</strong> decrease the margins around the particle.</li>\n</ul>"

@@ -1,0 +1,163 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1523567954
+layout:
+  navigation: {  }
+  /showcase/:
+    -
+      - custom-5283
+  /utility/:
+    -
+      - position-position-5798
+  /feature/:
+    -
+      - position-position-8324
+  /maintop/:
+    -
+      - position-position-3278
+  /container-main/:
+    -
+      -
+        'sidebar 33': {  }
+      -
+        'main 34': {  }
+      -
+        'aside 33': {  }
+  /mainbottom/:
+    -
+      - position-position-2329
+  /extension/:
+    -
+      - position-position-6823
+  /bottom/:
+    -
+      - position-position-4077
+  /footer/:
+    -
+      - custom-9141
+  copyright: {  }
+  offcanvas: {  }
+structure:
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  showcase:
+    type: section
+    attributes:
+      boxed: ''
+  utility:
+    type: section
+    attributes:
+      boxed: ''
+  feature:
+    type: section
+    attributes:
+      boxed: ''
+  maintop:
+    type: section
+    attributes:
+      boxed: ''
+  sidebar:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  main:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  aside:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  container-main:
+    attributes:
+      boxed: ''
+  mainbottom:
+    type: section
+    attributes:
+      boxed: ''
+  extension:
+    type: section
+    attributes:
+      boxed: ''
+  bottom:
+    type: section
+    attributes:
+      boxed: ''
+  footer:
+    attributes:
+      boxed: ''
+      class: ''
+  copyright:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+content:
+  custom-5283:
+    title: 'Custom HTML'
+    attributes:
+      title: 'Responsive Layout'
+      titletag: 'Flexible Grid System'
+      html: "<p class=\"promo2\">A responsive design automatically adapts itself to a particular viewing environment such as desktop, tablet or mobile, without the need for separate layouts for varying platforms</p>\n\n<p><img src=\"gantry-media://rocketlauncher/features/features-overview/responsive-layout.png\" alt=\"image\" /></p>"
+      twig: '0'
+      filter: '0'
+    block:
+      class: rt-big-title
+      variations: center
+  position-position-5798:
+    title: 'Utility A'
+    attributes:
+      key: utility-a
+  position-position-8324:
+    title: 'Feature A'
+    attributes:
+      key: feature-a
+  position-position-3278:
+    title: MainTop
+    attributes:
+      key: maintop-a
+  position-position-2329:
+    title: MainBottom
+    attributes:
+      key: mainbottom-a
+  position-position-6823:
+    title: Extension
+    attributes:
+      key: extension-a
+  position-position-4077:
+    title: Bottom
+    attributes:
+      key: bottom-a
+  custom-9141:
+    title: 'Custom HTML'
+    attributes:
+      title: 'Complete Features List'
+      titletag: ''
+      html: "<h4>Hadron Features</h4>\n\n<div class=\"gantry-row\">\n\t<div class=\"gantry-width-container\">\n\t\t<div class=\"gantry-width-33\">\n\t\t\t<div class=\"gantry-width-spacer\">\n\t\t\t\t<ul class=\"nomarginbottom\">\n\t\t\t\t\t<li>Responsive Layout</li>\n\t\t\t\t\t<li>Custom Logo Option</li>\n\t\t\t\t\t<li>Chart.js</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<div class=\"gantry-width-33\">\n\t\t\t<div class=\"gantry-width-spacer\">\n\t\t\t\t<ul class=\"nomarginbottom\">\n\t\t\t\t\t<li>8 Preset Styles</li>\n\t\t\t\t\t<li>8 Styled Suffixes</li>\n\t\t\t\t\t<li>Mobile Menu</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<div class=\"gantry-width-33\">\n\t\t\t<div class=\"gantry-width-spacer\">\n\t\t\t\t<ul class=\"nomarginbottom\">\n\t\t\t\t\t<li>Offline Page</li>\n\t\t\t\t\t<li>Coming Soon Page</li>\n\t\t\t\t\t<li>404 Error Page</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n<div class=\"clear\"></div>\n\n<h4>Gantry Core Features</h4>\n\n<div class=\"gantry-row\">\n\t<div class=\"gantry-width-container\">\n\t\t<div class=\"gantry-width-33\">\n\t\t\t<div class=\"gantry-width-spacer\">\n\t\t\t\t<ul class=\"nomarginbottom\">\n\t\t\t\t\t<li>Configurable Grid Sizes</li>\n\t\t\t\t\t<li>Font Selector</li>\n\t\t\t\t\t<li>Google Analytics</li>\n\t\t\t\t\t<li>Page Suffix Support</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<div class=\"gantry-width-33\">\n\t\t\t<div class=\"gantry-width-spacer\">\n\t\t\t\t<ul class=\"nomarginbottom\">\n\t\t\t\t\t<li>Date Display</li>\n\t\t\t\t\t<li>Login Panel</li>\n\t\t\t\t\t<li>Custom Copyright</li>\n\t\t\t\t\t<li>main &amp; Component Toggle</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<div class=\"gantry-width-33\">\n\t\t\t<div class=\"gantry-width-spacer\">\n\t\t\t\t<ul class=\"nomarginbottom\">\n\t\t\t\t\t<li>Popup Panel</li>\n\t\t\t\t\t<li>To-Top Scroller</li>\n\t\t\t\t\t<li>Basic RTL Support</li>\n\t\t\t\t\t<li>Menu Assignment</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n<div class=\"clear\"></div>\n\n<h4>Technical Requirements and Support</h4>\n\n<div class=\"gantry-row\">\n\t<div class=\"gantry-width-container\">\n\t\t<div class=\"gantry-width-33\">\n\t\t\t<div class=\"gantry-width-spacer\">\n\t\t\t\t<ul class=\"nomarginbottom\">\n\t\t\t\t\t<li>Gantry Framework</li>\n\t\t\t\t\t<li>PHP 7.2+</li>\n\t\t\t\t\t<li>MySQL</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<div class=\"gantry-width-33\">\n\t\t\t<div class=\"gantry-width-spacer\">\n\t\t\t\t<ul class=\"nomarginbottom\">\n\t\t\t\t\t<li>Apache or Microsoft IIS</li>\n\t\t\t\t\t<li>Firefox, Chrome, Safari, Opera, Edge</li>\n\t\t\t\t\t<li>HTML5, CSS3, LESS</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<div class=\"gantry-width-33\">\n\t\t\t<div class=\"gantry-width-spacer\">\n\t\t\t\t<ul class=\"nomarginbottom\">\n\t\t\t\t\t<li>Joomla, WordPress, Grav Support</li>\n\t\t\t\t\t<li>RocketLaunchers</li>\n\t\t\t\t\t<li>Adobe Fireworks PNG Sources</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n<div class=\"clear\"></div>"
+      twig: '0'
+      filter: '0'

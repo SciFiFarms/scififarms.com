@@ -1,0 +1,140 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1523567954
+layout:
+  navigation: {  }
+  /showcase/:
+    -
+      - custom-3952
+  /utility/:
+    -
+      - position-position-5798
+  /feature/:
+    -
+      - position-position-8324
+  /maintop/:
+    -
+      - position-position-3278
+  /container-main/:
+    -
+      -
+        'main 67':
+          -
+            - system-content-6489
+      -
+        'sidebar 33':
+          -
+            - custom-2441
+  /mainbottom/:
+    -
+      - position-position-2329
+  /extension/: {  }
+  bottom: {  }
+  footer: {  }
+  copyright: {  }
+  offcanvas: {  }
+structure:
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  showcase:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+  utility:
+    type: section
+    attributes:
+      boxed: ''
+  feature:
+    type: section
+    attributes:
+      boxed: ''
+  maintop:
+    type: section
+    attributes:
+      boxed: ''
+  sidebar:
+    type: section
+  container-main:
+    attributes:
+      boxed: ''
+  mainbottom:
+    type: section
+    attributes:
+      boxed: ''
+  extension:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+  bottom:
+    type: section
+    inherit:
+      outline: pages_-_overview
+      include:
+        - attributes
+        - children
+  footer:
+    inherit:
+      outline: pages_-_overview
+      include:
+        - attributes
+        - children
+  copyright:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+content:
+  custom-3952:
+    title: Contact
+    attributes:
+      title: 'Contact Us'
+      titletag: 'Keep in Touch with Us'
+      html: ''
+      twig: '0'
+      filter: '0'
+    block:
+      class: rt-big-title
+      variations: center
+  position-position-5798:
+    title: 'Utility A'
+    attributes:
+      key: utility-a
+  position-position-8324:
+    title: 'Feature A'
+    attributes:
+      key: feature-a
+  position-position-3278:
+    title: MainTop
+    attributes:
+      key: maintop-a
+  custom-2441:
+    title: 'Contact Info'
+    attributes:
+      title: 'Contact Info'
+      titletag: ''
+      html: "<p>All demo content is for sample purpose only, intended to show a live site. Use the Hadron RocketLauncher to install an equivalent of the demo onto your site.</p>\n\n<p>Hadron is only available as part of the Club Subscription.</p>\n\n<div class=\"rt-contact-info\">\n\t<div class=\"rt-contact-detail\">\n\t\t<div class=\"rt-contact-icon\"><span class=\"fa fa-phone\"></span></div>\n\t\t<div class=\"rt-contact-item\">\n\t\t\t<h4 class=\"smallmarginbottom\">Telephone</h4>\n\t\t\t<p>+1-(678)-123-6789</p>\n\t\t</div>\t\t\t\t\n\t</div>\n\t<hr />\n\t<div class=\"rt-contact-detail\">\n\t\t<div class=\"rt-contact-icon\"><span class=\"fa fa-map-marker\"></span></div>\n\t\t<div class=\"rt-contact-item\">\n\t\t\t<h4 class=\"smallmarginbottom\">Address</h4>\n\t\t\t<p>123 Joomla! Boulevard<br />Seattle, WA 00000, USA</p>\n\t\t</div>\t\t\t\t\n\t</div>\n\t<hr />\n\t<div class=\"rt-contact-detail\">\n\t\t<div class=\"rt-contact-icon nomarginbottom\"><span class=\"fa fa-envelope\"></span></div>\n\t\t<div class=\"rt-contact-item\">\n\t\t\t<h4 class=\"smallmarginbottom\">Email</h4>\n\t\t\t<p>noreply@domain.com</p>\n\t\t</div>\t\t\t\t\t\n\t</div>\n</div>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: 'box4 title2'
+  position-position-2329:
+    title: MainBottom
+    attributes:
+      key: mainbottom-a

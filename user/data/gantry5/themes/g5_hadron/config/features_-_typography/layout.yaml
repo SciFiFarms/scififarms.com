@@ -1,0 +1,164 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1523567954
+layout:
+  navigation: {  }
+  /showcase/:
+    -
+      - position-position-2755
+  /utility/:
+    -
+      - position-position-5798
+  /feature/:
+    -
+      - position-position-8324
+  /maintop/:
+    -
+      - position-position-3278
+  /container-main/:
+    -
+      -
+        'sidebar 33': {  }
+      -
+        'main 34': {  }
+      -
+        'aside 33': {  }
+  /mainbottom/:
+    -
+      - position-position-2329
+  /extension/:
+    -
+      - position-position-6823
+  /bottom/:
+    -
+      - position-position-4905
+  footer: {  }
+  copyright: {  }
+  offcanvas: {  }
+structure:
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  utility:
+    type: section
+    attributes:
+      boxed: ''
+  showcase:
+    type: section
+    attributes:
+      boxed: ''
+  feature:
+    type: section
+    attributes:
+      boxed: ''
+  maintop:
+    type: section
+    attributes:
+      boxed: ''
+  sidebar:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  main:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  aside:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  container-main:
+    attributes:
+      boxed: ''
+  mainbottom:
+    type: section
+    attributes:
+      boxed: ''
+  extension:
+    type: section
+    attributes:
+      boxed: ''
+  bottom:
+    type: section
+    attributes:
+      boxed: ''
+  footer:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  copyright:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+content:
+  position-position-9101:
+    title: 'Top A'
+    attributes:
+      key: top-a
+  position-position-5798:
+    title: 'Utility A'
+    attributes:
+      key: utility-a
+  position-position-2755:
+    title: 'Showcase A'
+    attributes:
+      key: showcase-a
+  position-position-5168:
+    title: 'Breadcrumb A'
+    attributes:
+      key: breadcrumb-a
+  position-position-8324:
+    title: 'Feature A'
+    attributes:
+      key: feature-a
+  position-position-3278:
+    title: MainTop
+    attributes:
+      key: maintop-a
+  position-position-8368:
+    title: ExpandedTop
+    attributes:
+      key: expandedtop-a
+  position-position-1604:
+    title: ExpandedBottom
+    attributes:
+      key: expandedbottom-a
+  position-position-2329:
+    title: MainBottom
+    attributes:
+      key: mainbottom-a
+  position-position-6823:
+    title: Extension
+    attributes:
+      key: extension-a
+  position-position-4905:
+    title: 'Bottom A'
+    attributes:
+      key: bottom-a

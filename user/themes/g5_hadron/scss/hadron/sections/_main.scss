@@ -1,0 +1,42 @@
+#g-main {
+	background: $main-background;
+    color: $main-text-color; 
+}
+
+.blog-newsletter {
+	.g-newsletter-particle .g-newsletter.g-newsletter-aside .g-newsletter-form-wrapper 
+	{
+		justify-content: left;
+	}
+}
+
+.blog-search {
+	.search-input {
+		display: inline-block;
+		height: 45px;
+		padding: 0 15px 0 35px;
+		width: 100%;
+		color: $white;
+		border: 1px solid transparent;
+		background: darken($accent-color-1, 15%) !important;
+		box-shadow: none;
+		box-sizing: border-box;
+	}
+	.g-search {
+		position: relative;
+		&:before {
+		    content: "\f002";
+		    font-family: FontAwesome;
+		    left: 16px;
+		    position: absolute;
+		    top: 11px;
+		}    
+	}
+}
+
+@media print {
+	#g-main {
+		background: #fff !important;
+		color: #000 !important;
+	}
+}

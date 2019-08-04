@@ -1,0 +1,85 @@
+name: pages_-_about_us
+timestamp: 1549563916
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1523567954
+positions:
+  utility-a: 'Utility A'
+  showcase: Showcase
+  maintop: MainTop
+  expandedtop-a: ExpandedTop
+  expandedbottom-a: ExpandedBottom
+  sidebar-a: 'Sidebar A'
+  breadcrumb: Breadcrumb
+  bottom-a: Bottom
+sections:
+  navigation: Navigation
+  top: Top
+  utility: Utility
+  showcase: Showcase
+  breadcrumb: Breadcrumb
+  feature: Feature
+  maintop: Maintop
+  expandedtop: Expandedtop
+  mainbody: Mainbody
+  sidebar: Sidebar
+  expandedbottom: Expandedbottom
+  mainbottom: Mainbottom
+  extension: Extension
+  bottom: Bottom
+  copyright: Copyright
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  custom:
+    custom-3952: Heading
+    custom-5548: 'Custom HTML'
+    custom-9150: 'Custom HTML'
+    custom-2633: 'Custom HTML'
+    custom-1370: 'Custom HTML'
+    custom-3498: 'Custom HTML'
+  position:
+    position-position-5798: 'Utility A'
+    position-position-9170: Showcase
+    position-position-8324: MainTop
+    position-position-8368: ExpandedTop
+    position-position-2329: ExpandedBottom
+    position-position-8261: 'Sidebar A'
+    position-position-2115: Breadcrumb
+    position-position-5403: Bottom
+  logo:
+    logo-1211: Logo
+  menu:
+    menu-7078: Menu
+  content:
+    system-content-7897: 'Page Content'
+  branding:
+    branding-8677: Branding
+  totop:
+    totop-1403: 'To Top'
+  mobile-menu:
+    mobile-menu-6700: 'Mobile Menu'
+inherit:
+  default:
+    navigation: navigation
+    mainbody: mainbody
+    sidebar: sidebar
+    copyright: copyright
+    offcanvas: offcanvas
+    logo-1211: logo-5679
+    menu-7078: menu-2875
+    system-content-7897: system-content-6489
+    position-position-8261: position-position-7684
+    branding-8677: branding-7391
+    totop-1403: totop-7311
+    mobile-menu-6700: mobile-menu-4892
+  pages_-_overview:
+    breadcrumb: breadcrumb
+    bottom: bottom
+    footer: footer
+    position-position-2115: position-position-3611
+    position-position-5403: position-position-4077
+    custom-1370: custom-7934
+    custom-3498: custom-1158
