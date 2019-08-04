@@ -1,0 +1,13 @@
+enabled: true
+from: mail@example.com
+to: mail@example.com
+mailer:
+  engine: none
+  smtp:
+    server: localhost
+    port: 25
+    encryption: none
+  sendmail:
+    bin: /usr/sbin/sendmail
+content_type: text/html
+debug: false

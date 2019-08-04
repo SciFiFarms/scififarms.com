@@ -1,0 +1,54 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+
+    <div class="{{ particle.class|e }}">
+
+        {% if particle.title %}<h2 class="title">{{ particle.title|raw }}</h2>{% endif %}
+
+        {% if particle.headertext %}
+            <div class="g-pricingtable-headertext">{{ particle.headertext|raw }}</div>
+        {% endif %}
+
+        <div id="g-pricingtable-{{ id }}" class="{{ particle.columns|default('g-pricingtable-3-col')|e }} center">
+
+            {% for table in particle.tables %}
+                <div class="g-pricingtable-col-item" id="g-pricingtable-col-item-{{ loop.index }}">
+                    <ul class="g-pricingtable {{ table.class|e }}">
+
+                        {% if table.plan %}
+                            <li class="g-pricingtable-plan">
+                                {{ table.plan|raw }}
+                            </li>
+                        {% endif %}
+
+                        {% if table.price %}<li class="g-pricingtable-value"><span class="g-pricingtable-price">{{ table.price|raw }}</span><span class="g-pricingtable-decimal">{{ table.decimal|raw }}</span><span class="g-pricingtable-period">{{ table.period|raw }}</span></li>{% endif %}
+                        {% if table.desc %}<li class="g-pricingtable-desc">{{ table.desc|raw }}</li> {% endif %}
+
+                        {% for key, item in table.items %}
+                            <li class="g-pricingtable-item g-pricingtable-item-{{ key|e }}">
+                                {{ item.text|raw }}
+                            </li>
+                        {% endfor %}
+
+                        {% if table.buttontext %}
+                            <li class="g-pricingtable-cta">
+                                <a target="{{ table.buttontarget|default('_self')|e }}" href="{{ table.buttonlink|e }}" title="{{ table.buttontext|e }}" class="{{ table.buttonclass|e }}">
+                                    {{ table.buttontext|raw }}
+                                </a>
+                            </li>
+                        {% endif %}
+
+                    </ul>
+                </div>
+            {% endfor %}
+
+        </div>
+
+        {% if particle.footertext %}
+            <div class="clear"></div>
+            <div class="g-pricingtable-footertext">{{ particle.footertext|raw }}</div>
+        {% endif %}
+
+    </div>
+{% endblock %}

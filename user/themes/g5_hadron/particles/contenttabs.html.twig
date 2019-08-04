@@ -1,0 +1,77 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+
+    <div class="{{ particle.class|e }}">
+        {% if particle.title %}<h2 class="g-title">{{ particle.title }}</h2>{% endif %}
+
+        <div class="g-contenttabs">
+            <div id="g-contenttabs-{{ id }}" class="g-contenttabs-container">
+                <ul class="g-contenttabs-tab-wrapper-container">
+
+                    {% for item in particle.items %}
+                        <li class="g-contenttabs-tab-wrapper">
+                            <span class="g-contenttabs-tab-wrapper-head">
+                                <a class="g-contenttabs-tab" href="#g-contenttabs-item-{{ loop.index }}">
+                                    <span class="g-contenttabs-tab-title">{{ item.title|html|raw }}</span>
+                                </a>
+                            </span>
+                        </li>
+                    {% endfor %}
+
+                </ul>
+
+                <ul class="g-contenttabs-content-wrapper-container">
+
+                    {% for item in particle.items %}
+                        <li class="g-contenttabs-tab-wrapper">
+                            <div class="g-contenttabs-tab-wrapper-body">
+                                <div id="g-contenttabs-item-{{ loop.index }}" class="g-contenttabs-content">
+                                    {% if item.image %}      
+                                    <div {% if item.content %} class="gantry-width-50"{% endif %}> 
+                                        <div class="tabs-image">               
+                                            <img src="{{ url(item.image)|e }}" alt="image" />      
+                                        </div>
+                                    </div>    
+                                    {% endif %}
+                                    {% if item.content %}   
+                                    <div {% if item.image %}class="gantry-width-50"{% endif %}>     
+                                        <div class="tabs-content">  
+                                            {{ item.content|html|raw }}  
+
+                                            {% if item.link %}
+                                                <a href="{{ item.link|e }}" class="{{ item.buttonclass|e }}" target="{{ item.buttontarget|default('_self')|e }}"><span>{{ item.linklabel|default('Read More') }}</span></a>
+                                            {% endif %}         
+                                        </div>
+                                    </div>    
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascript %}
+    {% do gantry.load('jquery') %}
+    <script src="{{ url('gantry-theme://js/juihelper.js') }}"></script>
+{% endblock %}
+
+{% block javascript_footer %}
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery('#g-contenttabs-{{ id }}').tabs({
+                show: {
+                    effect: 'fade',
+                    duration: 350
+                }
+            });
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block stylesheets %}
+    <style>
+        #mc_embed_signup div.mce_inline_error {
+            display: none !important;
+        }
+    </style>
+{% endblock %}
+
+{% block particle %}
+
+    <div class="g-newsletter-particle {{ particle.class|e }}">
+
+        {% if particle.icon %}
+        <div class="rt-icon-badge rt-badge-left">{% if particle.link %}<a href="{{ particle.link }}">{% endif %}<span class="{{ particle.icon|raw }}"></span>{% if particle.link %}</a>{% endif %}</div>
+        {% endif %}
+
+        {% if particle.title %}
+            <h2 class="title">{% if particle.link %}<a href="{{ particle.link }}">{% endif %}{{ particle.title|raw }}{% if particle.link %}</a>{% endif %}</h2>
+        {% endif %}
+
+        <div id="mc_embed_signup" class="g-newsletter {{ particle.layout|e }} {{ particle.style|e }}">
+            {% if particle.headtext %}
+                <div class="g-newsletter-headtext">{{ particle.headtext|raw }}</div>
+            {% endif %}
+
+            <form action="{{ particle.action }}" method="post" target="_blank" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate="novalidate">
+
+                <div class="mc_embed_signup_scroll g-newsletter-form-wrapper">
+                    <div class="mc-field-group g-newsletter-inputbox">
+                        <input type="email" placeholder="{{ particle.inputboxtext|raw }}" name="EMAIL" class="required email" id="mce-EMAIL" >
+                    </div>
+
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                        <input type="text" name="b_cb0c9a182648225cba12ab39e_2008961ab4" tabindex="-1" value="">
+                    </div>
+
+                    <div class="g-newsletter-button" {% if not particle.buttontext %} style="display: none;" {% endif %}>
+                        <input type="submit" value="{{ particle.buttontext|raw|default('Join') }}" name="subscribe" id="mc-embedded-subscribe" class="g-newsletter-button-submit button {{ particle.buttonclass|e }}">
+                    </div>
+                </div>
+
+                <div id="mce-responses" class="center">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+    <script type='text/javascript'>
+        (function ($) {
+            window.fnames = new Array();
+            window.ftypes = new Array();
+            fnames[0] = 'EMAIL';
+            ftypes[0] = 'email';
+        }(jQuery));
+        var $mcj = jQuery.noConflict(true);
+    </script>
+{% endblock %}

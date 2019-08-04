@@ -1,0 +1,34 @@
+.rt-social-buttons {
+    float: right;
+    width: 200px;
+    position: relative;
+    z-index: 10;
+
+    .nav-social & {
+        margin-right: -136px;
+        @include breakpoint(desktop-range) {
+            margin-right: -100px;
+        }
+        @include breakpoint(tablet-range) {
+            margin-right: -70px;
+        }  
+    }
+}
+.social-button {
+    color: fadeout($navigation-text-color, 50%);
+    border: 2px solid fadeout($navigation-text-color, 50%);
+    border-radius: $base-border-radius;
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    line-height: 40px;
+    margin: 0 -1px;
+    padding: 0;
+    text-align: center;
+    &:hover {
+        color: $button-text-color;
+        background: $button-background;
+        border: 2px solid transparent;
+    }
+}
+

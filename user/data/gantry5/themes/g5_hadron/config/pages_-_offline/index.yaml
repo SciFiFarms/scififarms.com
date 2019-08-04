@@ -1,0 +1,83 @@
+name: pages_-_offline
+timestamp: 1549564910
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1523567954
+positions:
+  utility-a: 'Utility A'
+  showcase: Showcase
+  breadcrumb: Breadcrumb
+  feature-a: 'Feature A'
+  maintop-a: MainTop
+  expandedtop-a: ExpandedTop
+  sidebar-a: Sidebar
+  expandedbottom-a: ExpandedBottom
+  mainbottom-a: MainBottom
+  bottom-a: Bottom
+sections:
+  navigation: Navigation
+  top: Top
+  utility: Utility
+  showcase: Showcase
+  breadcrumb: Breadcrumb
+  feature: Feature
+  maintop: Maintop
+  expandedtop: Expandedtop
+  mainbody: Mainbody
+  sidebar: Sidebar
+  expandedbottom: Expandedbottom
+  mainbottom: Mainbottom
+  extension: Extension
+  bottom: Bottom
+  copyright: Copyright
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  logo:
+    logo-5443: Logo
+  menu:
+    menu-4883: Menu
+  custom:
+    custom-3952: 'Custom HTML'
+    custom-2633: 'Custom HTML'
+    custom-6988: 'Custom HTML'
+    custom-7256: 'Custom HTML'
+  position:
+    position-position-5798: 'Utility A'
+    position-position-3378: Showcase
+    position-position-5677: Breadcrumb
+    position-position-8324: 'Feature A'
+    position-position-3278: MainTop
+    position-position-8368: ExpandedTop
+    position-position-7684: Sidebar
+    position-position-1604: ExpandedBottom
+    position-position-2329: MainBottom
+    position-position-5841: Bottom
+  content:
+    system-content-6489: 'Page Content'
+  branding:
+    branding-9414: Branding
+  totop:
+    totop-7458: 'To Top'
+  mobile-menu:
+    mobile-menu-2765: 'Mobile Menu'
+inherit:
+  default:
+    navigation: navigation
+    logo-5443: logo-5679
+    menu-4883: menu-2875
+    copyright: copyright
+    branding-9414: branding-7391
+    totop-7458: totop-7311
+    offcanvas: offcanvas
+    mobile-menu-2765: mobile-menu-4892
+  pages_-_overview:
+    breadcrumb: breadcrumb
+    position-position-5677: position-position-3611
+    bottom: bottom
+    position-position-5841: position-position-4077
+    footer: footer
+    custom-6988: custom-7934
+    custom-7256: custom-1158

@@ -1,0 +1,80 @@
+name: pages_-_faq
+timestamp: 1549564752
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1523567954
+positions:
+  utility-a: 'Utility A'
+  showcase: Showcase
+  breadcrumb: Breadcrumb
+  expandedtop-a: ExpandedTop
+  sidebar-a: Sidebar
+  expandedbottom-a: 'Expanded Bottom A'
+  bottom-a: Bottom
+sections:
+  navigation: Navigation
+  top: Top
+  utility: Utility
+  showcase: Showcase
+  breadcrumb: Breadcrumb
+  feature: Feature
+  maintop: Maintop
+  expandedtop: Expandedtop
+  mainbody: Mainbody
+  sidebar: Sidebar
+  expandedbottom: Expandedbottom
+  mainbottom: Mainbottom
+  extension: Extension
+  bottom: Bottom
+  copyright: Copyright
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  logo:
+    logo-5683: Logo
+  menu:
+    menu-5617: Menu
+  custom:
+    custom-3952: 'Custom HTML'
+    custom-7124: 'Custom HTML'
+    custom-2633: 'Custom HTML'
+    custom-3155: 'Custom HTML'
+    custom-5086: 'Custom HTML'
+  position:
+    position-position-5798: 'Utility A'
+    position-position-2668: Showcase
+    position-position-7056: Breadcrumb
+    position-position-8368: ExpandedTop
+    position-position-7684: Sidebar
+    position-position-1527: 'Expanded Bottom A'
+    position-position-8604: Bottom
+  content:
+    system-content-6489: 'Page Content'
+  lists:
+    lists-9361: Lists
+  branding:
+    branding-8694: Branding
+  totop:
+    totop-3960: 'To Top'
+  mobile-menu:
+    mobile-menu-9741: 'Mobile Menu'
+inherit:
+  default:
+    navigation: navigation
+    logo-5683: logo-5679
+    menu-5617: menu-2875
+    copyright: copyright
+    branding-8694: branding-7391
+    totop-3960: totop-7311
+    offcanvas: offcanvas
+    mobile-menu-9741: mobile-menu-4892
+  pages_-_overview:
+    breadcrumb: breadcrumb
+    position-position-7056: position-position-3611
+    bottom: bottom
+    position-position-8604: position-position-4077
+    footer: footer
+    custom-3155: custom-7934
+    custom-5086: custom-1158

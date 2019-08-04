@@ -1,0 +1,54 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+
+{% if particle.title %}<h2 class="title">{{ particle.title|html|raw }}</h2>{% endif %}
+
+    <div id="g-search-{{ id }}" class="g-search {{ particle.class|e }}">
+        {% if gantry.platform.name == "joomla" %}
+        <form action="{{ joomla.route('index.php?option=com_search') }}" method="post">
+            <input type="text" name="searchword" placeholder="{{ particle.placeholder }}" size="30" maxlength="200" value="" title="{{ particle.title }}">
+        </form>
+        {% elseif gantry.platform.name == "wordpress"  %}
+        <form method="get" action="{{ gantry.siteUrl() }}" role="search">
+            <input type="search" placeholder="{{ particle.placeholder }}" value="" name="s" title="{{ particle.title }}">
+        </form>
+        {% elseif gantry.platform.name == "grav"  %}
+                <form name="search" onSubmit="return validateSearch(event);" data-simplesearch-form>
+                    <input
+                        name="searchfield"
+                        class="search-input"
+                        type="text"
+                        required
+                        value=""
+                        placeholder="{{ particle.placeholder|default('') }}"
+                        data-search-separator="{{ config.system.param_sep }}"
+                        data-search-input="{{ gantry.siteUrl() }}{{ config.plugins.simplesearch.route == '@self' ? '' : (config.plugins.simplesearch.route == '/' ? '' : config.plugins.simplesearch.route) }}/query"
+                        title="{{ particle.title }}"
+                    />
+                </form>
+        {% endif  %}
+    </div>
+
+{% endblock %}
+
+{% block javascript_footer %}
+    {% do gantry.load('jquery') %}
+    {% do gantry.load('lightcase.init') %} 
+    {% if gantry.platform.name == "grav" %}
+        <script>
+            {% set min_chars = config.plugins.simplesearch.min_query_length|default('3') %}
+            function validateSearch(event) {
+                var input = document.forms["search"]["searchfield"];
+                var location = input.getAttribute('data-search-input');
+                var separator = input.getAttribute('data-search-separator');
+                if (input.value.length >= {{ min_chars }}) {
+                    event.preventDefault();
+                    window.location.href = location + separator + input.value;
+                } else {
+                    event.preventDefault();
+                }
+            }
+        </script>
+    {% endif %}    
+{% endblock %}

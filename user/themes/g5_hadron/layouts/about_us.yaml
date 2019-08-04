@@ -1,0 +1,257 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: about_us
+  timestamp: 1527098404
+layout:
+  navigation: {  }
+  /showcase/:
+    -
+      - custom-3952
+  /utility/:
+    -
+      - custom-1155
+  /feature/:
+    -
+      - custom-5548
+  /maintop/:
+    -
+      - 'custom-5748 50'
+      - 'lists-2133 50'
+  /container-main/:
+    -
+      -
+        'sidebar 33': {  }
+      -
+        'main 34':
+          -
+            - custom-8520
+          -
+            - custom-2744
+      -
+        'aside 33': {  }
+  /mainbottom/: {  }
+  /extension/: {  }
+  /bottom/:
+    -
+      - custom-2272
+  /footer/:
+    -
+      - 'custom-3219 50'
+      - 'custom-5072 50'
+  copyright: {  }
+  offcanvas: {  }
+structure:
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  showcase:
+    type: section
+    attributes:
+      boxed: ''
+  utility:
+    type: section
+    attributes:
+      boxed: ''
+  feature:
+    type: section
+    attributes:
+      boxed: ''
+  maintop:
+    type: section
+    attributes:
+      boxed: ''
+  sidebar:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  main:
+    attributes:
+      class: ''
+      variations: ''
+  aside:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  container-main:
+    attributes:
+      boxed: ''
+  mainbottom:
+    type: section
+    attributes:
+      boxed: ''
+  extension:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  bottom:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  footer:
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  copyright:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+content:
+  custom-3952:
+    title: Heading
+    attributes:
+      title: 'We are Hadron'
+      titletag: 'Learn More About Us'
+      html: ''
+      twig: '0'
+      filter: '0'
+    block:
+      class: rt-big-title
+      variations: center
+  custom-1155:
+    title: '376,487 Members'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<div class=\"gantry-width-block gantry-width-25\">\n\t<div class=\"gantry-width-spacer\">\n\t\t<h1 class=\"title nomarginbottom\">376,487</h1>\n\t\t<p class=\"rt-uppercase\">Members</p>\n\t</div>\n</div>\n\n<div class=\"gantry-width-block gantry-width-25\">\n\t<div class=\"gantry-width-spacer\">\n\t\t<h1 class=\"title nomarginbottom\">12,376</h1>\n\t\t<p class=\"rt-uppercase\">Products Sold</p>\n\t</div>\n</div>\n\n<div class=\"gantry-width-block gantry-width-25\">\n\t<div class=\"gantry-width-spacer\">\n\t\t<h1 class=\"title nomarginbottom\">168</h1>\n\t\t<p class=\"rt-uppercase\">Employees</p>\n\t</div>\n</div>\n\n<div class=\"gantry-width-block gantry-width-25\">\n\t<div class=\"gantry-width-spacer\">\n\t\t<h1 class=\"title nomarginbottom\">200,987</h1>\n\t\t<p class=\"rt-uppercase\">Happy Customers</p>\n\t</div>\n</div>\n\n<div class=\"clear\"></div>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: 'center nomargintop nomarginbottom'
+  custom-5548:
+    title: 'Custom HTML'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<div class=\"gantry-row\">\n\t<div class=\"gantry-width-container\">\n\t\t<div class=\"gantry-width-50\">\n\t\t\t<div class=\"gantry-width-spacer\">\n\t\t\t\t<span class=\"rt-image\"><img src=\"gantry-media://pages/about-us/img-01.jpg\" alt=\"image\" /></span>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<div class=\"gantry-width-50\">\n\t\t\t<div class=\"gantry-width-spacer\">\n\t\t\t\t<h3>Introduction</h3>\n\t\t\t\t<p>Globally incubate standards compliant channels before scalable benefits. Quickly disseminate superior deliverables whereas web-enabled applications. Quickly drive clicks-and-mortar catalysts for change.</p>\n\t\t\t\t<div class=\"hidden-tablet\">\n\t\t\t\t\t<h3>More About Us</h3>\n\t\t\t\t\t<p>Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products.</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n<div class=\"clear\"></div>\n\n<div class=\"rt-readon-row\">\n\t<a href=\"#\" class=\"readon\"><span class=\"fa fa-arrow-circle-right \"></span> Read More</a>\n\t<a href=\"#\" class=\"readon\"><span class=\"fa fa-envelope\"></span> Get in Touch</a>\n</div>"
+      twig: '0'
+      filter: '0'
+  custom-5748:
+    title: Statistics
+    attributes:
+      title: Statistics
+      titletag: ''
+      html: "<p><a href=\"#\">A lorem ipsum</a> dolor sit amet, consectetur adipisicing elit. Nam, eos, labore molestias quis eaque dolorum exceptur</p>\n\n<canvas id=\"myChart\" height=\"318\" width=\"500\"></canvas>\n\n<script type=\"text/javascript\">\n\tvar barChartData = {\n\t\tlabels : [\"\"],\n\t\tdatasets : [\n\t\t\t{\n\t\t\t\tfillColor : \"#D95240\",\n\t\t\t\tstrokeColor : \"#D95240\",\n\t\t\t\tdata : [300]\n\t\t\t},\n\t\t\t{\n\t\t\t\tfillColor : \"#6FC6A0\",\n\t\t\t\tstrokeColor : \"#6FC6A0\",\n\t\t\t\tdata : [800]\n\t\t\t},\n\t\t\t{\n\t\t\t\tfillColor : \"#D6A842\",\n\t\t\t\tstrokeColor : \"#D6A842\",\n\t\t\t\tdata : [600]\n\t\t\t},\n\t\t\t{\n\t\t\t\tfillColor : \"#6FB4C5\",\n\t\t\t\tstrokeColor : \"#6FB4C5\",\n\t\t\t\tdata : [1000]\n\t\t\t},\n\t\t\t{\n\t\t\t\tfillColor : \"#D49245\",\n\t\t\t\tstrokeColor : \"#D49245\",\n\t\t\t\tdata : [400]\n\t\t\t}\t\t\t\t\t\t\t\t\t\n\t\t]\n\t},\n\toptions = {\n\t\t//Boolean - If we want to override with a hard coded scale\n\t\tscaleOverride : true,\n\t\t\n\t\t//** Required if scaleOverride is true **\n\t\t//Number - The number of steps in a hard coded scale\n\t\tscaleSteps : 9,\n\t\t//Number - The value jump in the hard coded scale\n\t\tscaleStepWidth : 100,\n\t\t//Number - The scale starting value\n\t\tscaleStartValue : 100,\n\n\t\t//String - Scale label font colour\t\n\t\tscaleFontColor : \"rgba(0,0,0,0.2)\",\n\n\t\t//String - Colour of the scale line\n\t\tscaleLineColor : \"rgba(0,0,0,0.2)\",\n\n\t\t//String - Colour of the grid lines\n\t\tscaleGridLineColor : \"rgba(0,0,0,0.2)\",\t\n\n\t\t//Number - Spacing between data sets within X values\n\t\tbarDatasetSpacing : 30,\t\n\t}\n\n\t//Get the context of the canvas element we want to select\n\tvar ctx = document.getElementById(\"myChart\").getContext(\"2d\");\n\tvar myNewChart = new Chart(ctx).Bar(barChartData, options);\n\n</script>\n\n\n<div class=\"rds-infos rt-center\">\n\t<span class=\"rds-info\">\n\t\t<span class=\"rt-data-1\"></span> <span>Lorem</span>\n\t</span>\n\t<span class=\"rds-info\">\n\t\t<span class=\"rt-data-2\"></span> <span>Ipsum</span>\n\t</span>\n\t<span class=\"rds-info\">\n\t\t<span class=\"rt-data-3\"></span> <span>Dolor</span>\n\t</span>\n\t<span class=\"rds-info\">\n\t\t<span class=\"rt-data-4\"></span> <span>Amet</span>\n\t</span>\n\t<span class=\"rds-info\">\n\t\t<span class=\"rt-data-5\"></span> <span>Viva</span>\n\t</span>\t\n</div>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: title2
+  lists-2133:
+    attributes:
+      class: ''
+      title: 'What We Do'
+      description: '<br /><br />'
+      displayitems: '4'
+      accordion: enabled
+      active: '0'
+      nav: enabled
+      dots: enabled
+      autoplay: disabled
+      autoplaySpeed: ''
+      pauseOnHover: enabled
+      items:
+        -
+          title: 'Graphical Design'
+          desc: 'Lorem ipsum dolor sit amet elit donec sit amet nibh'
+          linklabel: 'Read More'
+          link: '#'
+          buttontarget: _self
+          buttonclass: readon
+          name: 'Item 1'
+        -
+          title: 'Web Development'
+          desc: 'Lorem ipsum dolor sit amet elit donec sit amet nibh'
+          linklabel: 'Read More'
+          link: '#'
+          buttontarget: _self
+          buttonclass: readon
+          name: 'Item 2'
+        -
+          title: 'Domain Registration'
+          desc: 'Lorem ipsum dolor sit amet elit donec sit amet nibh'
+          linklabel: 'Read More'
+          link: '#'
+          buttontarget: _self
+          buttonclass: readon
+          name: 'Item 3'
+        -
+          title: 'Hosting Management'
+          desc: 'Lorem ipsum dolor sit amet elit donec sit amet nibh'
+          linklabel: 'Read More'
+          link: '#'
+          buttontarget: _self
+          buttonclass: readon
+          name: 'Item 4'
+    block:
+      variations: title2
+  custom-8520:
+    title: 'Custom HTML'
+    attributes:
+      title: 'Meet the Team'
+      titletag: 'Development and Design'
+      html: ''
+      twig: '0'
+      filter: '0'
+    block:
+      class: rt-big-title
+      variations: 'center nomarginbottom'
+  custom-2744:
+    title: 'Page Content'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<div class=\"gantry-width-block gantry-width-25\">\n\t<div class=\"gantry-width-spacer\">\n\t\t<div class=\"rt-center\">\n\t\t\t<span class=\"rt-team-img\">\n\t\t\t\t<img src=\"gantry-media://pages/about-us/img-02.jpg\" alt=\"image\" />\n\t\t\t</span>\t\n\t\t\t<h3 class=\"rt-uppercase nomarginbottom\">Julia Smith</h3>\n\t\t\t<h5 class=\"nomargintop\">Co-Founder</h5>\n\t\t\t<div class=\"rt-staff-social\">\n\t\t\t\t<a href=\"#\"><span class=\"rt-facebook\"></span></a>\n\t\t\t\t<a href=\"#\"><span class=\"rt-twitter\"></span></a>\n\t\t\t\t<a href=\"#\"><span class=\"rt-gplus\"></span></a>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n<div class=\"gantry-width-block gantry-width-25\">\n\t<div class=\"gantry-width-spacer\">\n\t\t<div class=\"rt-center\">\n\t\t\t<span class=\"rt-team-img\">\n\t\t\t\t<img src=\"gantry-media://pages/about-us/img-02.jpg\" alt=\"image\" />\n\t\t\t</span>\t\n\t\t\t<h3 class=\"rt-uppercase nomarginbottom\">Joe Williams</h3>\n\t\t\t<h5 class=\"nomargintop\">Lead Developer</h5>\n\t\t\t<div class=\"rt-staff-social\">\n\t\t\t\t<a href=\"#\"><span class=\"rt-facebook\"></span></a>\n\t\t\t\t<a href=\"#\"><span class=\"rt-twitter\"></span></a>\n\t\t\t\t<a href=\"#\"><span class=\"rt-gplus\"></span></a>\n\t\t\t</div>\t\t\t\n\t\t</div>\n\t</div>\n</div>\n\n<div class=\"gantry-width-block gantry-width-25\">\n\t<div class=\"gantry-width-spacer\">\n\t\t<div class=\"rt-center\">\n\t\t\t<span class=\"rt-team-img\">\n\t\t\t\t<img src=\"gantry-media://pages/about-us/img-02.jpg\" alt=\"image\" />\n\t\t\t</span>\t\n\t\t\t<h3 class=\"rt-uppercase nomarginbottom\">Anna Cruise</h3>\n\t\t\t<h5 class=\"nomargintop\">UX &amp; UI Designer</h5>\n\t\t\t<div class=\"rt-staff-social\">\n\t\t\t\t<a href=\"#\"><span class=\"rt-facebook\"></span></a>\n\t\t\t\t<a href=\"#\"><span class=\"rt-twitter\"></span></a>\n\t\t\t\t<a href=\"#\"><span class=\"rt-gplus\"></span></a>\n\t\t\t</div>\t\t\t\n\t\t</div>\n\t</div>\n</div>\n\n<div class=\"gantry-width-block gantry-width-25\">\n\t<div class=\"gantry-width-spacer\">\n\t\t<div class=\"rt-center\">\n\t\t\t<span class=\"rt-team-img\">\n\t\t\t\t<img src=\"gantry-media://pages/about-us/img-02.jpg\" alt=\"image\" />\n\t\t\t</span>\t\n\t\t\t<h3 class=\"rt-uppercase nomarginbottom\">Thomas Davis</h3>\n\t\t\t<h5 class=\"nomargintop\">Graphic Designer</h5>\n\t\t\t<div class=\"rt-staff-social\">\n\t\t\t\t<a href=\"#\"><span class=\"rt-facebook\"></span></a>\n\t\t\t\t<a href=\"#\"><span class=\"rt-twitter\"></span></a>\n\t\t\t\t<a href=\"#\"><span class=\"rt-gplus\"></span></a>\n\t\t\t</div>\t\t\t\n\t\t</div>\n\t</div>\n</div>\n\n<div class=\"clear\"></div>"
+      twig: '0'
+      filter: '0'
+  custom-2272:
+    title: 'More Details'
+    attributes:
+      title: 'More Details'
+      titletag: 'Help guides are available to assist'
+      html: ''
+      twig: '0'
+      filter: '0'
+    block:
+      class: 'rt-big-title rt-pages-bottom'
+      variations: center
+  custom-3219:
+    title: 'Custom HTML'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<p>All demo content is for sample purpose only, intended to show a live site. Use the <a href=\"#\">Hadron RocketLauncher</a> to install an equivalent of the demo onto your site.</p>\n<p>Hadron is only available as part of the Club Subscription.</p>\n\n<div class=\"gantry-width-block gantry-width-50\">\n\t<div class=\"gantry-width-spacer\">\n\t\t<div class=\"rt-footer-logo\"></div>\n\t</div>\n</div>\n\n<div class=\"gantry-width-block gantry-width-50\">\n\t<div class=\"gantry-width-spacer nomarginleft\">\n\t\t<span>+1-(678)-123-6789</span><br />\n\t\t<span>Hadron Center, LLC</span><br />\n\t\t<span>123 Joomla! Boulevard</span><br />\n\t\t<span>Seattle, WA 00000, USA</span><br />\n\t\t<span><a href=\"#\">hello@hadron.com</a></span>\n\t</div>\n</div>\n\n<div class=\"clear\"></div>"
+      twig: '0'
+      filter: '0'
+  custom-5072:
+    title: 'Custom HTML'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<div class=\"rt-email-form\">\n\t<form action=\"#\">\n\t\t<input type=\"text\" placeholder=\"Full Name\" size=\"18\" alt=\"fullname\" class=\"inputbox\" name=\"fullname\">\n\t\t<input type=\"text\" placeholder=\"Your Email\" size=\"28\" alt=\"email\" class=\"inputbox\" name=\"email\">\n\t\t<textarea placeholder=\"Your Message\" name=\"message\" cols=\"30\" rows=\"5\"></textarea>\n\t\t<input type=\"submit\" value=\"Send Message\" class=\"button\" name=\"send\">\n\t</form>\t\n</div>"
+      twig: '0'
+      filter: '0'

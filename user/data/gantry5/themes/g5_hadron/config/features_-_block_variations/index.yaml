@@ -1,0 +1,86 @@
+name: features_-_block_variations
+timestamp: 1549562187
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1523567954
+positions:
+  top-a: 'Top A'
+  utility-a: 'Utility A'
+  showcase-a: 'Showcase A'
+  breadcrumb-a: 'Breadcrumb A'
+  feature-a: 'Feature A'
+  maintop-a: MainTop
+  expandedtop-a: ExpandedTop
+  expandedbottom-a: ExpandedBottom
+  mainbottom-a: MainBottom
+  extension-a: Extension
+  bottom-a: Bottom
+sections:
+  navigation: Navigation
+  top: Top
+  utility: Utility
+  showcase: Showcase
+  breadcrumb: Breadcrumb
+  feature: Feature
+  maintop: Maintop
+  expandedtop: Expandedtop
+  mainbody: Mainbody
+  sidebar: Sidebar
+  expandedbottom: Expandedbottom
+  mainbottom: Mainbottom
+  extension: Extension
+  bottom: Bottom
+  copyright: Copyright
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  logo:
+    logo-5764: Logo
+  menu:
+    menu-1059: Menu
+  position:
+    position-position-9101: 'Top A'
+    position-position-5798: 'Utility A'
+    position-position-2755: 'Showcase A'
+    position-position-5168: 'Breadcrumb A'
+    position-position-8324: 'Feature A'
+    position-position-3278: MainTop
+    position-position-8368: ExpandedTop
+    position-position-1604: ExpandedBottom
+    position-position-2329: MainBottom
+    position-position-6823: Extension
+    position-position-4077: Bottom
+  content:
+    system-content-6489: 'Page Content'
+  custom:
+    custom-7059: 'Custom HTML'
+    custom-2584: 'Custom HTML'
+    custom-2024: 'Custom HTML'
+    custom-5781: 'Custom HTML'
+    custom-9663: 'Custom HTML'
+    custom-8824: 'Custom HTML'
+    custom-7453: 'Custom HTML'
+    custom-7455: 'Custom HTML'
+    custom-4144: 'Custom HTML'
+    custom-2307: 'Custom HTML'
+    custom-8919: 'Custom HTML'
+    custom-6530: 'Custom HTML'
+    custom-7970: 'Custom HTML'
+  branding:
+    branding-9493: Branding
+  totop:
+    totop-1865: 'To Top'
+  mobile-menu:
+    mobile-menu-8283: 'Mobile Menu'
+inherit:
+  default:
+    navigation: navigation
+    logo-5764: logo-5679
+    menu-1059: menu-2875
+    copyright: copyright
+    branding-9493: branding-7391
+    totop-1865: totop-7311
+    offcanvas: offcanvas
+    mobile-menu-8283: mobile-menu-4892

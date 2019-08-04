@@ -1,0 +1,243 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1523567954
+layout:
+  navigation: {  }
+  /showcase/:
+    -
+      - custom-3952
+  /utility/: {  }
+  /feature/: {  }
+  /maintop/:
+    -
+      - 'custom-8424 33.3'
+      - 'custom-6350 33.3'
+      - 'custom-5276 33.3'
+    -
+      - 'custom-7545 33.3'
+      - 'custom-7409 33.3'
+      - 'custom-3195 33.3'
+  /container-main/:
+    -
+      -
+        'sidebar 15': {  }
+      -
+        'main 56': {  }
+      -
+        'aside 29':
+          -
+            - custom-6248
+          -
+            - custom-8325
+          -
+            - custom-1967
+  /mainbottom/:
+    -
+      - custom-8113
+  extension: {  }
+  bottom: {  }
+  footer: {  }
+  copyright: {  }
+  offcanvas: {  }
+structure:
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  showcase:
+    type: section
+    attributes:
+      boxed: ''
+  utility:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  feature:
+    type: section
+    attributes:
+      boxed: ''
+  maintop:
+    type: section
+    attributes:
+      boxed: ''
+      class: services-maintop
+      variations: ''
+  sidebar:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  main:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  aside:
+    attributes:
+      class: ''
+      variations: ''
+  container-main:
+    attributes:
+      boxed: ''
+  mainbottom:
+    type: section
+    attributes:
+      boxed: ''
+  extension:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  bottom:
+    type: section
+    inherit:
+      outline: pages_-_overview
+      include:
+        - attributes
+        - children
+  footer:
+    inherit:
+      outline: pages_-_overview
+      include:
+        - attributes
+        - children
+  copyright:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+content:
+  custom-3952:
+    title: 'Custom HTML'
+    attributes:
+      title: Services
+      titletag: 'What We Can Do for You'
+      html: ''
+      twig: '0'
+      filter: '0'
+    block:
+      class: rt-big-title
+      variations: center
+  custom-8424:
+    title: 'Web Design'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<span class=\"rt-icon\"><span class=\"fa fa-gears title\"></span></span>\n<h1 class=\"title rt-capitalize\">Web Development</h1>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n<a class=\"readon\" href=\"#\">Read More</a>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: center
+  custom-6350:
+    title: 'Graphic Design'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<span class=\"rt-icon\"><span class=\"fa fa-bar-chart title\"></span></span>\n<h1 class=\"title rt-capitalize\">Graphic Design</h1>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n<a class=\"readon\" href=\"#\">Read More</a>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: center
+  custom-5276:
+    title: 'Web Hosting'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<span class=\"rt-icon\"><span class=\"fa fa-cloud title\"></span></span>\n<h1 class=\"title rt-capitalize\">Web Hosting</h1>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n<a class=\"readon\" href=\"#\">Read More</a>"
+      twig: '0'
+      filter: '0'
+    block:
+      class: center
+  custom-7545:
+    title: 'Movie Maker'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<span class=\"rt-icon\"><span class=\"fa fa-film title\"></span></span>\n<h1 class=\"title rt-capitalize\">Movie Maker</h1>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n<a class=\"readon\" href=\"#\">Read More</a>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: center
+  custom-7409:
+    title: 'Music Studio'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<span class=\"rt-icon\"><span class=\"fa fa-music title\"></span></span>\n<h1 class=\"title rt-capitalize\">Music Studio</h1>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n<a class=\"readon\" href=\"#\">Read More</a>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: center
+  custom-3195:
+    title: 'Custom HTML'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<span class=\"rt-icon\"><span class=\"fa fa-comments title\"></span></span>\n<h1 class=\"title rt-capitalize\">Web Translator</h1>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n<a class=\"readon\" href=\"#\">Read More</a>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: center
+  custom-6248:
+    title: 'Cloud Services'
+    attributes:
+      title: '<span class="fa fa-cloud-download"></span> Cloud Services'
+      titletag: ''
+      html: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate pariatur officia accusantium sapiente expedita eius fugiat</p>\n<a href=\"#\" class=\"readon\">Learn More</a>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: 'box3 nomarginbottom'
+  custom-8325:
+    title: 'Secured Data'
+    attributes:
+      title: '<span class="fa fa-shield"></span> Secured Data'
+      titletag: ''
+      html: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate pariatur officia accusantium sapiente expedita eius fugiat</p>\n<a href=\"#\" class=\"readon\">Learn More</a>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: 'box3 nomarginbottom'
+  custom-1967:
+    title: '24/7 Support'
+    attributes:
+      title: '<span class="fa fa-road"></span> 24/7 Support'
+      titletag: ''
+      html: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate pariatur officia accusantium sapiente expedita eius fugiat</p>\n<a href=\"#\" class=\"readon\">Learn More</a>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: box3
+  custom-8113:
+    title: 'Custom HTML'
+    attributes:
+      title: 'Want to Work With Us?'
+      titletag: ''
+      html: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate pariatur officia accusantium sapiente expedita eius fugiat ea distinctio et rem sed quo amet atque dignissimos autem quos asperiores dolorum!</p>\n\n<div class=\"rt-readon-row\">\n\t<a href=\"#\" class=\"readon rt-large-button\"><span class=\"fa fa-file-text\"></span> Contact Us</a>\n</div>\t"
+      twig: '0'
+      filter: '0'
+    block:
+      class: rt-big-title
+      variations: center

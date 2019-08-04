@@ -1,0 +1,38 @@
+name: Progress Bar
+description: Display progressbar.
+type: particle
+icon: fa-expand
+
+configuration:
+  caching:
+    type: static
+
+form:
+  overrideable: false
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable the particle.
+      default: true
+
+    progressbar:
+      type: collection.list
+      array: true
+      label: Progress Bars
+      description: Create each item to appear in the content row.
+      value: name
+      ajax: true
+
+      fields:        
+        .title:
+          type: input.text
+          label: Item Title
+          description: Customize the item title text.
+          placeholder: Enter item title       
+        .progress:
+          type: input.number
+          label: Progress Amount
+          description: Specify the progress amount.
+          max: 100
+          default: 0

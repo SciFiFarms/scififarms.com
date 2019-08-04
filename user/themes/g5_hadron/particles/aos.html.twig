@@ -1,0 +1,22 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="gantry-theme://css/aos.css" />
+{% endblock %}
+
+{% block javascript %}
+    <script src="gantry-theme://js/aos.js"></script>
+{% endblock %}
+
+{% set init %}
+	AOS.init({
+
+	duration: {{ particle.duration }},
+	once: {{ particle.once }},
+	delay: {{ particle.delay }},
+	easing: '{{ particle.easing }}',
+	offset: {{ particle.offset }}
+
+	});
+{% endset %}
+{% do gantry.document.addInlineScript(init, -10, 'footer') %}

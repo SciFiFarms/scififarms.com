@@ -1,0 +1,154 @@
+name: Mosaic
+description: Display content dynamically in blocks
+type: particle
+icon: fa-address-book
+
+configuration:
+  caching:
+    type: static
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable particles.
+      default: true
+
+    class:
+      type: input.selectize
+      label: CSS Classes
+      description: CSS class name for the particle.
+
+    title:
+      type: input.text
+      label: Title
+      description: Customize the title text.
+      placeholder: Enter title
+
+    allitems:
+      overridable: false
+      type: input.text
+      label: '"All" Label'
+      description: Enter all items button label.
+      placeholder: 'All'
+
+    allposition:
+      type: select.select
+      label: All Position
+      description: Select All button position or hide.
+      default: left
+      options:
+        left: Left
+        right: Right
+        '': Hide
+
+    selected:
+      type: select.select
+      label: Selected
+      description: Choose Selected Nav Item
+      default: all
+      options:
+        all: All
+        first: First
+        last: Last
+
+    cols:
+      type: select.select
+      label: Grid Column
+      description: Select the grid column amount
+      placeholder: 'Select...'
+      default: 2cols
+      options:
+        cols-2: 2 Columns
+        cols-3: 3 Columns
+        cols-4: 4 Columns
+        cols-5: 5 Columns
+
+    overlay:
+      type: select.select
+      label: Overlay
+      description: Enable or disable overlay.
+      default: enabled
+      options:
+        enabled: Enabled
+        disabled: Disabled
+
+    cases:
+      type: collection.list
+      array: true
+      label: Cases
+      description: Create categories.
+      overridable: false
+      value: title
+      ajax: true
+
+      fields:
+        .title:
+          type: input.text
+          label: Title
+          description: Enter category title
+        .items:
+          type: collection.list
+          array: true
+          label: Items
+          description: Create mosaic items.
+          value: title
+          ajax: true
+
+          fields:
+            .layout:
+              type: select.select
+              label: Layout
+              description: Select desired layout.
+              placeholder: 'Select...'
+              default: default-top
+              options:
+                default-top: Default - Top
+                default-bottom: Default - Bottom
+                alt-top: Alternative Top
+                alt-bottom: Alternative Bottom
+            .variation:
+              type: select.select
+              label: Variation
+              description: Select desired variation.
+              placeholder: 'Select...'
+              default: dark
+              options:
+                dark: Dark
+                light: Light
+            .image:
+              type: input.imagepicker
+              label: Image
+              description: Select desired image.
+            .title:
+              type: input.text
+              label: Title
+              description: Enter title
+            .subtitle:
+              type: input.text
+              label: Subtitle
+              description: Enter subtitle
+            .linklabel:
+              type: input.text
+              label: Read More Text
+              description: Specify the read more text.
+              placeholder: 'Read More'
+            .url:
+              type: input.text
+              label: Url
+              description: Customize url.
+            .target:
+              type: select.select
+              label: Target
+              description: Target browser window when item is clicked.
+              placeholder: 'Select...'
+              default: _blank
+              options:
+                  _self: Self
+                  _blank: New Window
+            .buttonclass:
+              type: input.text
+              label: Button Class
+              description: Input the button class.
+              default: 'readon' 

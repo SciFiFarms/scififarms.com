@@ -1,0 +1,41 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+
+{% if particle.title %}<h2 class="g-title">{{ particle.title|raw }}</h2>{% endif %}
+<div id="{{ id }}" data-audioplayer-id="{{ id }}" class="g-audioplayer {{ particle.class|e }}">
+    {% if particle.items %}
+    <div class="g-audioplayer-info">
+        <div class="g-audioplayer-left">
+            <img class="g-audioplayer-cover" src="" alt="{% if file.source == "local" or file.source == "exernal" %}{% if file.artist %}{{ file.artist }}{% endif %}{% if file.artist and file.tracktitle %} - {% endif %}{% if file.tracktitle %}{{ file.tracktitle }}{% endif %}{% endif %}" />
+        </div>
+        <div class="g-audioplayer-right">
+            <div class="g-audioplayer-nowplaying">{{ particle.nowplaying }}</div>
+            <div class="g-audioplayer-trackinfo"></div>
+            <audio preload></audio>
+        </div>
+    </div>
+    {% endif %}
+    <div class="g-audioplayer-playlist" {% if particle.scrollbar == 'scrollbar' %}style="overflow-y: scroll;height: {{ particle.overflow }}px;"{% endif %}>
+        <ol>
+            {% for file in particle.items %}
+            {% if file.source == "local" %}
+            <li><a href="#" data-cover="{{ url(file.cover)|e }}" data-src="{{ url(file.localurl) }}">{% if file.artist %}{{ file.artist }}{% endif %}{% if file.artist and file.tracktitle %} - {% endif %}{% if file.tracktitle %}{{ file.tracktitle }}{% endif %}</a><i class="fa fa-volume-up" aria-hidden="true"></i>{% if file.link %}<div class="g-audioplayer-button"><a href="{{ file.link }}" class="button">{{ file.linktext }}</a></div>{% endif %}</li>
+            {% elseif file.source == "external" %}
+            <li><a href="#" data-cover="{{ url(file.cover)|e }}" data-src="{{ file.externalurl }}">{% if file.artist %}{{ file.artist }}{% endif %}{% if file.artist and file.tracktitle %} - {% endif %}{% if file.tracktitle %}{{ file.tracktitle }}{% endif %}</a> <i class="fa fa-volume-up" aria-hidden="true"></i>{% if file.link %}<div class="g-audioplayer-button"><a href="{{ file.link }}" class="button">{{ file.linktext }}</a></div>{% endif %}</li>
+            {% endif %}
+            {% endfor %}
+        </ol>
+    </div>
+    {% if particle.scrollbar == 'scrollbar' %}
+        <div class="g-audioplayer-fadeout"></div>
+    {% endif %}
+</div>
+
+{% endblock %}
+
+{% block javascript_footer %}
+{% do gantry.load('jquery') %} 
+<script src="{{ url('gantry-theme://js/audioplayer.js') }}"></script>
+<script src="{{ url('gantry-theme://js/audioplayer.init.js') }}"></script>
+{% endblock %}

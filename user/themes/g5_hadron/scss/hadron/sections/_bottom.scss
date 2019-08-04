@@ -1,0 +1,24 @@
+#g-bottom {
+	background: $bottom-background;
+	color: $bottom-text-color;
+}
+
+.fp-bottom {
+	margin-bottom: -25px;
+}
+
+.fp-totop {
+	@include breakpoint(mobile-only) {
+		.g-content {
+			margin-top: 0;
+			padding-top: 0;
+		}	
+	}
+}
+
+@media print {
+	#g-bottom {
+		background: #fff !important;
+		color: #000 !important;
+	}
+}

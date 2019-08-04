@@ -1,0 +1,205 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: overview
+  timestamp: 1527098404
+layout:
+  navigation: {  }
+  /showcase/:
+    -
+      - custom-4093
+  /utility/:
+    -
+      - position-position-5798
+  /feature/:
+    -
+      - 'custom-1837 50'
+      - 'custom-7386 50'
+  /maintop/:
+    -
+      - custom-9667
+  /container-main/:
+    -
+      -
+        'sidebar 33': {  }
+      -
+        'main 34':
+          -
+            - custom-3352
+      -
+        'aside 33': {  }
+  /mainbottom/:
+    -
+      - position-position-2329
+  /extension/:
+    -
+      - position-position-6823
+  /bottom/:
+    -
+      - custom-2272
+  /footer/:
+    -
+      - 'custom-3219 50'
+      - 'custom-5072 50'
+  copyright: {  }
+  offcanvas: {  }
+structure:
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  showcase:
+    type: section
+    attributes:
+      boxed: ''
+  utility:
+    type: section
+    attributes:
+      boxed: ''
+  feature:
+    type: section
+    attributes:
+      boxed: ''
+  maintop:
+    type: section
+    attributes:
+      boxed: ''
+  sidebar:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  main:
+    attributes:
+      class: ''
+      variations: ''
+  aside:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  container-main:
+    attributes:
+      boxed: ''
+  mainbottom:
+    type: section
+    attributes:
+      boxed: ''
+  extension:
+    type: section
+    attributes:
+      boxed: ''
+  bottom:
+    type: section
+    attributes:
+      boxed: ''
+  footer:
+    attributes:
+      boxed: ''
+      class: ''
+  copyright:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+content:
+  custom-4093:
+    title: 'Custom HTML'
+    attributes:
+      title: 'Various Pages'
+      titletag: 'Flexible and adaptable sample pages'
+      html: ''
+      twig: '0'
+      filter: '0'
+    block:
+      class: rt-big-title
+      variations: center
+  position-position-5798:
+    title: 'Utility A'
+    attributes:
+      key: utility-a
+  custom-1837:
+    title: 'ChartJS A'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<canvas id=\"myChart-a\" height=\"320\" width=\"600\"></canvas>\n\n<script type=\"text/javascript\">\n\tvar lineChartData = {\n\t\tlabels : [\"Cerulean\",\"Chapelco\",\"Lumiere\",\"Hexeris\",\"Oculus\",\"Stratos\",\"Corvus\"],\n\t\tdatasets : [\n\t\t\t{\n\t\t\t\tfillColor : \"transparent\",\n\t\t\t\tstrokeColor : \"#97DBF2\",\n\t\t\t\tpointColor : \"#97DBF2\",\n\t\t\t\tpointStrokeColor : \"#97DBF2\",\n\t\t\t\tdata : [600,500,900,800,500,400,700]\n\t\t\t},\n\t\t\t{\n\t\t\t\tfillColor : \"transparent\",\n\t\t\t\tstrokeColor : \"#DE4E33\",\n\t\t\t\tpointColor : \"#DE4E33\",\n\t\t\t\tpointStrokeColor : \"#DE4E33\",\n\t\t\t\tdata : [200,400,600,300,900,200,500]\n\t\t\t},\t\t\n\t\t]\n\t},\n\toptions = {\n\t\t//Boolean - If we want to override with a hard coded scale\n\t\tscaleOverride : true,\n\t\t\n\t\t//** Required if scaleOverride is true **\n\t\t//Number - The number of steps in a hard coded scale\n\t\tscaleSteps : 9,\n\t\t//Number - The value jump in the hard coded scale\n\t\tscaleStepWidth : 100,\n\t\t//Number - The scale starting value\n\t\tscaleStartValue : 100,\n\n\t\t//String - Scale label font colour\t\n\t\tscaleFontColor : \"#A8A8A8\",\n\n\t\t//String - Colour of the scale line\n\t\tscaleLineColor : \"#A8A8A8\",\n\n\t\t//String - Colour of the grid lines\n\t\tscaleGridLineColor : \"#A8A8A8\",\t\n\n\t\t//Boolean - Whether the line is curved between points\n\t\tbezierCurve : false,\t\n\n\t\t//Number - Radius of each point dot in pixels\n\t\tpointDotRadius : 8,\n\n\t\t//Number - Pixel width of point dot stroke\n\t\tpointDotStrokeWidth : 5,\n\t\t\n\t\t//Number - Pixel width of dataset stroke\n\t\tdatasetStrokeWidth : 6,\n\t\t\n\t\t//Boolean - Whether to fill the dataset with a colour\n\t\tdatasetFill : true,\n\n\t}\n\n\t//Get the context of the canvas element we want to select\n\tvar ctx = document.getElementById(\"myChart-a\").getContext(\"2d\");\n\tvar myNewChart = new Chart(ctx).Line(lineChartData, options);\n\n</script>"
+      twig: '0'
+      filter: '0'
+  custom-7386:
+    title: 'ChartJS B'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<canvas id=\"myChart-b\" height=\"320\" width=\"600\"></canvas>\n\n<script type=\"text/javascript\">\n\tvar barChartData = {\n\t\tlabels : [\"\"],\n\t\tdatasets : [\n\t\t\t{\n\t\t\t\tfillColor : \"#D95240\",\n\t\t\t\tstrokeColor : \"#D95240\",\n\t\t\t\tdata : [300]\n\t\t\t},\n\t\t\t{\n\t\t\t\tfillColor : \"#6FC6A0\",\n\t\t\t\tstrokeColor : \"#6FC6A0\",\n\t\t\t\tdata : [800]\n\t\t\t},\n\t\t\t{\n\t\t\t\tfillColor : \"#D6A842\",\n\t\t\t\tstrokeColor : \"#D6A842\",\n\t\t\t\tdata : [600]\n\t\t\t},\n\t\t\t{\n\t\t\t\tfillColor : \"#6FB4C5\",\n\t\t\t\tstrokeColor : \"#6FB4C5\",\n\t\t\t\tdata : [1000]\n\t\t\t},\n\t\t\t{\n\t\t\t\tfillColor : \"#D49245\",\n\t\t\t\tstrokeColor : \"#D49245\",\n\t\t\t\tdata : [400]\n\t\t\t}\t\t\t\t\t\t\t\t\t\n\t\t]\n\t},\n\toptions = {\n\t\t//Boolean - If we want to override with a hard coded scale\n\t\tscaleOverride : true,\n\t\t\n\t\t//** Required if scaleOverride is true **\n\t\t//Number - The number of steps in a hard coded scale\n\t\tscaleSteps : 9,\n\t\t//Number - The value jump in the hard coded scale\n\t\tscaleStepWidth : 100,\n\t\t//Number - The scale starting value\n\t\tscaleStartValue : 100,\n\n\t\t//String - Scale label font colour\t\n\t\tscaleFontColor : \"#A8A8A8\",\n\n\t\t//String - Colour of the scale line\n\t\tscaleLineColor : \"#A8A8A8\",\n\n\t\t//String - Colour of the grid lines\n\t\tscaleGridLineColor : \"#A8A8A8\",\t\n\n\t\t//Number - Spacing between data sets within X values\n\t\tbarDatasetSpacing : 30,\t\n\t}\n\n\t//Get the context of the canvas element we want to select\n\tvar ctx = document.getElementById(\"myChart-b\").getContext(\"2d\");\n\tvar myNewChart = new Chart(ctx).Bar(barChartData, options);\n\n</script>"
+      twig: '0'
+      filter: '0'
+  custom-9667:
+    title: 'Graphic Charts by ChartJS'
+    attributes:
+      title: 'Graphic Charts by ChartJS'
+      titletag: ''
+      html: "<p><strong>NOTE: </strong>The canvas only works on modern browsers (Firefox, Opera, Chrome, Safari, and Internet Explorer 9+) that support the HTML5 canvas element. <a href=\"http://www.w3schools.com/html/html5_canvas.asp\" target=\"_blank\">Internet Explorer 8 and earlier versions, do not support the canvas element.</a></p>\n\n<p>The two charts shown above are the sample chart we used on our demo pages. It's based on <a href=\"http://www.chartjs.org/\">Chart.js</a>. Chart.js is an easy, object oriented client side graphs for designers and developers.</p>\n\n<p class=\"nomarginbottom\">For more information how to create great looking charts using Chart.js, please visit <a href=\"http://www.chartjs.org/\">Chart.js</a> homepage or download the script <a href=\"https://github.com/nnnick/Chart.js\">here</a>.</p>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: title2
+  custom-3352:
+    title: 'Custom HTML'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<div class=\"rt-center\">\n\t<p class=\"promo1\"><strong>Hadron</strong> Sample Pages</p>\n  <p class=\"promo2\">These examples are intended to show how Hadron can be constructed on your site, above and beyond the frontpage demonstration. These include Joomla content and component pages, with varying modular content, mainbody widths and page lengths.</p>\n    \n   <br />\n\t<div class=\"gantry-row\">\n\t\t<div class=\"gantry-width-container\">\n\t\t\t<div class=\"gantry-width-33\">\n\t\t\t\t<div class=\"gantry-width-spacer\">\n\t\t\t\t\t<span class=\"rt-image\"><img src=\"gantry-media://pages/overview/page-01.jpg\" alt=\"image\" /></span>\n\t\t\t\t\t<h3><a href=\"about-us\">About Us</a></h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"gantry-width-33\">\n\t\t\t\t<div class=\"gantry-width-spacer\">\n\t\t\t\t\t<span class=\"rt-image\"><img src=\"gantry-media://pages/overview/page-01.jpg\" alt=\"image\" /></span>\n\t\t\t\t\t<h3><a href=\"our-team\">Our Team</a></h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"gantry-width-33\">\n\t\t\t\t<div class=\"gantry-width-spacer\">\n\t\t\t\t\t<span class=\"rt-image\"><img src=\"gantry-media://pages/overview/page-01.jpg\" alt=\"image\" /></span>\n\t\t\t\t\t<h3><a href=\"services\">Services</a></h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\t<div class=\"gantry-row\">\n\t\t<div class=\"gantry-width-container\">\n\t\t\t<div class=\"gantry-width-33\">\n\t\t\t\t<div class=\"gantry-width-spacer\">\n\t\t\t\t\t<span class=\"rt-image\"><img src=\"gantry-media://pages/overview/page-01.jpg\" alt=\"image\" /></span>\n\t\t\t\t\t<h3><a href=\"pricing\">Pricing</a></h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"gantry-width-33\">\n\t\t\t\t<div class=\"gantry-width-spacer\">\n\t\t\t\t\t<span class=\"rt-image\"><img src=\"gantry-media://pages/overview/page-01.jpg\" alt=\"image\" /></span>\n\t\t\t\t\t<h3><a href=\"portfolio\">Portfolio</a></h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"gantry-width-33\">\n\t\t\t\t<div class=\"gantry-width-spacer\">\n\t\t\t\t\t<span class=\"rt-image\"><img src=\"gantry-media://pages/overview/page-01.jpg\" alt=\"image\" /></span>\n\t\t\t\t\t<h3><a href=\"blog\">Blog</a></h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\t<div class=\"gantry-row\">\n\t\t<div class=\"gantry-width-container\">\n\t\t\t<div class=\"gantry-width-33\">\n\t\t\t\t<div class=\"gantry-width-spacer\">\n\t\t\t\t\t<span class=\"rt-image\"><img src=\"gantry-media://pages/overview/page-01.jpg\" alt=\"image\" /></span>\n\t\t\t\t\t<h3><a href=\"faq\">FAQ</a></h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"gantry-width-33\">\n\t\t\t\t<div class=\"gantry-width-spacer\">\n\t\t\t\t\t<span class=\"rt-image\"><img src=\"gantry-media://pages/overview/page-01.jpg\" alt=\"image\" /></span>\n\t\t\t\t\t<h3><a href=\"contact\">Contact Us</a></h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"gantry-width-33\">\n\t\t\t\t<div class=\"gantry-width-spacer\">\n\t\t\t\t\t<span class=\"rt-image\"><img src=\"gantry-media://pages/overview/page-01.jpg\" alt=\"image\" /></span>\n\t\t\t\t\t<h3><a href=\"offline\">Offline Page</a></h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\t<div class=\"gantry-row\">\n\t\t<div class=\"gantry-width-container\">\n\t\t\t<div class=\"gantry-width-33\">\n\t\t\t\t<div class=\"gantry-width-spacer\">\n\t\t\t\t\t<span class=\"rt-image\"><img src=\"gantry-media://pages/overview/page-01.jpg\" alt=\"image\" /></span>\n\t\t\t\t\t<h3><a href=\"coming-soon\">Coming Soon</a></h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"gantry-width-33\">\n\t\t\t\t<div class=\"gantry-width-spacer\">\n\t\t\t\t\t<span class=\"rt-image\"><img src=\"gantry-media://pages/overview/page-01.jpg\" alt=\"image\" /></span>\n\t\t\t\t\t<h3><a href=\"error\">404 Error</a></h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\t<div class=\"clear\"></div><br />\n</div>"
+      twig: '0'
+      filter: '0'
+  position-position-2329:
+    title: MainBottom
+    attributes:
+      key: mainbottom-a
+  position-position-6823:
+    title: Extension
+    attributes:
+      key: extension-a
+  custom-2272:
+    title: 'More Details'
+    attributes:
+      title: 'More Details'
+      titletag: 'Help guides are available to assist'
+      html: ''
+      twig: '0'
+      filter: '0'
+    block:
+      class: 'rt-big-title rt-pages-bottom'
+      variations: center
+  custom-3219:
+    title: 'Custom HTML'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<p>All demo content is for sample purpose only, intended to show a live site. Use the <a href=\"#\">Hadron RocketLauncher</a> to install an equivalent of the demo onto your site.</p>\n<p>Hadron is only available as part of the Club Subscription.</p>\n\n<div class=\"gantry-width-block gantry-width-50\">\n\t<div class=\"gantry-width-spacer\">\n\t\t<div class=\"rt-footer-logo\"></div>\n\t</div>\n</div>\n\n<div class=\"gantry-width-block gantry-width-50\">\n\t<div class=\"gantry-width-spacer nomarginleft\">\n\t\t<span>+1-(678)-123-6789</span><br />\n\t\t<span>Hadron Center, LLC</span><br />\n\t\t<span>123 Joomla! Boulevard</span><br />\n\t\t<span>Seattle, WA 00000, USA</span><br />\n\t\t<span><a href=\"#\">hello@hadron.com</a></span>\n\t</div>\n</div>\n\n<div class=\"clear\"></div>"
+      twig: '0'
+      filter: '0'
+  custom-5072:
+    title: 'Custom HTML'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<div class=\"rt-email-form\">\n\t<form action=\"#\">\n\t\t<input type=\"text\" placeholder=\"Full Name\" size=\"18\" alt=\"fullname\" class=\"inputbox\" name=\"fullname\">\n\t\t<input type=\"text\" placeholder=\"Your Email\" size=\"28\" alt=\"email\" class=\"inputbox\" name=\"email\">\n\t\t<textarea placeholder=\"Your Message\" name=\"message\" cols=\"30\" rows=\"5\"></textarea>\n\t\t<input type=\"submit\" value=\"Send Message\" class=\"button\" name=\"send\">\n\t</form>\t\n</div>"
+      twig: '0'
+      filter: '0'

@@ -1,0 +1,104 @@
+.g-main-nav {
+        .g-standard {
+            .g-dropdown {
+                @include transition(none);
+            }
+
+            .g-fade.g-dropdown {
+                @include transition(opacity .3s ease-out, transform .3s ease-out);
+
+                .g-sublevel {
+                    > li {
+                        &.active {
+                            > .g-menu-item-container {
+                                @include transition(opacity .3s ease-out, transform .3s ease-out);
+                            }
+                        }    
+                    }
+                }
+            }
+
+            .g-zoom.g-active {
+                @include animation-duration(.3s);
+                @include animation-name(g-dropdown-zoom);
+            }
+
+            .g-fade-in-up.g-active {
+                @include animation-duration(.3s);
+                @include animation-name(g-dropdown-fade-in-up);
+            }
+        }
+
+        .g-fullwidth > {
+            .g-dropdown {
+                @include transition(none);
+            }
+
+            .g-fade.g-dropdown {
+                @include transition(opacity .3s ease-out, transform .3s ease-out);
+            }
+
+            .g-zoom.g-active {
+                @include animation-duration(.3s);
+                @include animation-name(g-dropdown-zoom);
+            }
+
+            .g-fade-in-up.g-active {
+                @include animation-duration(.3s);
+                @include animation-name(g-dropdown-fade-in-up);
+            }
+        }
+
+    // Menu Animation
+    .slot-animation & {
+        .g-toplevel {
+            > li {
+                > .g-menu-item-container {
+                    .g-menu-item-title {
+                        display: inline-block;
+                        position: relative;
+                        @include transition(all 0.2s ease-in);
+                        &:before {
+                            content: attr(data-hover);
+                            position: absolute;
+                            top: -60px;
+                            @include transform(translate3d(0, 0, 0));
+                        }
+                    }
+                    &:hover {
+                        .g-menu-item-title {
+                            @include transform(translateY(60px));
+                        }
+                    }
+                }
+                &:hover, &:focus, &.active:hover {
+                    > .g-menu-item-container {
+                        .g-menu-item-title {
+                            @include transform(translateY(60px));
+                        }
+                    }
+                }
+            }
+        }
+    }
+}    
+
+@include keyframes(g-dropdown-zoom) {
+    0% {
+        opacity: 0;
+        @include transform(scale3d(.8, .8, .8));
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@include keyframes(g-dropdown-fade-in-up) {
+    0% {
+        opacity: 0;
+        @include transform(translate3d(0, 30px, 0));
+    }
+    100% {
+        opacity: 1;
+    }
+}
