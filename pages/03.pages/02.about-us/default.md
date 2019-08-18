@@ -24,9 +24,9 @@ author:
 			<h3 class="rt-uppercase nomarginbottom">Spencer Hachmeister</h3>
 			<h5 class="nomargintop">Developer</h5>
 			<div class="rt-staff-social">
-				<a href="#"><span class="rt-facebook"></span></a>
+				<!--<a href="#"><span class="rt-facebook"></span></a>
 				<a href="#"><span class="rt-twitter"></span></a>
-				<a href="#"><span class="rt-gplus"></span></a>
+				<a href="#"><span class="rt-gplus"></span></a>-->
 			</div>
 		</div>
 	</div>
