@@ -35,7 +35,7 @@ author:
 	<div class="gantry-width-spacer">
 		<div class="rt-center">
 			<span class="rt-team-img">
-				<img src="gantry-media://rocketlauncher/pages/about-us/img-03.jpg" alt="image" />
+				<img src="https://avatars3.githubusercontent.com/u/6370350?s=400&v=4" alt="image" />
 			</span>	
 			<h3 class="rt-uppercase nomarginbottom">Joe Williams</h3>
 			<h5 class="nomargintop">Lead Developer</h5>
