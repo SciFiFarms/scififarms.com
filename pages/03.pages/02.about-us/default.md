@@ -14,6 +14,7 @@ author:
     alias: 'The Fighting Mongoose'
 ---
 
+<h1>About Us</h1>
 <div class="gantry-width-block gantry-width-25">
 	<div class="gantry-width-spacer">
 		<div class="rt-center">
