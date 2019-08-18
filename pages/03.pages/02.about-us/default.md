@@ -48,7 +48,7 @@ author:
 	</div>
 </div>
 
-<div class="gantry-width-block gantry-width-25">
+<!--<div class="gantry-width-block gantry-width-25">
 	<div class="gantry-width-spacer">
 		<div class="rt-center">
 			<span class="rt-team-img">
@@ -80,6 +80,6 @@ author:
 			</div>			
 		</div>
 	</div>
-</div>
+</div>-->
 
 <div class="clear"></div>
