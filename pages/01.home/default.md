@@ -5,10 +5,16 @@ body_classes: 'title-center title-h1h2'
 
 # Science Fiction Farms
 ## Why Sci-fi Farms?
-Something about why sci-fi farms (automation, computer integration, feed the world!)...
+The vision creating Sci-fi farms is to solve one of the world most pressing issues. How to grow food quickly in an efficent way.
+
+### Aeroponics
+
+### Seedships
+[Seedships](https://github.com/SciFiFarms/Seedship)
 
 ## TechnoCore
-Fundamentally TechnoCore is a stack built to support Home Assistant. It strives to make IoT cheap, easy, and secure. Ultimately, it will be used to automate a vertical farm. You can see more about the technology used to support this goal in the [overview](https://github.com/SciFiFarms/TechnoCore/blob/master/CONTRIBUTING.md#overview) on github.
+Fundamentally TechnoCore is a stack built to support Home Assistant. It strives to make IoT cheap, easy, and secure. Ultimately, it will be used to automate a vertical farm. You can see more about the technology used to support this goal in the [overview on github](https://github.com/SciFiFarms/TechnoCore/blob/master/CONTRIBUTING.md#overview).
+
 
 # Say Hello to Grav!
 ## installation successful...
