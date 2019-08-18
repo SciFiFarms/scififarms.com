@@ -8,7 +8,7 @@ body_classes: 'title-center title-h1h2'
 Something about why sci-fi farms (automation, computer integration, feed the world!)...
 
 ## TechnoCore
-Fundamentally TechnoCore is a stack built to support Home Assistant. It strives to make IoT cheap, easy, and secure. Ultimately, it will be used to automate a vertical farm. You can see more about the technology used to support this goal in the [Overview](https://github.com/SciFiFarms/TechnoCore/blob/master/CONTRIBUTING.md#overview) on github.
+Fundamentally TechnoCore is a stack built to support Home Assistant. It strives to make IoT cheap, easy, and secure. Ultimately, it will be used to automate a vertical farm. You can see more about the technology used to support this goal in the [overview](https://github.com/SciFiFarms/TechnoCore/blob/master/CONTRIBUTING.md#overview) on github.
 
 # Say Hello to Grav!
 ## installation successful...
