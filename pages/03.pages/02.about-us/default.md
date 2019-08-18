@@ -20,12 +20,12 @@ author:
 			<span class="rt-team-img">
 				<img src="gantry-media://rocketlauncher/pages/about-us/img-02.jpg" alt="image" />
 			</span>	
-			<h3 class="rt-uppercase nomarginbottom">Julia Smith</h3>
-			<h5 class="nomargintop">Co-Founder</h5>
+			<h3 class="rt-uppercase nomarginbottom">Spencer Hachmeister</h3>
+			<h5 class="nomargintop">Founder</h5>
 			<div class="rt-staff-social">
-				<a href="#"><span class="rt-facebook"></span></a>
+				<!--<a href="#"><span class="rt-facebook"></span></a>
 				<a href="#"><span class="rt-twitter"></span></a>
-				<a href="#"><span class="rt-gplus"></span></a>
+				<a href="#"><span class="rt-gplus"></span></a>-->
 			</div>
 		</div>
 	</div>
