@@ -18,7 +18,7 @@ author:
 	<div class="gantry-width-spacer">
 		<div class="rt-center">
 			<span class="rt-team-img">
-				<img src="gantry-media://rocketlauncher/pages/about-us/img-02.jpg" alt="image" />
+				<img src="https://avatars3.githubusercontent.com/u/6370350?s=400&v=4" alt="image" />
 			</span>	
 			<h3 class="rt-uppercase nomarginbottom">Spencer Hachmeister</h3>
 			<h5 class="nomargintop">Founder</h5>
@@ -35,14 +35,14 @@ author:
 	<div class="gantry-width-spacer">
 		<div class="rt-center">
 			<span class="rt-team-img">
-				<img src="https://avatars3.githubusercontent.com/u/6370350?s=400&v=4" alt="image" />
+				<img src="https://scontent.fapa1-1.fna.fbcdn.net/v/t1.0-9/21463247_10211281855856950_4748714929805495996_n.jpg?_nc_cat=106&_nc_oc=AQlttNPueOyzCQE6k92rrKtNNzAXACSOfjvlgmSBOA1fgyMvQrzWWwxATGAJscDnjvE&_nc_ht=scontent.fapa1-1.fna&oh=f0e3af740ad508005da025457dcfa43a&oe=5DCE9DED" alt="image" />
 			</span>	
-			<h3 class="rt-uppercase nomarginbottom">Joe Williams</h3>
-			<h5 class="nomargintop">Lead Developer</h5>
+			<h3 class="rt-uppercase nomarginbottom">Liz Simmons</h3>
+			<h5 class="nomargintop">Graphic Designer</h5>
 			<div class="rt-staff-social">
-				<a href="#"><span class="rt-facebook"></span></a>
+				<!--<a href="#"><span class="rt-facebook"></span></a>
 				<a href="#"><span class="rt-twitter"></span></a>
-				<a href="#"><span class="rt-gplus"></span></a>
+				<a href="#"><span class="rt-gplus"></span></a>-->
 			</div>			
 		</div>
 	</div>
