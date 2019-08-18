@@ -21,7 +21,7 @@ author:
 				<img src="https://avatars3.githubusercontent.com/u/6370350?s=400&v=4" alt="image" />
 			</span>	
 			<h3 class="rt-uppercase nomarginbottom">Spencer Hachmeister</h3>
-			<h5 class="nomargintop">Founder</h5>
+			<h5 class="nomargintop">Developer</h5>
 			<div class="rt-staff-social">
 				<!--<a href="#"><span class="rt-facebook"></span></a>
 				<a href="#"><span class="rt-twitter"></span></a>
