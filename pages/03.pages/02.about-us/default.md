@@ -10,8 +10,8 @@ process:
     twig: true
     markdown: false
 author:
-    username: admin
-    alias: RocketTheme
+    username: dave
+    alias: 'The Fighting Mongoose'
 ---
 
 <div class="gantry-width-block gantry-width-25">
