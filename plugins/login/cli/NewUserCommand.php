@@ -131,16 +131,11 @@ class NewUserCommand extends ConsoleCommand
                 return $value;
             });
 
-            $username = $helper->ask($this->input, $this->output, $question);
+            $data['username'] = $helper->ask($this->input, $this->output, $question);
         } else {
-            $username = $this->options['user'];
+            $data['username'] = $this->options['user'];
         }
 
-        $user = $users->load($username);
-        if ($user->exists()) {
-            $this->output->writeln('<red>Failure!</red> User <cyan>' . $data['username'] . '</cyan> already exists!');
-            exit();
-        }
 
         if (!$this->options['password1']) {
             // Get password and validate
@@ -153,9 +148,9 @@ class NewUserCommand extends ConsoleCommand
                 });
             });
 
-            $user->set('password', $password);
+            $data['password'] = $password;
         } else {
-            $user->set('password', $this->options['password1']);
+            $data['password'] = $this->options['password1'];
         }
 
         if (!$this->options['email']) {
@@ -165,9 +160,9 @@ class NewUserCommand extends ConsoleCommand
                 return $this->validate('email', $value);
             });
 
-            $user->set('email', $helper->ask($this->input, $this->output, $question));
+            $data['email'] = $helper->ask($this->input, $this->output, $question);
         } else {
-            $user->set('email', $this->options['email']);
+            $data['email'] = $this->options['email'];
         }
 
         if (!$this->options['permissions']) {
@@ -186,34 +181,14 @@ class NewUserCommand extends ConsoleCommand
 
         switch ($permissions_choice) {
             case 'a':
-                $access = [
-                    'admin' => [
-                        'login' => true,
-                        'super' => true
-                    ]
-                ];
+                $data['access']['admin'] = ['login' => true, 'super' => true];
                 break;
             case 's':
-                $access = [
-                    'site' => [
-                        'login' => true
-                    ]
-                ];
+                $data['access']['site'] = ['login' => true];
                 break;
             case 'b':
-                $access = [
-                    'admin' => [
-                        'login' => true,
-                        'super' => true
-                    ],
-                    'site' => [
-                        'login' => true
-                    ]
-                ];
-        }
-
-        if (isset($access)) {
-            $user->set('access', $access);
+                $data['access']['admin'] = ['login' => true, 'super' => true];
+                $data['access']['site']  = ['login' => true];
         }
 
         if (!$this->options['fullname']) {
@@ -223,18 +198,18 @@ class NewUserCommand extends ConsoleCommand
                 return $this->validate('fullname', $value);
             });
 
-            $user->set('fullname', $helper->ask($this->input, $this->output, $question));
+            $data['fullname'] = $helper->ask($this->input, $this->output, $question);
         } else {
-            $user->set('fullname', $this->options['fullname']);
+            $data['fullname'] = $this->options['fullname'];
         }
 
 
         if (!$this->options['title'] && !count(array_filter($this->options))) {
             // Get title
             $question      = new Question('Enter a <yellow>title</yellow>:    ');
-            $user->set('title', $helper->ask($this->input, $this->output, $question));
+            $data['title'] = $helper->ask($this->input, $this->output, $question);
         } else {
-            $user->set('title', $this->options['title']);
+            $data['title'] = $this->options['title'];
         }
 
         if (!$this->options['state'] && !count(array_filter($this->options))) {
@@ -246,18 +221,24 @@ class NewUserCommand extends ConsoleCommand
             );
 
             $question->setErrorMessage('State %s is invalid.');
-            $user->set('state', $helper->ask($this->input, $this->output, $question));
+            $data['state'] = $helper->ask($this->input, $this->output, $question);
         } else {
-            $user->set('state', $this->options['state'] ?: 'enabled');
+            $data['state'] = $this->options['state'] ?: 'enabled';
         }
 
-        $user->validate();
+        $user = $users->load($data['username']);
+        if ($user->exists()) {
+            $this->output->writeln('<red>Failure!</red> User <cyan>' . $data['username'] . '</cyan> already exists!');
+            exit();
+        }
+
+        $user->update($data);
         $user->save();
 
         $this->invalidateCache();
 
         $this->output->writeln('');
-        $this->output->writeln('<green>Success!</green> User <cyan>' . $user->username . '</cyan> created.');
+        $this->output->writeln('<green>Success!</green> User <cyan>' . $data['username'] . '</cyan> created.');
     }
 
     /**
