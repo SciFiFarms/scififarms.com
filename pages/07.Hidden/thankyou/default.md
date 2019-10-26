@@ -1,5 +1,5 @@
 ---
-title: Thank you!
+title: 'Thank you!'
 ---
 
 # Thank you!
