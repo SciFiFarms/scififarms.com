@@ -1,0 +1,103 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+    {% block layout %}
+
+        <div class="{{ particle.class|e }} g-owlcarousel-lists g-owlcarousel-lists-{{ particle.displayitems }}-items">
+            {% if particle.title or particle.description %}
+                <div class="g-grid">
+                    <div class="g-block">
+                            {% if particle.title %}<h2 class="title">{{ particle.title|html|raw }}</h2>{% endif %}
+                            {% if particle.description %}<div class="g-owlcarousel-description">{{ particle.description|html|raw }}</div>{% endif %}
+                    </div>
+                </div>
+            {% endif %}
+
+            <div id="g-owlcarousel-{{ id }}" data-owlcarousel-id="g-owlcarousel-{{ id }}" class="g-owlcarousel owl-carousel">
+
+                {% for row in particle.items|batch(particle.displayitems) %}
+                    <div class="item">
+                        {% for item in row  %}
+                            <div class="g-owlcarousel-item">
+                                {% if item.title %}
+                                    <h4 class="g-owlcarousel-item-title{% if particle.accordion == 'enabled' %} padding{% endif %}">
+
+
+                                    {% if particle.accordion == 'enabled' %}<span class="indicator"><span>+</span></span>{% endif %}
+
+                                        {{ item.title|html|raw }}
+
+                                    </h4>
+                                {% endif %}
+
+                                {% if item.desc %}
+                                    <div class="g-owlcarousel-content">
+
+                                        {% if item.desc %}
+                                            <div class="g-owlcarousel-item-desc">
+                                                {% if item.desc %}<p>{{ item.desc|html|raw }}</p>{% endif %}
+                                            </div>
+                                        {% endif %}
+
+                                        {% if item.link %}
+                                            <a href="{{ item.link|e }}" class="{{ item.buttonclass|e }}" target="{{ item.buttontarget|default('_self')|e }}"><span>{{ item.linklabel|default('Read More') }}</span></a>
+                                        {% endif %}         
+                                        
+                                    </div>
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+
+    {% endblock %}
+{% endblock %}
+
+{% block javascript %}
+    {% do gantry.load('jquery') %}
+    {% if particle.accordion == 'enabled' %}
+        <script src="{{ url('gantry-theme://js/juihelper.js') }}"></script>
+    {% endif %}
+{% endblock %}
+
+{% block javascript_footer %}
+    <script src="{{ url('gantry-theme://js/owl.carousel.min.js') }}"></script>
+    <script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery('#g-owlcarousel-{{ id }}').owlCarousel({
+            items: 1,
+            rtl: {% if gantry.page.direction == 'rtl' %}true{% else %}false{% endif %},
+            nav: false,
+            dots: false,
+            loop: false,
+            {% if particle.autoplay == 'enabled' %}
+            autoplay: true,
+            autoplayTimeout: {{ particle.autoplaySpeed|default('5000') }},
+            {% if particle.pauseOnHover == 'enabled' %}
+            autoplayHoverPause: true,
+            {% else %}
+            autoplayHoverPause: false,
+            {% endif %}
+            {% else %}
+            autoplay: false,
+            {% endif %}
+            URLhashListener: true,
+        })
+    });
+
+    jQuery(document).ready(function () {
+        jQuery("#g-owlcarousel-{{ id }}").accordion({
+            heightStyle: "content",
+            header: ".g-owlcarousel-item-title",
+            collapsible: true,
+            active: {{ particle.active }},
+            beforeActivate: function (event, ui) {
+                window.dispatchEvent(new Event('resize'));
+            }
+        })
+    });
+    </script>
+{% endblock %}

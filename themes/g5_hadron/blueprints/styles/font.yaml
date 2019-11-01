@@ -1,0 +1,11 @@
+name: Font Families
+description: Font families for the Hadron theme
+type: core
+
+form:
+  fields:
+
+    family-default:
+      type: input.fonts
+      label: Default Font
+      default: 'notosans, Verdana, Helvetica, Arial, sans-serif'

@@ -1,0 +1,19 @@
+name: Base Styles
+description: Base styles for the Hadron theme
+type: core
+
+form:
+  fields:
+
+    background:
+      type: input.colorpicker
+      label: Base Background
+      default: "#27292b"
+    text-color:
+      type: input.colorpicker
+      label: Base Text Color
+      default: "#bbbbbb"
+    border-radius:
+      type: input.text
+      label: Border Radius
+      default: "5px"

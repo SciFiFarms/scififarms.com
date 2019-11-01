@@ -1,0 +1,17 @@
+name: Menu
+description: Set menu style configuration options.
+type: configuration
+
+form:
+  fields:
+
+    animation:
+      type: select.selectize
+      label: Dropdown Animation
+      description: Select the dropdown animation.
+      default: g-fade
+      options:
+        g-no-animation: No Animation
+        g-fade: Fade
+        g-zoom: Zoom
+        g-fade-in-up: Fade In Up

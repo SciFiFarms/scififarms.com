@@ -1,0 +1,116 @@
+.g-pricingtable-col-item {
+    float: left;
+
+    .g-pricingtable-1-col & {
+        width: 100%;
+    }
+
+    .g-pricingtable-2-col & {
+        width: 50%;
+    }
+
+    .g-pricingtable-3-col & {
+        width: 33.33333%;
+    }
+
+    .g-pricingtable-4-col & {
+        width: 25%;
+
+        @include breakpoint(tablet-range) {
+            width: 50%;
+        }
+    }
+
+    .g-pricingtable-5-col & {
+        width: 20%;
+    }
+
+    .g-pricingtable-6-col & {
+        width: 16.66667%;
+    }
+
+    @include breakpoint(mobile-only) {
+        width: 100% !important;
+    }
+}
+
+.g-pricingtable-footertext {
+    margin-bottom: $content-margin + $content-padding;
+}
+
+.g-pricingtable {
+    clear: both;
+    background: darken($main-background, 8%);
+    border: 1px solid darken($main-background, 15%);
+    border-radius: 4px;
+    margin: 0;
+    list-style: none;
+
+    @include breakpoint(mobile-only) {
+        margin-top: 10px;
+    }
+
+    &.rt-table-highlight {
+        .g-pricingtable-plan {
+            color: $white;
+            background: $accent-color-1;
+            margin-top: -50px;
+            padding: 50px;
+            border-radius: 4px 4px 0 0;
+
+            @include breakpoint(mobile-only) {
+                margin-top: 0;
+            }
+        }
+
+        .g-pricingtable-value {
+            color: $white;
+            background: darken($accent-color-1, 10%);
+        }    
+    }
+
+    li {
+        padding: 15px 25px;
+        position: relative;
+    }
+
+    .g-pricingtable-item {
+        padding: 10px 0;
+    }
+
+    .g-pricingtable-plan {
+        font-size: 1.2em;
+        text-transform: uppercase;
+        color: $main-text-color;
+        background: darken($main-background, 3%);
+        padding: 25px;
+    }
+
+    .g-pricingtable-price {
+        font-size: 3em;
+        vertical-align: top;
+    }
+
+    .g-pricingtable-value {
+        color: $main-text-color;
+        background: darken($main-background, 3%);
+        padding: 40px 0 25px 0;
+        border-bottom: 1px solid darken($main-background, 15%);
+        margin-bottom: 15px;
+    }
+
+    .g-pricingtable-decimal {
+        font-size: 1.8em;
+        line-height: 0;
+    }
+
+    .g-pricingtable-period {
+        display: block;
+        margin-top: 15px;
+        font-size: $base-font-size;
+    }
+
+    .g-pricingtable-cta {
+        margin-top: 15px;
+    }
+}
