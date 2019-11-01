@@ -1,0 +1,37 @@
+.g-tabimage {
+	.g-tab-image {
+		position: relative;
+		margin-bottom: 1rem;
+		&:hover {
+			.g-tab-image-overlay {
+				opacity: 1;
+				@include transform(scale(1));
+			}
+		}
+	}
+	.g-tab-image-overlay {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		margin: 0;
+		right: 0;
+		top: 0;
+		background: fadeout($accent-color-1, 25%);
+		opacity: 0;
+		@include transform(scale(0));
+		@include transition(all 0.25s ease);
+		.readon {
+			color: $white;
+			font-family: get-font-family($font-family-default);
+			font-weight: $font-weight-bold;
+			text-transform: uppercase;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include transform(translate(-50%, -50%));
+			@include breakpoint(tablet-range) {
+				font-size: $base-font-size - 0.1;
+			}
+		}
+	}
+}

@@ -1,0 +1,94 @@
+name: MailChimp
+description: Display MailChimp newsletter form.
+type: particle
+icon: fa-file-text-o
+
+configuration:
+  caching:
+    type: static
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable particle.
+      default: true
+
+    info:
+      type: separator.note
+      class: alert
+      content: 'You need to register account on <a href="http://mailchimp.com/">mailchimp.com</a> and copy form embed action url into field below.'
+
+    action:
+      type: input.text
+      label: Form Action URL
+      description: Enter mailchimp Embedded forms action url.
+      placeholder: Enter url
+      default: https://rockettheme.us18.list-manage.com/subscribe/post?u=b35dd217b76653582e6741a63&amp;id=80179a67c0
+
+    class:
+      type: input.selectize
+      label: CSS Classes
+      description: CSS class name for the particle.
+
+    layout:
+      type: select.selectize
+      label: Layout
+      description: Choose the layout.
+      default: g-newsletter-stack-fullwidth
+      options:
+        g-newsletter-stack-fullwidth: Stack Fullwidth
+        g-newsletter-stack-compact: Stack Compact
+        g-newsletter-aside: Aside
+
+    style:
+      type: select.selectize
+      label: Style
+      description: Choose the style for the Input Box and Button.
+      default: g-newsletter-rounded
+      options:
+        g-newsletter-square: Square
+        g-newsletter-rounded: Rounded
+
+    link:
+      type: input.text
+      label: Link
+      description: Customize the link.
+
+    icon:
+      type: input.icon
+      label: Icon
+      description: Pick an icon.
+
+    title:
+      type: input.text
+      label: Title
+      description: Customize the title text.
+      placeholder: Enter title
+
+    headtext:
+      type: textarea.textarea
+      label: Heading Text
+      description: Customize the heading text.
+      placeholder: Enter short heading text
+
+    inputboxtext:
+      type: input.text
+      label: InputBox Text
+      description: Customize the InputBox text.
+      placeholder: Your email address...
+      default: Your email address...
+      
+    buttontext:
+      type: input.text
+      label: Button Text
+      description: Customize the Button text.
+      placeholder: Subscribe
+      default: Subscribe
+
+    buttonclass:
+      type: input.selectize
+      label: Button Classes
+      description: CSS class name for the join button.
+      default: 'button-xlarge'

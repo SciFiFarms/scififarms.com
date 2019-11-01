@@ -1,0 +1,99 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: _offline
+  timestamp: 1555442523
+layout:
+  /header/:
+    -
+      - logo-9204
+    -
+      - 'spacer-8199 20'
+      - 'custom-1467 60'
+      - 'spacer-2663 20'
+  /subscription-form/:
+    -
+      - 'spacer-2764 33.3'
+      - 'mailchimp-2304 33.3'
+      - 'spacer-5894 33.3'
+  /authorized-form/:
+    -
+      - custom-4776
+    -
+      - login-5002
+  copyright: {  }
+  offcanvas: {  }
+structure:
+  header:
+    attributes:
+      boxed: ''
+  subscription-form:
+    type: section
+    title: 'Subscription Form'
+    attributes:
+      boxed: '3'
+      class: ''
+      variations: nomarginall
+  authorized-form:
+    type: section
+    title: 'Authorized Form'
+    attributes:
+      boxed: '3'
+      class: rt-authorized-form
+      variations: nomarginall
+  copyright:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+content:
+  logo-9204:
+    attributes:
+      image: 'gantry-media://logo/preset1/logo.png'
+      class: g-logo
+    block:
+      variations: 'nomarginbottom center'
+  custom-1467:
+    title: 'Custom HTML'
+    attributes:
+      title: 'Our Website is Temporarily Offline'
+      titletag: ''
+      html: 'This site is down for maintenance. Please check back again soon.'
+      twig: '0'
+      filter: '0'
+    block:
+      variations: center
+  mailchimp-2304:
+    title: MailChimp
+    attributes:
+      layout: g-newsletter-aside
+      title: 'Get Notified When We Release'
+      inputboxtext: 'Email Address'
+    block:
+      variations: 'center nopaddingall'
+  custom-4776:
+    title: 'Custom HTML'
+    attributes:
+      title: 'Authorized Login'
+      titletag: ''
+      html: ''
+      twig: '0'
+      filter: '0'
+    block:
+      class: 'nopaddingbottom rt-authorized-form-title nopaddingtop'
+      variations: center
+  login-5002:
+    attributes:
+      title: ''
+      forgot: disabled
+    block:
+      id: rt-authorized-form
+      variations: nopaddingtop

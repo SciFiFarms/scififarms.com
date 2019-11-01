@@ -1,0 +1,225 @@
+details:
+  name: Hadron
+  version: '2.0.0'
+  icon: paper-plane
+  date: 'May 29, 2019'
+  author:
+    name: RocketTheme, LLC
+    email: support@rockettheme.com
+    link: http://www.rockettheme.com
+
+  documentation:
+    link: http://docs.gantry.org/gantry5
+
+  support:
+    link: https://gitter.im/gantry/gantry5
+
+  updates:
+    link: http://updates.rockettheme.com/themes/hadron.yaml
+
+  copyright: (C) 2007 - 2019 RocketTheme, LLC. All rights reserved.
+  license: GPLv2
+  description: Hadron Theme
+  images:
+    thumbnail: admin/images/preset1.png
+    preview: admin/images/preset1.png
+
+configuration:
+  gantry:
+    platform: grav
+    engine: nucleus
+
+  theme:
+    parent: g5_hadron
+    base: gantry-theme://common
+    file: gantry-theme://include/theme.php
+    class: \Gantry\Framework\Theme
+
+  fonts:
+    notosans:
+      400: 'gantry-theme://fonts/notosans/NotoSans-Regular-webfont'
+
+
+  css:
+    compiler: \Gantry\Component\Stylesheet\ScssCompiler
+    target: gantry-theme://css-compiled
+    paths:
+      - gantry-theme://scss
+      - gantry-engine://scss
+    files:
+      - hadron
+      - hadron-grav
+      - custom
+    persistent:
+      - hadron
+    overrides:
+      - hadron-grav
+      - custom
+
+  section-variations: 
+    Padding Variations:
+      section-vertical-paddings: Section Vertical Paddings
+      section-horizontal-paddings: Section Horizontal Paddings
+      section-vertical-paddings-large: Large Vertical Paddings
+      section-horizontal-paddings-large: Large Horizontal Paddings
+      section-vertical-paddings-small: Small Vertical Paddings
+      section-horizontal-paddings-small: Small Horizontal Paddings
+      xlargemarginall: Extra Large Margin All
+      xlargepaddingall: Extra Large Padding All
+      xlargemargintop: Extra Large Margin Top
+      xlargepaddingtop: Extra Large Padding Top
+      xlargemarginbottom: Extra Large Margin Bottom
+      xlargepaddingbottom: Extra Large Padding Bottom
+      xlargemarginleft: Extra Large Margin Left
+      xlargepaddingleft: Extra Large Padding Left
+      xlargemarginright: Extra Large Margin Right
+      xlargepaddingright: Extra Large Padding Right
+      largemarginall: Large Margin All
+      largepaddingall: Large Padding All
+      largemargintop: Large Margin Top
+      largepaddingtop: Large Padding Top
+      largemarginbottom: Large Margin Bottom
+      largepaddingbottom: Large Padding Bottom
+      largemarginleft: Large Margin Left
+      largepaddingleft: Large Padding Left
+      largemarginright: Large Margin Right
+      largepaddingright: Large Padding Right
+      medmarginall: Medium Margin All
+      medpaddingall: Medium Padding All
+      medmargintop: Medium Margin Top
+      medpaddingtop: Medium Padding Top
+      medmarginbottom: Medium Margin Bottom
+      medpaddingbottom: Medium Padding Bottom
+      medmarginleft: Medium Margin Left
+      medpaddingleft: Medium Padding Left
+      medmarginright: Medium Margin Right
+      medpaddingright: Medium Padding Right
+      smallmarginall: Small Margin All
+      smallpaddingall: Small Padding All
+      smallmargintop: Small Margin Top
+      smallpaddingtop: Small Padding Top
+      smallmarginbottom: Small Margin Bottom
+      smallpaddingbottom: Small Padding Bottom
+      smallmarginleft: Small Margin Left
+      smallpaddingleft: Small Padding Left
+      smallmarginright: Small Margin Right
+      smallpaddingright: Small Padding Right
+    Remove Padding / Margin:
+      nomarginall: No Margin All
+      nopaddingall: No Padding All
+      nomargintop: No Margin Top 
+      nopaddingtop: No Padding Top 
+      nomarginbottom: No Margin Bottom
+      nopaddingbottom: No Padding Bottom
+      nomarginleft: No Margin Left
+      nopaddingleft: No Padding Left
+      nomarginright: No Margin Right 
+      nopaddingright: No Padding Right       
+
+  block-variations:
+    Title Variations:
+      title1: Title 1
+      title2: Title 2
+      title3: Title 3
+      title4: Title 4
+    Box Variations:
+      box1: Box 1
+      box2: Box 2
+      box3: Box 3
+      box4: Box 4
+    Effects:
+      spaced: Spaced
+      bordered: Bordered
+      shadow: Shadow 1
+      shadow2: Shadow 2
+      rounded: Rounded
+      square: Square
+    Utility:
+      equal-height: Equal Height
+      g-outer-box: Outer Box
+      disabled: Disabled
+      align-right: Align Right
+      align-left: Align Left
+      title-center: Centered Title
+      center: Center
+      nomodulecontent: No Module Content
+      xlargemarginall: Extra Large Margin All
+      xlargepaddingall: Extra Large Padding All
+      xlargemargintop: Extra Large Margin Top
+      xlargepaddingtop: Extra Large Padding Top
+      xlargemarginbottom: Extra Large Margin Bottom
+      xlargepaddingbottom: Extra Large Padding Bottom
+      xlargemarginleft: Extra Large Margin Left
+      xlargepaddingleft: Extra Large Padding Left
+      xlargemarginright: Extra Large Margin Right
+      xlargepaddingright: Extra Large Padding Right
+      largemarginall: Large Margin All
+      largepaddingall: Large Padding All
+      largemargintop: Large Margin Top
+      largepaddingtop: Large Padding Top
+      largemarginbottom: Large Margin Bottom
+      largepaddingbottom: Large Padding Bottom
+      largemarginleft: Large Margin Left
+      largepaddingleft: Large Padding Left
+      largemarginright: Large Margin Right
+      largepaddingright: Large Padding Right
+      medmarginall: Medium Margin All
+      medpaddingall: Medium Padding All
+      medmargintop: Medium Margin Top
+      medpaddingtop: Medium Padding Top
+      medmarginbottom: Medium Margin Bottom
+      medpaddingbottom: Medium Padding Bottom
+      medmarginleft: Medium Margin Left
+      medpaddingleft: Medium Padding Left
+      medmarginright: Medium Margin Right
+      medpaddingright: Medium Padding Right
+      smallmarginall: Small Margin All
+      smallpaddingall: Small Padding All
+      smallmargintop: Small Margin Top
+      smallpaddingtop: Small Padding Top
+      smallmarginbottom: Small Margin Bottom
+      smallpaddingbottom: Small Padding Bottom
+      smallmarginleft: Small Margin Left
+      smallpaddingleft: Small Padding Left
+      smallmarginright: Small Margin Right
+      smallpaddingright: Small Padding Right
+    Remove Padding / Margin:  
+      nomarginall: No Margin All
+      nopaddingall: No Padding All
+      nomargintop: No Margin Top 
+      nopaddingtop: No Padding Top 
+      nomarginbottom: No Margin Bottom
+      nopaddingbottom: No Padding Bottom
+      nomarginleft: No Margin Left
+      nopaddingleft: No Padding Left
+      nomarginright: No Margin Right 
+      nopaddingright: No Padding Right
+
+admin:
+  styles:
+    core:
+      - base
+      - accent
+      - font
+    section:
+      - navigation
+      - slideshow
+      - topfullwidth
+      - top
+      - showcase
+      - breadcrumb
+      - feature
+      - utility
+      - expandedtop
+      - maintop
+      - main            
+      - mainbottom
+      - expandedbottom
+      - fullwidth
+      - extension
+      - bottom
+      - footer
+      - copyright
+      - offcanvas
+    configuration:
+      - breakpoints

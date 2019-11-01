@@ -1,0 +1,101 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+    {% block layout %}
+
+        <div class="{{ particle.class|e }} g-owlcarousel-headlines">
+            {% if particle.title or particle.description %}
+                <div class="g-grid">
+                    <div class="g-block">
+                        <div class="g-content g-owlcarousel-header">
+                            {% if particle.title %}<h2 class="g-title">{{ particle.title }}</h2>{% endif %}
+                            {% if particle.description %}<div class="g-owlcarousel-description">{{ particle.description|html|raw }}</div>{% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+
+            <div class="headlines-container">
+
+                {% if particle.label %}
+                    <div class="headlines-badge">
+                        <span>{{ particle.label|e }}</span>
+                    </div>
+                {% endif %}
+
+                <div id="g-owlcarousel-{{ id }}" data-owlcarousel-id="g-owlcarousel-{{ id }}" class="g-owlcarousel owl-carousel">
+
+                    {% for item in particle.items %}
+                        <div class="item">
+                            {% if item.image or item.desc or item.link %}
+                                <div class="g-owlcarousel-content">
+                                    {% if item.image %}
+                                        <div class="g-owlcarousel-item-image">
+                                            <img src="{{ url(item.image)|e }}" alt="{{ item.desc|e }}" />
+                                        </div>
+                                    {% endif %}
+
+                                    {% if item.desc %}
+                                        <div class="g-owlcarousel-item-desc">
+                                            {% if item.desc %}
+                                                {% if item.link %}
+                                                    <a href="{{ item.link|e }}" class="g-headlines-desc">
+                                                {% else %}
+                                                    <span class="g-headlines-desc">
+                                                {% endif %}
+
+                                                {{ item.desc|html|raw }}
+
+                                                {% if item.link %}
+                                                    </a>
+                                                {% else %}
+                                                    </span>
+                                                {% endif %}
+                                            {% endif %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+
+    {% endblock %}
+{% endblock %}
+
+{% block javascript_footer %}
+    {% do gantry.load('jquery') %}
+    <script src="{{ url('gantry-theme://js/owl.carousel.min.js') }}"></script>
+    <script type="text/javascript">
+    jQuery(document).ready(function () {
+        var owl{{ id|replace({'-':'_'}) }} = jQuery('#g-owlcarousel-{{ id }}');
+        owl{{ id|replace({'-':'_'}) }}.owlCarousel({
+            items: 1,
+            rtl: {% if gantry.page.direction == 'rtl' %}true{% else %}false{% endif %},
+            dots: false,
+            {% if particle.nav == 'enabled' %}
+            nav: true,
+            navText: ['<span>&lsaquo;</span>', '<span>&rsaquo;</span>'],
+            {% else %}
+            nav: false,
+            {% endif %}
+            loop: true,
+            {% if particle.autoplay == 'enabled' %}
+            autoplay: true,
+            autoplayTimeout: {{ particle.autoplaySpeed|default('5000') }},
+            {% if particle.pauseOnHover == 'enabled' %}
+            autoplayHoverPause: true,
+            {% else %}
+            autoplayHoverPause: false,
+            {% endif %}
+            {% else %}
+            autoplay: false,
+            {% endif %}
+            URLhashListener: true,
+        })
+    });
+    </script>
+{% endblock %}

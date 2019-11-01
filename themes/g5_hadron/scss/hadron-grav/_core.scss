@@ -1,0 +1,8 @@
+.list-blog {
+	.list-item {
+    	margin-bottom: 0;
+	}
+	+ .pagination li {
+		line-height: 25px;
+	}
+}

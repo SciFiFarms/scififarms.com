@@ -1,0 +1,57 @@
+preset1:
+  image: 'gantry-admin://images/preset1.png'
+  description: 'Preset 1'
+  colors:
+    - '#86dbc8'
+    - '#34ae93'
+  styles:    
+    base:
+      background: '#27292b'
+      text-color: '#bbbbbb'
+      border-radius: '5px'
+    accent:
+      color-1: '#86dbc8'
+      color-2: '#34ae93'
+    button:
+      background: '#86dbc8'
+      text-color: '#314f49'
+    font:
+      family-default: 'notosans, Verdana, Helvetica, Arial, sans-serif'
+    navigation:
+      background: '#191a1c'
+      text-color: '#bbbbbb'
+    showcase:
+      background: '#191a1c'
+      text-color: '#bbbbbb' 
+    utility:
+      background: '#1f2022'
+      text-color: '#bbbbbb'      
+    feature:
+      background: '#191a1c'
+      text-color: '#bbbbbb'
+    maintop:
+      background: '#131315'
+      text-color: '#bbbbbb'
+    main:
+      background: '#27292b'
+      text-color: '#bbbbbb'   
+    mainbottom:
+      background: '#27292b'
+      text-color: '#bbbbbb'
+    extension:
+      background: '#27292b'
+      text-color: '#bbbbbb'
+    bottom:
+      background: '#191a1c'
+      text-color: '#bbbbbb'
+    footer:
+      background: '#191a1c'
+      text-color: '#bbbbbb'
+    copyright:
+      background: '#191a1c'
+      text-color: '#bbbbbb'
+    offcanvas:
+      background: '#191a1c'
+      text-color: '#ffffff'
+      toggle-color: '#191a1c'
+      

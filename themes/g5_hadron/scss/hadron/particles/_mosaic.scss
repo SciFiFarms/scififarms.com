@@ -1,0 +1,312 @@
+.g-mosaic {
+    position: relative;
+
+    // Header
+    .g-mosaic-header {
+        @include display(flex);
+        @include align-items(center);
+        position: relative;
+        margin-bottom: 15px;
+
+        @include breakpoint(mobile-only) {
+            display: block;
+        }
+
+        // Title
+        .g-mosaic-title {
+            @include responsive-font($responsive-font-size + 1.7, $base-font-size, false, false);
+            font-weight: $font-weight-bold;
+            color: $base-text-color;
+            padding-right: $content-padding;
+
+            @include breakpoint(mobile-only) {
+                text-align: center;
+                padding-right: 0;
+            }
+        }
+
+        // Navigation
+        .g-mosaic-nav {
+            position: relative;
+
+            i {
+                display: none;
+                position: absolute;
+                top: 1rem;
+                left: $content-margin;
+
+                @include breakpoint(mobile-only) {
+                    display: block;
+                    top: 0.75rem;
+                }
+            }
+
+            // Mobile menu
+            @include breakpoint(mobile-only) {
+                min-height: 6rem;
+                width: 100%;
+            }
+
+            .g-mosaic-nav-container {
+                @include display(flex);
+                @include justify-content(center);
+                margin-bottom: 10px;
+
+                .fa {
+                    color: $black;
+                }
+
+                // Mobile menu
+                @include breakpoint(mobile-only) {
+                    @include flex-direction(column);
+                    width: 50%;
+                    padding: 5px 0;
+                    position: absolute;
+                    right: 0;
+                    left: 0;
+                    margin: 0 auto;
+                    border: solid 1px #aaa;
+                    background: $white;
+                    z-index: 15;
+                    margin-top: 1rem;
+                }
+            }
+
+            // Item
+            .g-mosaic-nav-item {
+                border: 2px solid transparent;
+                text-transform: uppercase;
+                cursor: pointer;
+                position: relative;
+                margin-right: 5px;
+                padding: 8px 25px;
+                border-radius: $base-border-radius;
+                @include responsive-font($responsive-font-size - 0.3, $base-font-size, false, false);
+                opacity: 0.7;
+
+                .rt-overlay-dark & {
+                    color: $white;
+                }
+                .rt-overlay-light & {
+                    color: $dark-grey;
+                }
+
+                &.selected, &:hover {
+                    .rt-overlay-dark & {
+                        border: 2px solid $white;
+                    }
+                    .rt-overlay-light & {
+                        border: 2px solid $dark-grey;
+                    }
+
+                    @include breakpoint(mobile-only) {
+                        border: none !important;
+                        color: $black;
+                    }
+                }
+
+                &.clicked {
+                    @include breakpoint(mobile-only) {
+                        border: none !important;
+                        color: $black;
+                    } 
+                }
+
+                @include breakpoint(mobile-only) {
+                    display: none;
+                    padding: $content-margin - 0.425 $content-padding + 1;
+                }
+                &.selected {
+                    opacity: 1;
+                    @include breakpoint(mobile-only) {
+                        display: block;
+                    }
+                }
+                &.clicked {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    // Grid Settings
+    .g-mosaic-grid {
+        margin: 0 -($content-padding - 0.5);
+        overflow: visible !important;
+
+        // Item & Item content
+        .g-mosaic-grid-item {
+            will-change: auto !important;
+
+            .g-mosaic-grid-item-wrapper {
+                margin: $content-padding - 0.3;
+                padding: $content-padding;
+                border-radius: $base-border-radius;
+                position: relative;
+                @include display(flex);
+                @include flex-direction(column);
+
+                .rt-overlay-dark & {
+                    border: 2px solid $white;
+                }
+                .rt-overlay-light & {
+                    border: 2px solid $dark-grey;
+                }
+
+                &:before {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                    content: '';
+                    top: 0;
+                    @include transition(background-color 0.5s);
+                    border-radius: 0.4rem;
+                }
+
+                .g-mosaic-image-container {
+                    margin-bottom: 10px;
+                    position: relative;
+
+                    img {
+                        min-height: 1px;
+                        border-radius: $base-border-radius;
+                    }
+
+                    .g-mosaic-hover {
+                        background: rgba(0, 0, 0, 0.5);
+                        bottom: 0;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                    }
+
+                    .g-mosaic-hovercontent {
+                        text-align: center;
+                        top: 50%;
+                        width: 100%;
+                        display: block;
+                        color: #ffffff;         
+                    }
+
+                    .g-mosaic-hovercontent, .g-mosaic-hover {
+                        position: absolute;
+                        @include transition(opacity 0.1s ease-in);
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+
+                    &:hover {
+                        .g-mosaic-hover, .g-mosaic-hovercontent {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+
+                // Layouts and variations
+                &.g-mosaic-variation-light {
+                    color: $white;
+                }
+                &.g-mosaic-layout-default-bottom {
+                    .g-mosaic-grid-item-content {
+                        bottom: 0;
+                    }
+                }
+                &.g-mosaic-layout-alt-top, &.g-mosaic-layout-alt-bottom {
+                    .g-mosaic-grid-item-content {
+                        position: relative;
+                    }
+                }
+                &.g-mosaic-layout-alt-bottom {
+                    @include flex-direction(column-reverse);
+                }
+            }
+
+            .g-mosaic-grid-item-content {
+                position: absolute;
+                left: 0;
+                text-align: left;
+                z-index: 2;
+                @include transition(color 0.5s);
+
+                .g-mosaic-grid-item-title {
+                    font-size: 1em;
+                    line-height: 1;
+                }
+                .g-mosaic-grid-item-subtitle {
+                    margin: 15px 0;
+                }
+                .readon {
+                    display: table;
+                    margin: 15px 0;
+                    white-space: nowrap;
+                    font-weight: normal;
+                }
+                .g-mosaic-tag {
+                    display: inline-block;
+                    margin-right: 1px;
+                    padding: 2px 8px;
+                    font-size: 0.8em;
+                    color: $white;
+                    background: rgba(0, 0, 0, 0.5);
+                    border-radius: $base-border-radius;
+                    text-transform: lowercase;
+                    font-style: italic;
+                }
+            }
+        }
+
+        // Column layout
+        // 2 Columns
+        &.cols-2 {
+            .g-mosaic-grid-item, .g-mosaic-grid-sizer, {
+                width: 50%;
+
+                @include breakpoint(mobile-only) {
+                    width: 100%;
+                }
+            }
+        }
+        // 3 Columns
+        &.cols-3 {
+            .g-mosaic-grid-item, .g-mosaic-grid-sizer, {
+                width: 33.3%;
+
+                @include breakpoint(tablet-range) {
+                    width: 50%;
+                }
+                @include breakpoint(mobile-only) {
+                    width: 100%;
+                }
+            }
+        }
+        // 4 Columns
+        &.cols-4 {
+            .g-mosaic-grid-item, .g-mosaic-grid-sizer, {
+                width: 25%;
+
+                @include breakpoint(tablet-range) {
+                    width: 50%;
+                }
+                @include breakpoint(mobile-only) {
+                    width: 100%;
+                }
+            }
+        }
+        // 4 Columns
+        &.cols-5 {
+            .g-mosaic-grid-item, .g-mosaic-grid-sizer, {
+                width: 20%;
+
+                @include breakpoint(tablet-range) {
+                    width: 55%;
+                }
+                @include breakpoint(mobile-only) {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+

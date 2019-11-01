@@ -1,0 +1,32 @@
+meta: {  }
+head_bottom: ''
+atoms:
+  -
+    type: assets
+    title: 'Custom CSS / JS'
+    attributes:
+      enabled: '1'
+      css:
+        - { location: 'gantry-assets://css/animate.css', inline: '', extra: {  }, name: 'Animate CSS' }
+      javascript:
+        - { location: 'gantry-assets://js/chart.js', inline: '', in_footer: '0', extra: {  }, priority: '0', name: Chart.js }        
+  -
+    type: frameworks
+    title: 'JavaScript Frameworks'
+    attributes:
+      enabled: '1'
+      jquery:
+        enabled: '1'
+        ui_core: '0'
+        ui_sortable: '0'
+      bootstrap:
+        enabled: '0'
+      mootools:
+        enabled: '0'
+        more: '0'
+  -
+    id: lightcase-8176
+    type: lightcase
+    title: Lightcase
+    attributes:
+      enabled: '1'
