@@ -175,9 +175,7 @@
                 <table>
                     <tr>
                         <td>
-                            {% block content %}
                             {{ content|raw }}
-                            {% endblock content %}
                         </td>
                     </tr>
                 </table>
@@ -197,9 +195,7 @@
                 <table>
                     <tr>
                         <td align="center">
-                            {% block footer %}
                             {{ 'PLUGIN_EMAIL.EMAIL_FOOTER'|t }}
-                            {% endblock footer %}
                         </td>
                     </tr>
                 </table>

@@ -1,12 +1,11 @@
 <?php
 namespace Grav\Plugin;
 
-use Grav\Common\Plugin;
+use \Grav\Common\Plugin;
 use RocketTheme\Toolbox\Event\Event;
 
 class MarkdownNoticesPlugin extends Plugin
 {
-    protected $base_classes;
     protected $level_classes;
 
     /**
@@ -29,11 +28,12 @@ class MarkdownNoticesPlugin extends Plugin
         $markdown->blockNotices = function($Line) {
 
             $this->level_classes = $this->config->get('plugins.markdown-notices.level_classes');
-            $this->base_classes  = $this->config->get('plugins.markdown-notices.base_classes');
 
             if (preg_match('/^(!{1,'.count($this->level_classes).'})[ ]+(.*)/', $Line['text'], $matches))
             {
                 $level = strlen($matches[1]) - 1;
+
+
 
                 // if we have more levels than we support
                 if ($level > count($this->level_classes)-1)
@@ -42,18 +42,17 @@ class MarkdownNoticesPlugin extends Plugin
                 }
 
                 $text = $matches[2];
-                $base_classes = (empty($this->base_classes)) ? '' : str_replace(',', ' ', $this->base_classes) . ' ';
 
-                $Block = [
-                    'element' => [
+                $Block = array(
+                    'element' => array(
                         'name' => 'div',
                         'handler' => 'lines',
-                        'attributes' => [
-                            'class' => $base_classes . $this->level_classes[$level],
-                        ],
+                        'attributes' => array(
+                            'class' => 'notices '. $this->level_classes[$level],
+                        ),
                         'text' => (array) $text,
-                    ],
-                ];
+                    ),
+                );
 
                 return $Block;
             }
@@ -81,4 +80,5 @@ class MarkdownNoticesPlugin extends Plugin
                 ->add('plugin://markdown-notices/assets/notices.css');
         }
     }
+
 }
