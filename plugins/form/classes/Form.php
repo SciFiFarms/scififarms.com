@@ -179,9 +179,6 @@ class Form implements FormInterface, \ArrayAccess
         $this->initialize();
     }
 
-    /**
-     * @return $this
-     */
     public function initialize()
     {
         // Reset and initialize the form
@@ -191,11 +188,7 @@ class Form implements FormInterface, \ArrayAccess
 
         // Remember form state.
         $flash = $this->getFlash();
-        if ($flash->exists()) {
-            $data = $flash->getData() ?? $this->header_data;
-        } else {
-            $data = $this->header_data;
-        }
+        $data = ($flash->exists() ? $flash->getData() : null) ?? $this->header_data;
 
         // Remember data and files.
         $this->setAllData($data);
@@ -205,8 +198,6 @@ class Form implements FormInterface, \ArrayAccess
         // Fire event
         $grav = Grav::instance();
         $grav->fireEvent('onFormInitialized', new Event(['form' => $this]));
-
-        return $this;
     }
 
     protected function setAllFiles(FormFlash $flash)
@@ -260,11 +251,6 @@ class Form implements FormInterface, \ArrayAccess
         $this->blueprint = null;
         $this->setAllData($this->header_data);
         $this->values = new Data();
-
-        // Reset unique id (allow multiple form submits)
-        $uniqueid = $this->items['uniqueid'] ?? null;
-        $this->set('remember_redirect', null === $uniqueid && !empty($this->items['remember_state']));
-        $this->setUniqueId($uniqueid ?? strtolower(Utils::generateRandomString($this->items['uniqueid_len'] ?? 20)));
 
         // Fire event
         $grav = Grav::instance();
@@ -586,7 +572,7 @@ class Form implements FormInterface, \ArrayAccess
             }
 
             $isMime = strstr($type, '/');
-            $find   = str_replace(['.', '*', '+'], ['\.', '.*', '\+'], $type);
+            $find   = str_replace(['.', '*'], ['\.', '.*'], $type);
 
             if ($isMime) {
                 $match = preg_match('#' . $find . '$#', $mime);
@@ -654,7 +640,7 @@ class Form implements FormInterface, \ArrayAccess
 
         // We need to store the file into flash object or it will not be available upon save later on.
         $flash = $this->getFlash();
-        $flash->setUrl($url)->setUser($grav['user'] ?? null);
+        $flash->setUrl($url)->setUser($grav['user']);
 
         if ($task === 'cropupload') {
             $crop = $post['crop'];
@@ -1055,7 +1041,7 @@ class Form implements FormInterface, \ArrayAccess
         $defaults = [
             'name' => $this->items['name'],
             'id' => $this->items['id'],
-            'uniqueid' => $this->items['uniqueid'] ?? null,
+            'uniqueid' => $this->items['uniqueid'],
             'data' => []
         ];
 
