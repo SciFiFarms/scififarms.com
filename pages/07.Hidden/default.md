@@ -1,4 +1,4 @@
 ---
-routable: true
+visible: false
 ---
 

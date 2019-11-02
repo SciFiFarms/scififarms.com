@@ -1,5 +1,5 @@
 ---
-title: 'Science Fiction Farms | Home'
+title: 'Spencer''s Lab'
 body_classes: 'title-center title-h1h2'
 ---
 

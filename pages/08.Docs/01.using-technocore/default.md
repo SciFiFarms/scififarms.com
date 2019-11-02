@@ -7,22 +7,31 @@ page-toc:
 
 # How to use TechnoCore
 ## General capabilities
-At it's heart, TechnoCore is designed to make deploying, maintaining, and creating containers/services (and all the support infrastructure) running in Docker Swarm easy and secure. One of the draws for Docker Swarm is that it is easier to get started with than Kubernetes. The reality is that I found it easy to get started and get a proof of concept up and running, but to acutally have an application running in production with the flexibility to store secrects securely, change configuration, automatically update, monitor, test, and deploy repeatedly to be a serious technical lift. TechnoCore aims to automate all these tasks using a simple .env file and a handful of managment commands Long term, this supports infastructure as code and a CI/CD pipeline. 
+At it's heart, TechnoCore is designed to make deploying, maintaining, and creating containers/services (and all the support infrastructure) running in Docker Swarm easy and secure. One of the draws for Docker Swarm is that it is easier to get started with than Kubernetes. The reality is that I found it easy to get started and get a proof of concept up and running, but to acutally have an application running in production with the flexibility to store secrects securely, change configuration, automatically update, monitor, test, and deploy repeatedly to be a serious technical lift. TechnoCore aims to automate all these tasks using a simple .env file and a handful of managment commands. The ultimate goal for TechnoCore is to support CI/CD pipelines and infastructure as code in Swarm stacks.
 
-TechnoCore takes a page out of the Ruby on Rails book and operates on the principle of convention over configuration. 
+For those of you familair with other Docker technologies, using TechnoCore is similar to the way Kubernetes `kubectl` and Shift's `oc` command works. Another comparison would be Kubernetes Operators or Helm Charts, but for Swarm. 
 
-For those of you familair with other Docker technologies, using TechnoCore is similar to the way OpenShift's `oc` command works. Another comparison would be Kubernetes Operators/Helm Charts, but for Swarm. 
-
-Ultimately, TechnoCore is beging developed to enable the automation of a vertical farm.
+Ultimately, TechnoCore is beging developed to enable the automation and running of Seedships in a vertical farm.
 
 ### Status
 At this point, TechnoCore has been through a couple of rewrites already. The architecture is finally modular enough to be reasonably useable and the commands and conventions are defined in these docs. However, it's pretty clear that there are still some rough edges so there **will** be breaking changes yet to come. Most of these should be in how services are defined and the configuration generated. My plan is to try and keep the changes to env names/settings/flags minimal so that regular users/instances of TechnoCore should only need minimal work to upgrade from version to version. 
+
 Currently TechnoCore relies upon the *latest* tag for it's own container as well as all of the deployable services. This is a bad pratice and will be addressed once a functional Seedship is up and running. 
 
-TechnoCore strives to be platform agnostic. It does this by putting everything into containers. Infact, the `./technocore`(or `./tc` for short) script is simply a wrapper that passes in the given arguments into the TechnoCore container itself. This means that it should currently 
+TechnoCore strives to be platform agnostic. It does this by putting everything into containers. Infact, the `./technocore`(or `./tc` for short) script is simply a wrapper that passes the given arguments into the TechnoCore container itself. This means that it should currently support Linux and OSX. Windows and ARM will likely need some modfications made to TechnoCore to work. 
 
-### Envs
-TechnoCore relies **heavily** on shell environment variables. The idea is that **all** settings are configured in a .env file located at the root of the TechnoCore repo. The reality is that secrets should not be stored in plain text, so in some cases, a secret will need to be input manually. Below is the current general list of env vars that are settable. Each service will have additional specific envs that are listed in [Services currently supported](#services-currently-supported).
+### Getting Started
+```
+git pull https://github.com/SciFiFarms/TechnoCore technocore
+cd technocore
+git checkout refactor
+#cp <NEED TO CREATE THIS FILE> .env
+<EDIT .env>
+./tc deploy
+```
+
+### Environment Variables
+TechnoCore relies **heavily** on shell environment variables. The idea is that **all** settings are configured in a .env file located at the root of the TechnoCore repo. The reality is that secrets should not be stored in plain text, so in some cases, a secret will need to be [input manually](create_secret). Below is the current general list of env vars that are settable. Each service will have additional specific envs that are listed in [Services currently supported](#services-currently-supported).
 
 #### Things to know about env vars
 - You can disable an option by leaving the env variable blank: `<ENV_VAR>=`. *Any* non zero length value will evalute to true. Even `<ENV_VAR>=false`. I'd like to change this eventually. 
@@ -56,15 +65,6 @@ In order to use
 - `UPSTREAM_SMTP_PASSWORD=examplePassword`
 - `FROM_ADDRESS=${FROM_ADDRESS:-services@$REGISTERED_DOMAIN}`
 
-##### Envs to aid in development 
-- `TAG=latest` - This gets passed into pretty much all the scripts that work with images to pick which version to use. For production I use latest, but when developing, I use `TAG=local`.
-- `TECHNOCORE_ADMIN_PASSWORD=secretpasswordyo1` - By default, TechnoCore generates a different password for each service that needs an admin_password. This **really** gets in the way when developing a service because then each time the stack is recreated, I have to call `./tc get_secret <SERVICE_NAME>`. If you set this env, it will override that behavior and set all admin passwords to the value of TECHNOCORE_ADMIN_PASSWORD.
-- `ADMIN_USER=admin` - 
-- `TRAEFIK_DISABLE_BASIC_AUTH=true` - Some services don't come with any kind of authentication, which is **really** problematic when a service is exposed to the internet. Fortunantly Traefik provides a super simple auth mechinizium. However, this gets **very** annoying when doing development for those services. Setting this env disables that auth mechinisium. 
-- `DEV_MOUNT_<SERVICE_NAME>_<FOLDER_NAME>_ENABLED=true` - DEV_MOUNTs are preconfigured volume mounts that allow a single flag to enable mounting a folder from within the services/<SERVICE_NAME>/<FOLDER_NAME> directory into the container. Currently there aren't very many of these, but as I need to make more changes, I'll be adding more of these.
-- `PROD=true` - When PROD=true, TechnoCore will work with files located within the TechnoCore container itself. If `PROD=`, then the ./services/ and ./lib/ folders are passed into the TechnoCore container. This allows TechnoCore to pull in changes to services without having to rebuild the TechnoCore container itself.
-- `INGRESS_TYPE="subdomain"` - Originally this would allow one to pick between <SERVICE_NAME>.<DOMAIN> and <DOMAIN>/<SERVICE_NAME>. But experience showed me that <SERVICE_NAME>.<DOMAIN> is almost always a better choice, so this env will likely be removed. 
-
 ### Services currently supported:
 - Grafana
     - `SERVICE_GRAFANA=true`
@@ -90,33 +90,49 @@ In order to use
 - ESPHome
     - `SERVICE_ESPHOME=true`
 - Vault
-    - `SERVICE_VAULT=true`
-    - `DEV_MOUNT_VAULT_MIGRATIONS_ENABLED=true`
 
-### Methodology
+    Envs: 
+        - `SERVICE_VAULT=true`
+        - `DEV_MOUNT_VAULT_MIGRATIONS_ENABLED=true`
 
 ### Ansible/Terraform
 I have experimented with deploying a TechnoCore instance to Hetzner Cloud using Terraform to provision a server and Ansible to harden the server, install Docker, and deploy the TechnoCore instance. It's pretty basic, but was used to initialize this website, along with a NextCloud instance and a MailCow instance. You can check it out [here](https://github.com/SciFiFarms/mail.scifi.farm). 
 
 ## Commands
+These are arguments to the `./technocore` or `./tc` call. 
 
-### deploy
+#### deploy
+This takes the .env, generates a single compose.yaml, generates any needed secrets, and deploys the stack. 
+    
+Example: `./tc deploy`
 
-### run_in
-### create_secret
-### get_compose
-### get_secret
-### logs
-### restart
+#### run_in $SERVICE_NAME $COMMAND TO RUN
+This runs the given $COMMAND in the container for $SERVICE_NAME. 
 
-### Getting Started
-```
-git pull https://github.com/SciFiFarms/TechnoCore technocore
-cd technocore
-cp <NEED TO CREATE THIS FILE> .env
-<EDIT .env>
-./tc deploy
-```
+Example: `./tc run_in $SERVICE_NAME bash` to debug or do some maintenence tasks. 
+
+#### logs $SERVICE_NAME
+Follow the logs for $SERVICE_NAME. 
+
+Example: `./tc logs ingress`
+
+#### create_secret $SERVICE_NAME $MOUNT_NAME $SECRET
+Example: `./tc create_secret ingress admin_password this_is_a_password`
+#### get_compose
+This is mostly used for debugging. 
+
+Example: `./tc get_compose`
+
+### #get_secret $SERVICE_NAME $MOUNT_NAME
+Retrieve the $MOUNT_NAME secret used in the $SERVICE_NAME service.
+    
+Example: `./tc get_secret ingress admin_password`
+
+#### restart $SERVICE_NAME
+Restarts (using docker service update --force) the $SERVICE_NAME. 
+    
+Example: `./tc restart ingress` 
+
 
 ## Troubleshooting
 If you run into issues, there are a couple main places to look for clues. 

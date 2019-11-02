@@ -1,3 +1,44 @@
+# v3.0.9
+## 09/19/2019
+
+1. [](#improved)
+    * Removed jQuery dependency for the reCaptcha field and VanillaJS-ified it instead
+    * Updated to ReCaptcha library version `1.2.3`
+1. [](#bugfix)
+    * Fixed `Badly encoded JSON data` warning when uploading files [grav#2663](https://github.com/getgrav/grav/issues/2663)
+
+# v3.0.8
+## 08/14/2019
+
+1. [](#improved)
+    * Change form save action location to `user-data://` stream [#353](https://github.com/getgrav/grav-plugin-form/issues/353)
+    * Updated `eu`, `fr` and `pl` language
+    * Make `Form::initialize()` chainable
+    * Added `folder` option to `save:` action with fallback 
+1. [](#bugfix)
+    * Fixed Submit & Redirect not working as expected [#355](https://github.com/getgrav/grav-plugin-form/issues/355)
+    * Fixed oversensitive refresh prevention [#354](https://github.com/getgrav/grav-plugin-form/issues/354)
+    * Fixed issue with Form JS when pipeline is enabled [grav#2592](https://github.com/getgrav/grav/issues/2592)
+    * Fixed `accept` for SVG in file field [#364](https://github.com/getgrav/grav-plugin-form/pull/364)
+    * Fixed issue with plugin not returning expected form [#309](https://github.com/getgrav/grav-plugin-form/pull/309)
+    * Fixed form message not showing up after reset process
+    * Fixed form fields inside a single tab not using value from the form object if it is available
+    * Fixed file form field failing resolution checks in certain circumstances
+
+# v3.0.7
+## 07/01/2019
+
+1. [](#bugfix)
+    * Fixed file upload when `$grav['user']` is not set [#352](https://github.com/getgrav/grav-plugin-form/issues/352)
+    * Fixed label markdown being escaped [#356](https://github.com/getgrav/grav-plugin-form/pull/356)
+
+# v3.0.6
+## 06/24/2019
+
+1. [](#bugfix)
+    * Fixed regression breaking forms external to the page in some sites
+    * Fixed regression with form action in sub-path folders
+
 # v3.0.5
 ## 06/21/2019
 
