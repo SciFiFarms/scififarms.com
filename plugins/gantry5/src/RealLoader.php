@@ -36,17 +36,17 @@ abstract class RealLoader
      */
     public static function getClassLoader()
     {
-        // Fail safe version check for PHP <5.4.0.
-        if (version_compare($phpVersion = PHP_VERSION, '5.4.0', '<')) {
-            throw new \RuntimeException(sprintf(self::$errorMessagePhpMin, $phpVersion, '5.4.0'));
+        // Fail safe version check for PHP <5.5.9.
+        if (version_compare($phpVersion = PHP_VERSION, '5.5.9', '<')) {
+            throw new \RuntimeException(sprintf(self::$errorMessagePhpMin, $phpVersion, '5.5.9'));
         }
 
         if (defined('GANTRY5_VERSION')) {
             throw new \LogicException(self::$errorMessageGantryLoaded);
         }
 
-        define('GANTRY5_VERSION', '5.4.32');
-        define('GANTRY5_VERSION_DATE', 'January  2, 2020');
+        define('GANTRY5_VERSION', '5.4.36');
+        define('GANTRY5_VERSION_DATE', 'October 16, 2020');
 
         if (!defined('DS')) {
             define('DS', DIRECTORY_SEPARATOR);

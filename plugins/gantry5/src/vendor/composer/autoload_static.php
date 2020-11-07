@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitce51aaad4000cb0347719861b5a9dd4b
+class ComposerStaticInit82408178f69abef77c4a994a82315178
 {
     public static $prefixLengthsPsr4 = array (
         'L' => 
@@ -20,7 +20,8 @@ class ComposerStaticInitce51aaad4000cb0347719861b5a9dd4b
     public static $prefixDirsPsr4 = array (
         'Leafo\\ScssPhp\\' => 
         array (
-            0 => __DIR__ . '/..' . '/leafo/scssphp/src',
+            0 => __DIR__ . '/../..' . '/classes/Leafo/ScssPhp',
+            1 => __DIR__ . '/..' . '/leafo/scssphp/src',
         ),
         'Gantry\\' => 
         array (
@@ -31,8 +32,8 @@ class ComposerStaticInitce51aaad4000cb0347719861b5a9dd4b
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitce51aaad4000cb0347719861b5a9dd4b::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitce51aaad4000cb0347719861b5a9dd4b::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit82408178f69abef77c4a994a82315178::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit82408178f69abef77c4a994a82315178::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }
