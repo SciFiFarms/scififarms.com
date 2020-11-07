@@ -1,0 +1,66 @@
+.g-owlcarousel-headlines {
+    .headlines-container {
+        background: transparent;
+        margin: 0 45px 0 0;
+
+        .g-owlcarousel-content {
+            padding: 10px;
+        }
+
+        .headlines-badge {
+            float: left;
+            span {
+                display: block;
+                padding: 10px 5px !important;
+            }
+            @include breakpoint(tablet-range) {
+                display: none;
+            }
+            @include breakpoint(mobile-only) {
+                display: none;
+            }
+        }
+
+        .owl-nav {
+            button.owl-next, button.owl-prev {
+                position: absolute;
+                border: 0;
+                display: block;
+                width: 40px;
+                height: 40px;
+                top: 50%;
+                cursor: pointer;
+                z-index: 10;
+                text-align: center;
+                font-size: 24px;
+                line-height: 38px;
+                opacity: 0.7;
+                border-radius: 100%;
+                color: $white;
+                left: auto;
+                &:before {
+                    font-family: FontAwesome;
+                } 
+                &:hover {
+                    opacity: 1;
+                    background: none;
+                }
+                &.owl-next {
+                    right: -45px;
+                    &:before {
+                        content: "\f105";
+                    }
+                }
+                &.owl-prev {
+                    right: -10px;
+                    &:before {
+                        content: "\f104";
+                    }                         
+                }
+                span {
+                    display: none;
+                }
+            }
+        }  
+    }
+}

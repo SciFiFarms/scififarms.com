@@ -1,6 +1,5 @@
 ---
 login_redirect_here: false
-expires: 0
 
 form:
 
@@ -26,7 +25,7 @@ form:
 
     password1:
       type: password
-      label: PLUGIN_LOGIN.ENTER_PASSWORD
+      label: Enter a password
       validate:
         required: true
         message: PLUGIN_LOGIN.PASSWORD_VALIDATION_MESSAGE
@@ -34,7 +33,7 @@ form:
 
     password2:
       type: password
-      label: PLUGIN_LOGIN.ENTER_PASSWORD_AGAIN
+      label: Enter the password again
       validate:
         required: true
         message: PLUGIN_LOGIN.PASSWORD_VALIDATION_MESSAGE
@@ -43,14 +42,14 @@ form:
   buttons:
       -
           type: submit
-          value: PLUGIN_LOGIN.BTN_REGISTER
+          value: Submit
       -
           type: reset
-          value: PLUGIN_LOGIN.BTN_RESET
+          value: Reset
 
   process:
       register_user: true
-      message: PLUGIN_LOGIN.REGISTRATION_THANK_YOU
+      message: "Thanks for registering..."
       reset: true
 ---
 

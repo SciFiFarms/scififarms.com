@@ -1671,11 +1671,8 @@ class Admin
     {
         $reports = new ArrayCollection();
 
-        /** @var Pages $pages */
-        $pages = $this->grav['pages'];
-
         // Default to XSS Security Report
-        $result = Security::detectXssFromPages($pages, true);
+        $result = Security::detectXssFromPages($this->grav['pages'], true);
 
         $reports['Grav Security Check'] = $this->grav['twig']->processTemplate('reports/security.html.twig', [
             'result' => $result,
@@ -1967,10 +1964,5 @@ class Admin
     public function getReferrer()
     {
         return $_SERVER['HTTP_REFERER'] ?? null;
-    }
-
-    public static function enablePages()
-    {
-        return Grav::instance()['pages'];
     }
 }

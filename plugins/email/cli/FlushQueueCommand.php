@@ -40,11 +40,6 @@ class FlushQueueCommand extends ConsoleCommand
      */
     protected function serve()
     {
-        // TODO: remove when requiring Grav 1.7+
-        if (method_exists($this, 'initializeGrav')) {
-            $this->initializeGrav();
-        }
-
         $grav = Grav::instance();
 
         $this->output->writeln('');

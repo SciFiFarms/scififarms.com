@@ -1,0 +1,15 @@
+name: Feature Colors
+description: Feature colors for the Hadron theme
+type: section
+
+form:
+  fields:
+
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "#191a1c"
+    text-color:
+      type: input.colorpicker
+      label: Text
+      default: "#bbbbbb"

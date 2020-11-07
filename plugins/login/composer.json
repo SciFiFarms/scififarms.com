@@ -34,12 +34,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Grav\\Plugin\\Login\\": "classes/",
-            "Grav\\Plugin\\Console\\": "cli/"
-        },
-        "classmap": [
-            "login.php"
-        ]
+            "Grav\\Plugin\\Login\\": "classes/"
+        }
     },
     "config": {
         "platform": {

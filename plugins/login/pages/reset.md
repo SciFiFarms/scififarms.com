@@ -1,6 +1,5 @@
 ---
 title: Reset password
-expires: 0
 
 login_redirect_here: false
 
@@ -10,13 +9,13 @@ form:
         - name: username
           type: hidden
           id: username
-          placeholder: PLUGIN_LOGIN.USERNAME_EMAIL
+          placeholder: Username
           readonly: true
 
         - name: password
           type: password
           id: password
-          placeholder: PLUGIN_LOGIN.PASSWORD
+          placeholder: Password
           autofocus: true
           validate:
             required: true
@@ -33,3 +32,4 @@ process:
 # Password Reset
 
 ### Username: {{uri.param('user')}}
+

@@ -36,7 +36,7 @@ use RocketTheme\Toolbox\ResourceLocator\UniformResourceLocator;
  * @property-read Data $data
  * @property-read array $files
  * @property-read Data $value
- * @property array $errors
+ * @property-read array $errors
  * @property-read array $fields
  * @property-read Blueprint $blueprint
  * @property-read PageInterface $page
@@ -547,11 +547,7 @@ class Form implements FormInterface, \ArrayAccess
             // json_response
             return [
                 'status' => 'error',
-                'message' => sprintf(
-                    $language->translate('PLUGIN_FORM.FILEUPLOAD_UNABLE_TO_UPLOAD', null, true),
-                    $filename,
-                    $this->getFileUploadError($upload['file']['error'], $language)
-                )
+                'message' => sprintf($language->translate('PLUGIN_FORM.FILEUPLOAD_UNABLE_TO_UPLOAD', null, true), $filename, $this->upload_errors[$upload['file']['error']])
             ];
         }
 
@@ -701,54 +697,6 @@ class Form implements FormInterface, \ArrayAccess
         header('Content-Type: application/json');
         echo json_encode($json_response);
         exit;
-    }
-
-    /**
-     * Return an error message for a PHP file upload error code
-     * https://www.php.net/manual/en/features.file-upload.errors.php
-     *
-     * @param int $error PHP file upload error code
-     * @param Language|null $language
-     * @return string File upload error message
-     */
-    public function getFileUploadError(int $error, Language $language = null): string
-    {
-        if (!$language) {
-            $grav = Grav::instance();
-
-            /** @var Language $language */
-            $language = $grav['language'];
-        }
-
-        switch ($error) {
-            case UPLOAD_ERR_OK:
-                $item = 'FILEUPLOAD_ERR_OK';
-                break;
-            case UPLOAD_ERR_INI_SIZE:
-                $item = 'FILEUPLOAD_ERR_INI_SIZE';
-                break;
-            case UPLOAD_ERR_FORM_SIZE:
-                $item = 'FILEUPLOAD_ERR_FORM_SIZE';
-                break;
-            case UPLOAD_ERR_PARTIAL:
-                $item = 'FILEUPLOAD_ERR_PARTIAL';
-                break;
-            case UPLOAD_ERR_NO_FILE:
-                $item = 'FILEUPLOAD_ERR_NO_FILE';
-                break;
-            case UPLOAD_ERR_NO_TMP_DIR:
-                $item = 'FILEUPLOAD_ERR_NO_TMP_DIR';
-                break;
-            case UPLOAD_ERR_CANT_WRITE:
-                $item = 'FILEUPLOAD_ERR_CANT_WRITE';
-                break;
-            case UPLOAD_ERR_EXTENSION:
-                $item = 'FILEUPLOAD_ERR_EXTENSION';
-                break;
-            default:
-                $item = 'FILEUPLOAD_ERR_UNKNOWN';
-        }
-        return $language->translate('PLUGIN_FORM.'.$item);
     }
 
     /**
@@ -912,7 +860,7 @@ class Form implements FormInterface, \ArrayAccess
 
     /**
      * @return string
-     * @deprecated 3.0 Use $form->getName() instead
+     * @deprecated 3.0 Use $this->getName() instead
      */
     public function name(): string
     {
@@ -921,7 +869,7 @@ class Form implements FormInterface, \ArrayAccess
 
     /**
      * @return array
-     * @deprecated 3.0 Use $form->getFields() instead
+     * @deprecated 3.0 Use $this->getFields() instead
      */
     public function fields(): array
     {
@@ -930,7 +878,7 @@ class Form implements FormInterface, \ArrayAccess
 
     /**
      * @return PageInterface
-     * @deprecated 3.0 Use $form->getPage() instead
+     * @deprecated 3.0 Use $this->getPage() instead
      */
     public function page(): PageInterface
     {
@@ -940,7 +888,7 @@ class Form implements FormInterface, \ArrayAccess
     /**
      * Backwards compatibility
      *
-     * @deprecated 3.0 Calling $form->filter() is not needed anymore (does nothing)
+     * @deprecated 3.0
      */
     public function filter(): void
     {
@@ -1053,7 +1001,7 @@ class Form implements FormInterface, \ArrayAccess
 
     public function getPagePathFromToken($path)
     {
-        return Utils::getPagePathFromToken($path, $this->getPage());
+        return Utils::getPagePathFromToken($path, $this->page());
     }
 
     /**

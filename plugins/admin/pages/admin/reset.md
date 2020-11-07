@@ -1,6 +1,5 @@
 ---
 title: Reset password
-expires: 0
 
 form:
     fields:

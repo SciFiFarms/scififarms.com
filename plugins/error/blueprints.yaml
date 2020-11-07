@@ -1,8 +1,6 @@
 name: Error
-version: 1.7.1
+version: 1.6.2
 description: Displays the error page.
-type: plugin
-slug: error
 icon: warning
 author:
   name: Team Grav
@@ -12,8 +10,6 @@ homepage: https://github.com/getgrav/grav-plugin-error
 keywords: error, plugin, required
 bugs: https://github.com/getgrav/grav-plugin-error/issues
 license: MIT
-dependencies:
-  - { name: grav, version: '>=1.6.0' }
 
 form:
   validation: strict

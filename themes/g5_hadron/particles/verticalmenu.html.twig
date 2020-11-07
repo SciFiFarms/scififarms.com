@@ -1,0 +1,28 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+
+{% if particle.title %}<h2 class="title">{{ particle.title }}</h2>{% endif %}
+
+<ul class="menu">
+	{% for item in particle.items %}
+	{% if item.type == 'link' %}
+		<li><a target="{{ item.target|default('_self')|e }}" class="{{ item.class|e }}" href="{{ item.link|e }}">{{ item.title|html|raw }}</a>
+			{% if item.children %}<ul>{% endif %}
+			{% for child in item.children %}
+			<li><a target="{{ child.target|default('_self')|e }}" class="{{ child.class|e }}" href="{{ child.link|e }}">{{ child.title|html|raw }}</a></li>
+			{% endfor %}
+			{% if item.children %}</ul>{% endif %}
+		</li>
+	{% else %}
+		<li><span class="separator">{{ item.title|html|raw }}</span>
+			{% if item.children %}<ul>{% endif %}
+			{% for child in item.children %}
+			<li><a target="{{ child.target|default('_self')|e }}" class="{{ child.class|e }}" href="{{ child.link|e }}">{{ child.title|html|raw }}</a></li>
+			{% endfor %}
+			{% if item.children %}</ul>{% endif %}
+		</li>		
+	{% endif %}
+	{% endfor %}
+</ul>
+{% endblock %}

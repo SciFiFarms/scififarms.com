@@ -12,6 +12,8 @@ namespace SebastianBergmann\Git;
 
 use DateTime;
 
+/**
+ */
 class Git
 {
     /**
@@ -42,7 +44,7 @@ class Git
     public function checkout($revision)
     {
         $this->execute(
-            'checkout --force --quiet ' . $revision
+            'checkout --force --quiet ' . $revision . ' 2>&1'
         );
     }
 
@@ -115,25 +117,19 @@ class Git
     {
         $output = $this->execute('status');
 
-        return $output[count($output)-1] == 'nothing to commit, working directory clean' ||
-               $output[count($output)-1] == 'nothing to commit, working tree clean';
+        return $output[count($output)-1] == 'nothing to commit, working directory clean';
     }
 
     /**
-     * @param string $command
-     *
-     * @return string
-     *
+     * @param  string           $command
      * @throws RuntimeException
      */
     protected function execute($command)
     {
-        $command = 'cd ' . escapeshellarg($this->repositoryPath) . '; git ' . $command . ' 2>&1';
- 
+        $command = 'git -C ' . escapeshellarg($this->repositoryPath) . ' ' . $command;
         if (DIRECTORY_SEPARATOR == '/') {
             $command = 'LC_ALL=en_US.UTF-8 ' . $command;
         }
-
         exec($command, $output, $returnValue);
 
         if ($returnValue !== 0) {

@@ -1,6 +1,5 @@
 ---
 title: User
-expires: 0
 
 access:
     admin.users: true

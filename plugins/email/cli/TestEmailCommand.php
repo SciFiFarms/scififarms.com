@@ -59,11 +59,6 @@ class TestEmailCommand extends ConsoleCommand
      */
     protected function serve()
     {
-        // TODO: remove when requiring Grav 1.7+
-        if (method_exists($this, 'initializeGrav')) {
-            $this->initializeThemes();
-        }
-
         $grav = Grav::instance();
 
         $this->output->writeln('');
@@ -73,6 +68,8 @@ class TestEmailCommand extends ConsoleCommand
         dump($grav['config']->get('plugins.email'));
 
         $this->output->writeln('');
+
+        require_once __DIR__ . '/../vendor/autoload.php';
 
         $grav['Email'] = new Email();
 
@@ -89,6 +86,8 @@ class TestEmailCommand extends ConsoleCommand
             $body = $grav['language']->translate(['PLUGIN_EMAIL.TEST_EMAIL_BODY', $configuration]);
         }
 
+        // This is the old way....
+        // $sent = EmailUtils::sendEmail($subject, $body, $email_to);
         $sent = EmailUtils::sendEmail(['subject'=>$subject, 'body'=>$body, 'to'=>$to]);
 
         if ($sent) {
