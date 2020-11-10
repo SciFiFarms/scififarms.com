@@ -1,5 +1,5 @@
 ---
-title: 'About Us'
+title: About
 published: true
 date: '01-01-2016 00:00'
 publish_date: '28-05-2015 14:25'
