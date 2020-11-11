@@ -57,3 +57,6 @@ View ALL containers being ran.
 
 Example: `docker ps`
 Example: `docker ps -a` Includes containers that aren't running.
+
+## Development Commands
+Commands used primarily for the development of TechnoCore and supported services can be found under [Developing Technocore: Commands](../developing-technocore/commands)
