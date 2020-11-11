@@ -19,7 +19,7 @@ ln -s dev.env .env
 ```
 
 ## Environment Variables
-TechnoCore relies **heavily** on shell environment variables. The idea is that **all** settings are configured in a .env file located at the root of the TechnoCore repo. The reality is that secrets should not be stored in plain text, so in some cases, a secret will need to be manually added. Use the `./tc init` command to do so, or checkout [Developing TechnoCore: Secrets](developing-technocore/secrets)
+TechnoCore relies **heavily** on shell environment variables. The idea is that **all** settings are configured in a .env file located at the root of the TechnoCore repo. The reality is that secrets should not be stored in plain text, so in some cases, a secret will need to be manually added. Use the `./tc init` command to do so, or checkout [Developing TechnoCore: Secrets](developing-technocore/secrets). 
 
 Below is the current general list of env vars that are settable. Each service will have additional specific envs that are listed in [Services currently supported](#services-currently-supported).
 
