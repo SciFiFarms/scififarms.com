@@ -48,7 +48,13 @@ Example: `watch 'docker ps | grep home-assistant'`
 
 #### docker service ls
 This lists all the running services. 
-Warning: This is often less that the number of containers being ran.
+Warning: This is often les
+# From PR
+What     they control
+ln -s
+how they work
+tips & tricks
+s that the number of containers being ran.
 
 Example: `docker service ls`
 
@@ -59,4 +65,4 @@ Example: `docker ps`
 Example: `docker ps -a` Includes containers that aren't running.
 
 ## Development Commands
-Commands used primarily for the development of TechnoCore and supported services can be found under [Developing Technocore: Commands](../developing-technocore/commands)
+Commands used primarily for the development of TechnoCore and supported services can be found under [Developing Technocore: Commands](../../developing-technocore/commands)
