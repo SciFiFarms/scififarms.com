@@ -1,7 +1,7 @@
 ---
 title: Commands
+published: true
 ---
-
 
 ## Commands
 These are arguments to the `./technocore` or `./tc` call. 
