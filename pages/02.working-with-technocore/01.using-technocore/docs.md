@@ -26,9 +26,9 @@ TechnoCore strives to be platform agnostic. It does this by putting everything i
 git pull https://github.com/SciFiFarms/TechnoCore technocore
 cd technocore
 git checkout refactor
-#cp <NEED TO CREATE THIS FILE> .env
-<EDIT .env>
+ln -s dev.env .env
 ./tc deploy
+./tc init
 ```
 ## Environment Variables
 TechnoCore relies **heavily** on shell environment variables. The idea is that **all** settings are configured in a .env file located at the root of the TechnoCore repo. The reality is that secrets should not be stored in plain text, so in some cases, a secret will need to be [input manually](create_secret). Below is the current general list of env vars that are settable. Each service will have additional specific envs that are listed in [Services currently supported](#services-currently-supported).
@@ -48,10 +48,5 @@ To avoid storing secrets in plain text, you'll need to create a secret with your
 
 ---
 
----
-
-## Ansible/Terraform
-I have experimented with deploying a TechnoCore instance to Hetzner Cloud using Terraform to provision a server and Ansible to harden the server, install Docker, and deploy the TechnoCore instance. It's pretty basic, but was used to initialize this website, along with a NextCloud instance and a MailCow instance. You can check it out [here](https://github.com/SciFiFarms/mail.scifi.farm). 
-
 ## Troubleshooting
-If you have any trouble running TechnoCore, there are places to look, commands to run, and a list of known problems over on the [Troubleshooting TechnoCore](troubleshooting-technocore) page. 
+If you have any trouble running TechnoCore, there are places to look, commands to run, and a list of known problems over on the [Troubleshooting TechnoCore](../troubleshooting-technocore) page. 
