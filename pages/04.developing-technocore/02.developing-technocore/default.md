@@ -3,6 +3,10 @@ title: 'Developing TechnoCore'
 visible: true
 ---
 
+### Methodology
+TechnoCore takes a page out of the Ruby on Rails book and operates on the principle of convention over configuration. 
+Seperate Repos
+
 # How to develop with Technocore
     
 - PROD vs dev
@@ -30,12 +34,6 @@ visible: true
 - `INGRESS_TYPE="subdomain"` - Originally this would allow one to pick between <SERVICE_NAME>.<DOMAIN> and <DOMAIN>/<SERVICE_NAME>. But experience showed me that <SERVICE_NAME>.<DOMAIN> is almost always a better choice, so this env will likely be removed. 
 - `image_provider=scififarms`
 - `SERVICE_TRAEFIK_SUBDOMAIN=` - Prevents Traefik from running by default.
-
-## Commands
-- build 
-- clean
-- generate_getmodules
-
 
 ### Methodology
 TechnoCore takes a page out of the Ruby on Rails book and operates on the principle of convention over configuration. 

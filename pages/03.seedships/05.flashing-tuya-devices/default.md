@@ -1,5 +1,5 @@
 ---
-title: 'Flashing Tuya Devices'
+title: 'Flashing Tuya Devices (Make more friendly?)'
 ---
 
 ## Setting up the Tuya flasher

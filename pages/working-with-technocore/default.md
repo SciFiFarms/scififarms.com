@@ -1,4 +1,0 @@
----
-title: 'Working With TechnoCore'
----
-
