@@ -1,5 +1,5 @@
 ---
 title: 'Working with TechnoCore'
-redirect: ../using-technocore
+redirect: technocore/using-technocore
 ---
 
