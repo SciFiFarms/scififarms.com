@@ -1,5 +1,8 @@
 ---
 title: 'Home Assistant Links'
+taxonomy:
+    category:
+        - docs
 ---
 
 ## Projects
