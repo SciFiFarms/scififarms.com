@@ -1,0 +1,123 @@
+.ui-tabs {
+    position: relative;
+
+    .ui-tabs-nav {
+        margin: 0 0 35px 0;
+        @include display(flex);
+
+        @include breakpoint(small-mobile-range) {
+            @include display(block);
+        }
+
+        li {
+            list-style: none;
+            float: left;
+            border-bottom-width: 0;
+            padding: 0;
+            outline: none;
+
+            @include breakpoint(mobile-only) {
+                float: none;
+                text-align: center;
+                margin-bottom: 5px;
+                margin-right: 0;
+                margin-left: 0;
+            }
+
+            &.ui-state-disabled .ui-tabs-anchor {
+                cursor: text;
+            }
+
+            &.ui-tabs-loading .ui-tabs-anchor {
+                cursor: text;
+            }  
+        }
+
+        .ui-tabs-anchor {
+            text-decoration: none;            
+        }
+    }
+}
+
+.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
+    cursor: pointer;
+}
+
+.g-contenttabs {
+    .g-contenttabs-tab-wrapper-container {
+        list-style: none;
+
+        .g-contenttabs-tab-wrapper {
+            margin-right: 5px;
+        }
+    }
+
+    .g-contenttabs-tab {
+        outline: none;
+        color: inherit !important;
+    }
+
+    .g-contenttabs-tab-wrapper-head {
+
+        .g-contenttabs-tab-title {
+            display: inline-block;
+            background: none;
+            padding: 8px 25px;
+            border: 2px solid transparent;
+            border-radius: $base-border-radius;
+            opacity: 0.5;
+            text-transform: uppercase;
+            font-size: 1em;
+
+            .rt-overlay-dark & {
+                color: $white;
+            }
+            .rt-overlay-light & {
+                color: $dark-grey;
+            }
+
+            @include breakpoint(mobile-only) {
+                padding: 8px 15px;
+            }    
+
+            @include breakpoint(small-mobile-range) {
+               width: 100%;
+            }
+
+            &:hover {
+                opacity: 1;
+
+                .rt-overlay-dark & {
+                    border: 2px solid $white;
+                }
+                .rt-overlay-light & {
+                    border: 2px solid $dark-grey;
+                }
+            }
+        }
+    }
+
+    .g-contenttabs-content-wrapper-container {
+        list-style: none;
+        margin: 25px 0 0;
+
+        .g-contenttabs-tab-wrapper-body {
+            padding: 0;
+        }
+    }
+}
+
+.ui-tabs-active {
+    .g-contenttabs-tab-wrapper-head {
+        .g-contenttabs-tab-title {
+            opacity: 1;
+            
+            .rt-overlay-dark & {
+                border: 2px solid $white;
+            }
+            .rt-overlay-light & {
+                border: 2px solid $dark-grey;
+            }
+        }
+    }
+}

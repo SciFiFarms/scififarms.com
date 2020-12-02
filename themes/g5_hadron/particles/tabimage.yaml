@@ -1,0 +1,69 @@
+name: Tab Image
+description: Display tab image content.
+type: particle
+icon: fa-server
+
+configuration:
+  caching:
+    type: static
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable particles.
+      default: true
+
+    class:
+      type: input.selectize
+      label: CSS Classes
+      description: CSS class name for the particle.
+
+    title:
+      type: input.text
+      label: Title
+      description: Customize the title text.
+      placeholder: Enter title
+
+    tabimages:
+      type: collection.list
+      array: true
+      label: Tab Images
+      description: Create each item to appear in the content row.
+      value: title
+      ajax: true
+
+      fields:
+        .title:
+          type: input.text
+          label: Title
+          skip: true
+        .image:
+          type: input.imagepicker
+          label: Image
+          description: Select desired image.
+        .link:
+           type: input.text
+           label: Link
+           description: Specify the link.
+        .label:
+          type: input.text
+          label: Label
+          description: Customize the read more text.
+          placeholder: Enter read more label
+        .text:
+          type: textarea.textarea
+          label: Text
+          description: Customize the text.
+          placeholder: Enter short text
+        .tag:
+          type: input.text
+          label: Tag
+          description: Customize the tag
+          placeholder: Enter tag
+        .subtag:
+          type: input.text
+          label: Sub Tag
+          description: Customize the sub tag
+          placeholder: Enter sub tag

@@ -19,5 +19,16 @@
 {% endblock %}
 
 {% block content %}
+
+{% if config.get('plugins.page-toc.active') or attribute(page.header, 'page-toc').active %}
+<div class="page-toc" style="float:right;position:relative;width: 400px; background-color: #F8F8F8; box-shadow: 0 0 5px 0 rgba(50, 50, 50, 0.4); margin-left: 0.2em; padding: 0.1em 0.5em; min-width: 33.3%; max-width: 50%;">
+    {% set table_of_contents = toc(page.content) %}
+    {% if table_of_contents is not empty %}
+    <h4>Table of Contents</h4>
+    {{ table_of_contents }}
+    {% endif %}
+</div>
+{% endif %}
+
     {% include 'partials/page.html.twig' %}
 {% endblock %}

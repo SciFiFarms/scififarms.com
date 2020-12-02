@@ -1,0 +1,122 @@
+#g-offcanvas {
+	background: $offcanvas-background;
+	width: $offcanvas-width;
+	color: $offcanvas-text-color;
+
+	.button {
+		background: $accent-color-2;
+		color: $offcanvas-text-color;
+		&:hover {
+			background: lighten($accent-color-2, 5%);
+		}
+		&:active {
+			background: darken($accent-color-2, 5%);
+		}
+	}
+}
+
+.g-offcanvas-toggle {
+	@if $offcanvas-toggle-visibility == 1 {
+		display: none;		
+		@include breakpoint(mobile-only) { 
+			display: block;
+		}
+	} @else {
+	    display: block;
+	}		
+	.rt-overlay-dark & {
+		background-color: lighten($offcanvas-toggle-color, 15%);
+	}
+	.rt-overlay-light & {
+		background-color: darken($offcanvas-toggle-color, 15%);
+	}
+   	font-size: 20px;
+	color: $accent-color-1;
+	padding: 0.35rem;
+	top: 0.5rem;
+	left: 0.5rem;
+	z-index: 100001;
+
+	.fa-bars {
+		font-size: 15pt;
+	}
+}
+
+.g-offcanvas-open {
+    .g-offcanvas-left {
+        #g-page-surround {
+            left: $offcanvas-width;
+        }
+    }
+    .g-offcanvas-right {
+        #g-page-surround {
+            right: $offcanvas-width;
+        }
+    }
+	.dir-rtl {
+	    &.g-offcanvas-left {
+	        #g-offcanvas {
+	            right : auto;
+	        }
+	    }
+	    &.g-offcanvas-right {
+	        #g-offcanvas {
+	            left : auto;
+	        }
+		}
+	}
+}
+
+// Mobile Menu
+#g-offcanvas {
+	#g-mobilemenu-container {
+		ul {
+			background: $offcanvas-background;
+			> li {
+				> .g-menu-item-container {
+					padding: $content-padding;
+					color: $offcanvas-text-color;
+				}
+				&:not(.g-menu-item-type-particle):not(.g-menu-item-type-module) {
+					&.active, &:hover {
+						> .g-menu-item-container {
+							color: darken($accent-color-1, 5%);
+						}
+					}
+				}
+			}
+			.g-dropdown-column {
+				width: $offcanvas-width;
+			}
+		}
+	}
+}
+
+#g-mobilemenu-container {
+	margin: -($content-padding + $content-margin);
+}
+
+// Preset Thumbnails
+.g-preset-thumbnails {
+	@include breakpoint(mobile-only) {
+		img {
+			margin-bottom: 1rem;
+		}
+		text-align: center;
+		.g-block {
+			@include flex(0 0 auto);
+			width: 50% !important;
+
+			.g-content {
+				margin: 0 !important;
+				padding: 0 !important;
+			}
+			a {
+				color: $accent-color-1;
+				&:hover {
+					color: $accent-color-1;
+				}
+			}
+		}
+	}	
+}

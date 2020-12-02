@@ -1,0 +1,113 @@
+.login, #login-form, #g-loginform {
+	.form-input-wrapper {
+		margin-bottom: 15px;
+		input {
+			width: 100%;
+		}
+	}
+
+	input#modlgn-username, input#modlgn-passwd, input#username, input#passwd {
+		width: 100%;
+		display: block;
+	}
+
+	input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+	    color: $white;
+	}	
+}
+
+.rt-authorized-login-message {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+
+.rt-authorized-form-title {
+    .title {
+        font-size: 160%;
+        text-align: center;
+    }
+}
+
+#rt-authorized-form {
+
+    .outline {
+        background: inherit;
+        border: none;
+    }
+
+    .button {
+        padding: 15px 20px;
+    }
+
+    .login, #login-form, .g-loginform, #form-login {
+        margin: 0 auto;
+        text-align: center;
+        width: 90%;
+        .form-field, .form-actions {
+            display: inline-block;
+            @include breakpoint(tablet-range) {
+                display: block;
+            }
+            @include breakpoint(mobile-only) {
+                display: block;
+            }
+        }
+        #form-login-username, #form-login-password, #form-login-submit, #login-username, #login-password {
+            display: inline-block;
+            @include breakpoint(tablet-range) {
+                display: block;
+            }
+            label {
+                display: none;
+            }
+        }
+        input#username, input#password, input#modlgn-username, input#modlgn-passwd, input#passwd {
+            display: inline-block;
+            color: $grey;
+            font-size: 1em;
+            line-height: 20px;
+            padding: 0 15px;
+            height: 50px;
+            border: 1px solid transparent;
+            background-color: rgba(255,255,255,0.7);
+            background-image: linear-gradient(to right,rgba(255,255,255,0.7),rgba(255,255,255,0.7));
+            background-repeat: repeat-x;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            width: 280px;
+            border-radius: 3px;
+            &.rt-secretkey-input {
+                width: 100px;
+            }
+            @include breakpoint(mobile-only) {
+                margin: 5px auto;
+                display: block;
+                box-sizing: border-box;
+            }
+        }
+        .rememberme {
+            margin-top: 5px;
+        }
+        .form-label {
+            label {
+                display: none;
+            }
+        }
+
+        .add-on {
+            display: none;
+        }    
+
+        .input-prepend {
+        	font-size: $base-font-size
+        }        
+
+        input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+	    	color: #999;
+	    }
+
+        #form-login-remember {
+            display: none;
+        }	
+    }
+}

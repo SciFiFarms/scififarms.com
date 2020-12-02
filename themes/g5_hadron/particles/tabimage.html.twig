@@ -1,0 +1,48 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+
+	{% if particle.title %}<h2 class="g-title">{{ particle.title|raw }}</h2>{% endif %}
+
+	<div class="g-tabimage {{ particle.class|e }}">
+		<div class="g-grid">
+		{% for tabimage in particle.tabimages %}
+		<div class="g-block">
+			<div class="g-content">
+		
+				{% if tabimage.image %}
+				<div class="g-tab-image">
+					<img src="{{ url(tabimage.image)|e }}" alt="{{ tabimage.title|e }}" />
+					{% if tabimage.link %}
+					<div class="g-tab-image-overlay">
+						<a class="readon" href="{{ tabimage.link|e }}">{{ tabimage.label|e }}</a>
+					</div>
+					{% endif %}
+				</div>
+				{% endif %}	
+			
+				{% if tabimage.text %}
+				<div class="g-title-regular">{{ tabimage.text|raw }}</div>
+				{% endif %}	
+
+				{% if tabimage.tag %}
+					{% if tabimage.link %}
+					<a href="{{ tabimage.link|e }}">
+					{% endif %}	
+						<span class="g-tag">{{ tabimage.tag|e }}</span>
+					{% if tabimage.link %}
+					</a>
+					{% endif %}	
+				{% endif %}	
+			
+				{% if tabimage.subtag %}
+				<span class="g-small">{{ tabimage.subtag|e }}</span>
+				{% endif %}
+			
+			</div>
+		</div>
+		{% endfor %}
+		</div>
+	</div>
+
+{% endblock %}

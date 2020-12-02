@@ -1,0 +1,49 @@
+// Buttons
+.button, .button2, .readon, .readon2, .readon3, .g-totop a, a.readmore, button.validate, p.readmore a, #member-profile a, #member-registration a, .formelm-buttons button, .controls .btn, .logout-button .btn, .sprocket-readmore, &.roksearch_results a.clr, input.g-newsletter-button-submit {
+	color: $button-text-color;
+	background-color: $button-background;
+	display: inline-block;
+	padding: 10px 20px;
+	line-height: normal;
+	font-size: $base-font-size + 1;
+	border: 2px solid transparent;
+	border-radius: $base-border-radius;
+	background-image: none;
+	text-shadow: none;
+	@include transition(all 0.2s ease-in);
+
+	&:hover {
+		color: $button-text-color;
+		background-color: darken($button-background, 15%);
+		border: 2px solid transparent;
+		background-position: inherit;
+		background-image: none;
+		text-shadow: none;
+	}
+}
+
+input[type="submit"] {
+	border: 2px solid transparent !important;
+}
+
+.readon2,
+.g-totop a {
+	background: none;
+	.rt-overlay-dark & {
+		border: 2px solid $white;
+		color: $white;
+	}
+	.rt-overlay-light & {
+		border: 2px solid $dark-grey;
+		color: $dark-grey;
+	}
+	&:hover {
+		border: 2px solid transparent;
+	}
+}
+
+body {
+	input.g-newsletter-button-submit {
+		padding: 15px 20px;
+	}
+}

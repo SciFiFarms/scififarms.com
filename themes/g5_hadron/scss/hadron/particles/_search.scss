@@ -1,0 +1,32 @@
+.nav-search {
+    .g-search {
+        position: relative;
+        float:right;
+        margin: 0 15px;
+        z-index: 11;
+
+        &:before {
+            content: "\f002";
+            font-family: FontAwesome;
+            left: 16px;
+            position: absolute;
+            top: 11px;
+        }
+
+        &:hover {
+            input {
+                width: 235px;
+                padding-left: 45px;
+            }    
+        }
+
+        input {
+            width: 0;
+            padding-left: 28px;
+            border: 2px solid $navigation-text-color;
+            color: $navigation-text-color;
+            background: $navigation-background;
+            @include transition(width 0.2s ease-in-out);
+        }
+    }
+}
