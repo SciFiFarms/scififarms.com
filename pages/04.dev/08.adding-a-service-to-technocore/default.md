@@ -16,8 +16,8 @@ title: 'Adding a Service to TechnoCore'
 	 * Ports
 	 * DB?
 	 * Accounts
-	 * 
 7. Create Docker image (if nessesary - usually is)
 8. Test
 9. Integrate with other services
-10. 
+    * technocore.stack.sh
+11. 

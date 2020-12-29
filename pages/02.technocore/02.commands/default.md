@@ -18,16 +18,18 @@ Example: `./tc run_in $SERVICE_NAME bash` to debug or do some maintenance tasks.
 #### logs $SERVICE_NAME
 Follow the logs for $SERVICE_NAME. 
 
-Example: `./tc logs ingress`
+Example: `./tc logs grafana` or `./tc logs ingress`
+
+#### enter_secrets
+Scans the configuration for needed user-provided credentials, securely prompts (input not displayed) the user for them, and finally saves the credientals. 
+
+Example: `./tc enter_secrets` 
+
 
 #### create_secret $SERVICE_NAME $MOUNT_NAME $SECRET
 Example: `./tc create_secret ingress admin_password this_is_a_password`
-#### get_compose
-This is mostly used for debugging. 
 
-Example: `./tc get_compose`
-
-### #get_secret $SERVICE_NAME $MOUNT_NAME
+### get_secret $SERVICE_NAME $MOUNT_NAME
 Retrieve the $MOUNT_NAME secret used in the $SERVICE_NAME service.
     
 Example: `./tc get_secret ingress admin_password`
