@@ -6,6 +6,9 @@ taxonomy:
 ---
 
 # Service Information
+  In order to provide a trusted connection to TechnoCore, I've utilized [DuckDNS.org](https://www.duckdns.org/) and [LetsEncrypt](https://letsencrypt.org/) to generate trusted TLS certificates. 
+  You'll need to provide your DuckDNS token and domain as part of the installation. DuckDNS allows you to login using GitHub, Reddit, Google, or Twitter accounts, so you shouldn't need to create a new account. 
+  
 ## Docker image
 https://hub.docker.com/_/traefik?tab=description
 https://github.com/containous/traefik-library-image/blob/8c0a8508ea75d5a491abadb7fc5bfa33b2beb3d7/scratch/amd64/Dockerfile

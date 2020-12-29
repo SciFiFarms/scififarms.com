@@ -10,8 +10,13 @@ page-toc:
 
 # Prerequisites
 1. A domain/DNS record for your TechnoCore instance. For more on how to set this up, checkout [Setting up DNS](#setting-up-dns)
-2. Git is installed. You can find instructions on installing git here: [Getting Started Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-3. Docker. If you don't already have this installed, you'll be prompted to install it when running TechnoCore.
+2. Operating System
+   1. Linux - I'm running developing with Fedora and testing with Debian, Ubuntu, and CentOS. 
+   2. OS X - At one point, it was working with OS X. A lot has changed since then, and I'd expect some minor issues. 
+   3. Windows - Not currently supported, but there have been major changes to TechnoCore since I last tried. Checkout [#10](https://github.com/SciFiFarms/TechnoCore/issues/10) for more information.
+   4. Pi - Would like to eventually support. [#8](https://github.com/SciFiFarms/TechnoCore/issues/8)
+3. Git is installed. You can find instructions on installing git here: [Getting Started Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+4. Docker. If you don't already have this installed, you'll be prompted to install it when first running TechnoCore.
 
 # Getting Started
 ```

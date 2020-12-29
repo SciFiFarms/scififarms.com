@@ -5,6 +5,16 @@ taxonomy:
         - docs
 ---
 
+ESPs are the eyes and ears of TechnoCore. They aren't mandatory, but I'd highly recommend looking around [ESPHome's Documentation](https://esphome.io/) to see what is possible and how it works. 
+
+Note: I'm still exploring how to manage the ESPs in a sane and DRY way. Here are the methods I've employed:
+  - Mounted the /config folder to a folder on the server, and then used NextCloud to sync changes between my local machine and the server. 
+    This is my current solution. 
+  - Mounted the /config folder to a folder on the server, and then used sshfs to mount that folder on my local machine. To do this, you'll need to setup passwordless ssh to your server, and the add something like the following to your /etc/fstab:
+    ```technocore@technocore:/home/technocore/technocore/esphome/config /home/spencer/src/technocore/hals fuse.sshfs noauto,x-systemd.automount,_netdev,users,idmap=user,allow_other,reconnect 0 0```
+    This worked OK when I was on the local network, but broke when I left the network. 
+  - Used the text editor from within ESPHome. This worked OK, but doesn't have a way of editing files in folders, nor of creating symlinks. 
+
 # Service Information
 [Seedships: ESPHome](../../../seedships/esphome)  
 [ESPHome Documentation](https://esphome.io/)  
