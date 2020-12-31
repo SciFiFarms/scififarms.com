@@ -37,6 +37,7 @@ To learn more about how to use the .env file:
   -  Look at the documentation: [TechnoCore: Enviornment Variables](../env-vars)
   -  [dev.env](https://github.com/SciFiFarms/TechnoCore/blob/refactor/dev.env) has been commented with how to use each variable
 
+## Secrets
 While the goal is to put all configuration in that file, the reality is that secrets should not be stored in plain text, so in some cases, a secret will need to be manually added. Use the [enter_secrets command](../commands#enter-secrets): `./tc enter_secrets`; it will prompt you for the approprate tokens or keys. Alternatively, you can checkout [Developing TechnoCore: Secrets](../../developing-technocore/secrets) for more information.
 
 ## Workflow
