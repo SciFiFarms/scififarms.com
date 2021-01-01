@@ -17,7 +17,7 @@ The easiest way to get started is to `cp example.env .env` from the root of the 
 ! *Any* non zero length value will evalute to true. Even `<ENV_VAR>=false`. 
 - Secrets aren't env vars!
 ! You can run `./tc enter_secrets` to be promted for secrets you need to provide TechnoCore. For more information, checkout [Using TechnoCore: Secrets](../using-technocore#secrets)
-- Documentation for enviornment vars needed for development can be found in the [dev.env](https://github.com/SciFiFarms/TechnoCore/blob/master/stacks/dev.env) file, as well as at [Dev: Enviornment Variables](/dev/env-vars)
+- Documentation for environment vars needed for development can be found in the [dev.env](https://github.com/SciFiFarms/TechnoCore/blob/master/stacks/dev.env) file, as well as at [Dev: Enviornment Variables](/dev/env-vars)
 
 ## Required Values
 - `DOMAIN=tc.scifi.farm` - This env is the base for the URL of all of the services TechnoCore is running.  
@@ -48,15 +48,15 @@ Below are a couple of useful .env files, but you can find all avaliable .env fil
     Used for developing TechnoCore. For more information, see [Dev: Enviornment Variables](/dev/env-vars).
 
 
-! If you want to load more than one defaults file, then you have to use unique LOAD_STACK_NAMES env vars.  If you have the same variable name, for example: 
+! If you want to load more than one defaults file, then you have to use unique LOAD_ENV_NAMES env vars.  If you have the same variable name, for example: 
 ! ```
-! LOAD_STACK=dev.env
-! LOAD_STACK=grav.env
+! LOAD_ENV=dev.env
+! LOAD_ENV=grav.env
 ! ```
 ! Then grav.env will override dev.env and only grav.env will be loaded. Instead, use something like:
 ! ```
-! LOAD_STACK_DEV=dev.env
-! LOAD_STACK_GRAV=grav.env
+! LOAD_ENV_DEV=dev.env
+! LOAD_ENV_GRAV=grav.env
 ! ```
 
 [//]: # ( TODO: Have this file displayed in page with https://github.com/anza/grav-plugin-filesource )
