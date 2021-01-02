@@ -16,12 +16,12 @@ The easiest way to get started is to `cp example.env .env` from the root of the 
 - You can disable an option by leaving the env variable blank: `<ENV_VAR>=`. 
 ! *Any* non zero length value will evalute to true. Even `<ENV_VAR>=false`. 
 - Secrets aren't env vars!
-! You can run `./tc enter_secrets` to be promted for secrets you need to provide TechnoCore. For more information, checkout [Using TechnoCore: Secrets](../using-technocore#secrets)
-- Documentation for environment vars needed for development can be found in the [dev.env](https://github.com/SciFiFarms/TechnoCore/blob/master/stacks/dev.env) file, as well as at [Dev: Enviornment Variables](/dev/env-vars)
+! You can run `./tc enter_secrets` to be prompted for secrets you need to provide TechnoCore. For more information, checkout [Using TechnoCore: Secrets](../using-technocore#secrets)
+- Documentation for environment vars needed for development can be found in the [dev.env](https://github.com/SciFiFarms/TechnoCore/blob/master/stacks/dev.env) file, as well as at [Dev: Environment Variables](/dev/env-vars)
 
 ## Required Values
 - `DOMAIN=tc.scifi.farm` - This env is the base for the URL of all of the services TechnoCore is running.  
-    For example, with this DOMAIN set, you could access the grafana service at grafana.tc.scifi.farm.  
+    For example, with this DOMAIN set, you could access the Grafana service at grafana.tc.scifi.farm.  
     [//]: # ( More information on domains can be found at [TechnoCore: More on DNS](../more-on-dns) )  
 - `TZ=America/Denver` - See [this](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) list for the accepted timezone names.
 
@@ -39,13 +39,13 @@ The easiest way to get started is to `cp example.env .env` from the root of the 
 In order to make configurations modular and shareable, you can load more .env files by using `LOAD_ENV*` variables. TechnoCore comes with a handful of \*.env files that contain the configuration needed to fullfil a specific purpose. For example, the services and configurations needed to run this website are loaded with `LOAD_ENV=docs.env`. 
 !!! What you put in the .env will override any values already set in the LOAD_ENV_\* file, so you can think of settings brought in by LOAD_ENVs as defaults. This allows for flexibility in what parts of the  configuring you to add or remove services and options as needed.  
 
-Below are a couple of useful .env files, but you can find all avaliable .env files in the [TechnoCore GitHub repo](https://github.com/SciFiFarms/TechnoCore/tree/master/stacks).   
+Below are a couple of useful .env files, but you can find all available .env files in the [TechnoCore GitHub repo](https://github.com/SciFiFarms/TechnoCore/tree/master/stacks).   
 - [farm.env](https://github.com/SciFiFarms/TechnoCore/tree/master/stacks/farm.env)  
     This is what I'm using to run my SciFi Farm. It includes Grafana, ESPHome, Home Assistant, MQTT, and supporting services.   
 - [grav.env](https://github.com/SciFiFarms/TechnoCore/tree/master/stacks/grav.env)  
     This documentation is running off of env file. It includes Grava and a few supporting services.  
 - [dev.env](https://github.com/SciFiFarms/TechnoCore/tree/master/stacks/dev.env)
-    Used for developing TechnoCore. For more information, see [Dev: Enviornment Variables](/dev/env-vars).
+    Used for developing TechnoCore. For more information, see [Dev: Environment Variables](/dev/env-vars).
 
 
 ! If you want to load more than one defaults file, then you have to use unique LOAD_ENV_NAMES env vars.  If you have the same variable name, for example: 

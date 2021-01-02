@@ -23,7 +23,7 @@ page-toc:
 git pull https://github.com/SciFiFarms/TechnoCore technocore
 cd technocore
 cp example.env .env
-# EDIT .env. I use VS Code or vim. You'll need to atleast update DOMAIN to match the domain your actually using. 
+# EDIT .env. I use VS Code or vim. You'll need to at least update DOMAIN to match the domain your actually using. 
 ./tc enter_secrets
 ./tc deploy
 ```
@@ -38,7 +38,7 @@ To learn more about how to use the .env file:
   -  [dev.env](https://github.com/SciFiFarms/TechnoCore/blob/refactor/dev.env) has been commented with how to use each variable
 
 ## Secrets
-While the goal is to put all configuration in that file, the reality is that secrets should not be stored in plain text, so in some cases, a secret will need to be manually added. Use the [enter_secrets command](../commands#enter-secrets): `./tc enter_secrets`; it will prompt you for the approprate tokens or keys. Alternatively, you can checkout [Developing TechnoCore: Secrets](../../developing-technocore/secrets) for more information.
+While the goal is to put all configuration in that file, the reality is that secrets should not be stored in plain text, so in some cases, a secret will need to be manually added. Use the [enter_secrets command](../commands#enter-secrets): `./tc enter_secrets`; it will prompt you for the appropriate tokens or keys. Alternatively, you can checkout [Developing TechnoCore: Secrets](../../developing-technocore/secrets) for more information.
 
 ## Workflow
 1. Make changes to the .env file

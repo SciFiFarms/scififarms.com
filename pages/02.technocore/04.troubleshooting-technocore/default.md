@@ -10,6 +10,6 @@ If you run into issues, there are a couple main places to look for clues.
 - Check the documentation dedicated to the service you're having trouble with. Links can be found on the [Supported Services](../supported-services) page. 
 
 # Common issues
-TLS being untrusted
+TLS being un-trusted
 Ummon crashing
 Vault credentials expiring
