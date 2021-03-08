@@ -10,7 +10,7 @@ title: 'Flashing Tuya Devices (Make more friendly?)'
 5. Add /boot/ssh
 6. Boot pi
 7. SSH in, change PW and hostname: sudo raspi-config
-8. Set up tuya-convert:
+8. Set up tuya-convert: https://github.com/ct-Open-Source/tuya-convert#procedure
 9. 
 
 ## How to flash a Tuya device
@@ -25,6 +25,7 @@ title: 'Flashing Tuya Devices (Make more friendly?)'
 ssh pi@tuya-convert
 cd tuya-convert
 ./start_flash.sh
+Stop dnsmasq, mqtt
 ```
 4. Connect phone to network. 
 4. Flash device with generic firmware
