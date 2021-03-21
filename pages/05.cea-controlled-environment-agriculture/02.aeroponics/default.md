@@ -1,5 +1,0 @@
----
-title: Aeroponics
-published: true
----
-
