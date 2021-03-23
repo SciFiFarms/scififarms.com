@@ -5,7 +5,6 @@ taxonomy:
         - docs
 ---
 
-
 ## Setting up DNS
 In order for traffic to be directed to TechnoCore, there has to be at least one DNS record pointing to that TechnoCore instance. This allows your browser and TechnoCore to route traffic to the appropriate service.
 
