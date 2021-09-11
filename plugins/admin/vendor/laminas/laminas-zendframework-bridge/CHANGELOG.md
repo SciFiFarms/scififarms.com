@@ -2,28 +2,6 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 1.2.1 - TBD
-
-### Added
-
-- Nothing.
-
-### Changed
-
-- Nothing.
-
-### Deprecated
-
-- Nothing.
-
-### Removed
-
-- Nothing.
-
-### Fixed
-
-- Nothing.
-
 ## 1.2.0 - 2021-02-25
 
 
@@ -59,11 +37,13 @@ Feature release (minor)
 
 ### Fixed
 
-- [#71](https://github.com/laminas/laminas-zendframework-bridge/pull/71) fixes detection of the vendor directory when the `COMPOSER_VENDOR_DIR` env variable is missing or empty. Previously, this could lead to scenarios where a non-existent path was used for finding the bridge autoloader.
+- Nothing.
+
+## 1.2.0 - 2021-02-25
 
 -----
 
-### Release Notes for [1.1.1](https://github.com/laminas/laminas-zendframework-bridge/milestone/5)
+### Release Notes for [1.2.0](https://github.com/laminas/laminas-zendframework-bridge/milestone/7)
 
 - Total issues resolved: **0**
 - Total pull requests resolved: **1**

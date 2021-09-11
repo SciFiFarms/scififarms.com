@@ -26,11 +26,11 @@
     {% endif %}
 
     {% for p in pcol %}
-        {% set description = (not p.page ? "PLUGIN_ADMIN.FOLDER"|t ~ ' &bull; ' : "PLUGIN_ADMIN.PAGE"|t ~ ' &bull; ') ~
-            (p.isModule ? "PLUGIN_ADMIN.MODULE"|t ~ ' &bull; ' : '') ~
-            (p.routable ? "PLUGIN_ADMIN.ROUTABLE"|t ~ ' &bull; ' : "PLUGIN_ADMIN.NON_ROUTABLE"|t ~ ' &bull; ') ~
-            (p.visible ? "PLUGIN_ADMIN.VISIBLE"|t ~ ' &bull; ' : "PLUGIN_ADMIN.NON_VISIBLE"|t ~ ' &bull; ') ~
-            (p.published ? "PLUGIN_ADMIN.PUBLISHED"|t ~ ' &bull; ' : "PLUGIN_ADMIN.NON_PUBLISHED"|t ~ ' &bull; ') %}
+        {% set description = (not p.page ? "PLUGIN_ADMIN.FOLDER"|tu ~ ' &bull; ' : "PLUGIN_ADMIN.PAGE"|tu ~ ' &bull; ') ~
+            (p.isModule ? "PLUGIN_ADMIN.MODULE"|tu ~ ' &bull; ' : '') ~
+            (p.routable ? "PLUGIN_ADMIN.ROUTABLE"|tu ~ ' &bull; ' : "PLUGIN_ADMIN.NON_ROUTABLE"|tu ~ ' &bull; ') ~
+            (p.visible ? "PLUGIN_ADMIN.VISIBLE"|tu ~ ' &bull; ' : "PLUGIN_ADMIN.NON_VISIBLE"|tu ~ ' &bull; ') ~
+            (p.published ? "PLUGIN_ADMIN.PUBLISHED"|tu ~ ' &bull; ' : "PLUGIN_ADMIN.NON_PUBLISHED"|tu ~ ' &bull; ') %}
 
         {% set page_url = getPageUrl(p) %}
 
@@ -58,10 +58,10 @@
                     {% if config.plugins.admin.frontend_preview_target != 'inline' %}
                         {% set preview_target = config.plugins.admin.frontend_preview_target %}
                         {% set preview_route = (base_url_relative_frontend|rtrim('/') ~ (p.home ? '' : p.route)) ?: '/' %}
-                        {% set preview_link = p.routable ? '<a class="page-view" target="' ~ preview_target ~ '" href="' ~ preview_route ~ '" title="' ~ "PLUGIN_ADMIN.PREVIEW"|t ~ '"> <i class="fa fa-fw fa-eye"></i></a>' : '' %}
+                        {% set preview_link = p.routable ? '<a class="page-view" target="' ~ preview_target ~ '" href="' ~ preview_route ~ '" title="' ~ "PLUGIN_ADMIN.PREVIEW"|tu ~ '"> <i class="fa fa-fw fa-eye"></i></a>' : '' %}
                     {% else %}
                         {% set preview_route = admin_route('/preview' ~ (p.home ? '' : p.route)) %}
-                        {% set preview_link = p.routable ? '<a class="page-view" href="' ~ preview_route ~ '" title="' ~ "PLUGIN_ADMIN.PREVIEW"|t ~ '"> <i class="fa fa-fw fa-eye"></i></a>' : '' %}
+                        {% set preview_link = p.routable ? '<a class="page-view" href="' ~ preview_route ~ '" title="' ~ "PLUGIN_ADMIN.PREVIEW"|tu ~ '"> <i class="fa fa-fw fa-eye"></i></a>' : '' %}
                     {% endif %}
                     {{ preview_link|raw }}
                     {% if warn %}
@@ -130,17 +130,17 @@
 {% if config.plugins.admin.frontend_preview_target != 'inline' %}
     {% set preview_route = (base_url_relative_frontend|rtrim('/') ~ (context.home ? '' : context.route)) ?: '/' %}
     {% set preview_target = config.plugins.admin.frontend_preview_target %}
-    {% set preview_link = context.routable ? '<a class="button" target="' ~ preview_target ~ '" href="' ~ preview_route ~ '" title="' ~ "PLUGIN_ADMIN.PREVIEW"|t ~ '"> <i class="fa fa-fw fa-eye" style="font-size:18px;margin-right:0;"></i></a>' : '' %}
+    {% set preview_link = context.routable ? '<a class="button" target="' ~ preview_target ~ '" href="' ~ preview_route ~ '" title="' ~ "PLUGIN_ADMIN.PREVIEW"|tu ~ '"> <i class="fa fa-fw fa-eye" style="font-size:18px;margin-right:0;"></i></a>' : '' %}
 {% else %}
     {% set preview_route = admin_route('/preview' ~ (context.home ? '' : context.route)) %}
-    {% set preview_link = context.routable ? '<a class="button" href="' ~ preview_route ~ '" title="' ~ "PLUGIN_ADMIN.PREVIEW"|t ~ '"> <i class="fa fa-fw fa-eye" style="font-size:18px;margin-right:0;"></i></a>' : '' %}
+    {% set preview_link = context.routable ? '<a class="button" href="' ~ preview_route ~ '" title="' ~ "PLUGIN_ADMIN.PREVIEW"|tu ~ '"> <i class="fa fa-fw fa-eye" style="font-size:18px;margin-right:0;"></i></a>' : '' %}
 {% endif %}
 
 {% block titlebar %}
 
     <div class="button-bar">
         {% if mode == 'list' %}
-            <a class="button" href="{{ admin_route('/') }}"><i class="fa fa-reply"></i> {{ "PLUGIN_ADMIN.BACK"|t }}</a>
+            <a class="button" href="{{ admin_route('/') }}"><i class="fa fa-reply"></i> {{ "PLUGIN_ADMIN.BACK"|tu }}</a>
 
             {% for key, add_modal in config.plugins.admin.add_modals %}
                 {% if add_modal.show_in|defined('bar') == 'bar' %}
@@ -159,7 +159,7 @@
                     <li><a class="button" href="#modal" data-remodal-target="modal">{{ "PLUGIN_ADMIN.ADD_PAGE"|t }}</a></li>
                     <li><a class="button" href="#modal-folder" data-remodal-target="modal-folder">{{ "PLUGIN_ADMIN.ADD_FOLDER"|t }}</a></li>
                     {% if admin.modularTypes is not empty %}
-                        <li><a class="button" href="#module" data-remodal-target="module">{{ "PLUGIN_ADMIN.ADD_MODULE"|t }}</a></li>
+                        <li><a class="button" href="#module" data-remodal-target="module">{{ "PLUGIN_ADMIN.ADD_MODULE"|tu }}</a></li>
                     {% endif %}
                     {% for key, add_modal in config.plugins.admin.add_modals %}
                         {% if add_modal.show_in|defined('bar') == 'dropdown' %}
@@ -196,7 +196,7 @@
 
             {{ preview_link|raw }}
 
-            <a class="button" href="{{ admin_route('/pages') }}" title="{{ "PLUGIN_ADMIN.BACK"|t }}"><i class="fa fa-reply"></i></a>
+            <a class="button" href="{{ admin_route('/pages') }}" title="{{ "PLUGIN_ADMIN.BACK"|tu }}"><i class="fa fa-reply"></i></a>
 
             {% if exists %}
                 {% set siblings = context.parent().children() %}
@@ -204,17 +204,17 @@
                 {% if not siblings.isFirst(context.path) %}
                     {% set sib = siblings.nextSibling(context.path) %}
                     {% set sib_url = admin_route('/pages' ~ (sib.header.routes.default ?: sib.rawRoute)) %}
-                    <a class="button hidden-mobile" href="{{ sib_url }}" title="{{ "PLUGIN_ADMIN.PREVIOUS"|t }}"><i class="fa fa-chevron-left"></i></a>
+                    <a class="button hidden-mobile" href="{{ sib_url }}" title="{{ "PLUGIN_ADMIN.PREVIOUS"|tu }}"><i class="fa fa-chevron-left"></i></a>
                 {% endif %}
 
                 {% if not siblings.isLast(context.path) %}
                     {% set sib = siblings.prevSibling(context.path) %}
                     {% set sib_url = admin_route('/pages' ~ (sib.header.routes.default ?: sib.rawRoute)) %}
-                    <a class="button hidden-mobile" href="{{ sib_url }}" title="{{ "PLUGIN_ADMIN.NEXT"|t }}"><i class="fa fa-chevron-right"></i></a>
+                    <a class="button hidden-mobile" href="{{ sib_url }}" title="{{ "PLUGIN_ADMIN.NEXT"|tu }}"><i class="fa fa-chevron-right"></i></a>
                 {% endif %}
 
                 {% if warn %}
-                    <a class="button" href="#delete" data-remodal-target="delete" data-delete-url="{{ uri.addNonce(page_url ~ '/task' ~ config.system.param_sep ~ 'delete', 'admin-form', 'admin-nonce') }}"><i class="fa fa-trash-o"></i> {{ "PLUGIN_ADMIN.DELETE"|t }}</a>
+                    <a class="button" href="#delete" data-remodal-target="delete" data-delete-url="{{ uri.addNonce(page_url ~ '/task' ~ config.system.param_sep ~ 'delete', 'admin-form', 'admin-nonce') }}"><i class="fa fa-trash-o"></i> {{ "PLUGIN_ADMIN.DELETE"|tu }}</a>
                 {% else %}
                     <a class="button disable-after-click" href="{{ uri.addNonce(uri.route(true) ~ '/task' ~ config.system.param_sep ~ 'delete', 'admin-form', 'admin-nonce') }}" class="page-delete" ><i class="fa fa-trash-o"></i></a>
                 {% endif %}
@@ -230,21 +230,21 @@
                         <li><a class="button" href="#modal" data-remodal-target="modal">{{ "PLUGIN_ADMIN.ADD_PAGE"|t }}</a></li>
                         <li><a class="button" href="#modal-folder" data-remodal-target="modal-folder">{{ "PLUGIN_ADMIN.ADD_FOLDER"|t }}</a></li>
                         {% if admin.modularTypes is not empty %}
-                            <li><a class="button" href="#module" data-remodal-target="module">{{ "PLUGIN_ADMIN.ADD_MODULE"|t }}</a></li>
+                            <li><a class="button" href="#module" data-remodal-target="module">{{ "PLUGIN_ADMIN.ADD_MODULE"|tu }}</a></li>
                         {% endif %}
                     </ul>
                 </div>
 
-                <a class="button disable-after-click" href="{{ uri.addNonce(page_url ~ '/task' ~ config.system.param_sep ~ 'copy', 'admin-form', 'admin-nonce') }}" class="page-copy" ><i class="fa fa-copy"></i> {{ "PLUGIN_ADMIN.COPY"|t }}</a>
-                <a class="button" href="#" data-remodal-target="move" data-parents="data[route]"><i class="fa fa-arrows"></i> {{ "PLUGIN_ADMIN.MOVE"|t }}</a>
+                <a class="button disable-after-click" href="{{ uri.addNonce(page_url ~ '/task' ~ config.system.param_sep ~ 'copy', 'admin-form', 'admin-nonce') }}" class="page-copy" ><i class="fa fa-copy"></i> {{ "PLUGIN_ADMIN.COPY"|tu }}</a>
+                <a class="button" href="#" data-remodal-target="move" data-parents="data[route]"><i class="fa fa-arrows"></i> {{ "PLUGIN_ADMIN.MOVE"|tu }}</a>
                 {% if config.plugins['admin-pro'].enabled %}
-                    <a class="button" href="#" data-remodal-target="revisions"><i class="fa fa-history"></i> {{ "PLUGIN_ADMIN_PRO.REVISIONS"|t }}</a>
+                    <a class="button" href="#" data-remodal-target="revisions"><i class="fa fa-history"></i> {{ "PLUGIN_ADMIN_PRO.REVISIONS"|tu }}</a>
                 {% endif %}
 
             {% endif %}
 
             <div class="button-group">
-                <button class="button success" name="task" value="save" form="blueprints" type="submit"><i class="fa fa-check"></i> {{ "PLUGIN_ADMIN.SAVE"|t }}</button>
+                <button class="button success" name="task" value="save" form="blueprints" type="submit"><i class="fa fa-check"></i> {{ "PLUGIN_ADMIN.SAVE"|tu }}</button>
                 {% if exists and admin.multilang %}
                     {%  set untranslated = context.untranslatedLanguages(true) %}
                     {% if untranslated %}
@@ -255,7 +255,7 @@
                             {% for langCode in untranslated %}
                                 {% set langName = admin.siteLanguages[langCode] %}
                                 {% if langCode != page_lang %}
-                                    <li><button class="button success task" name="task" value="saveas" lang="{{langCode}}" form="blueprints" type="submit">{{ "PLUGIN_ADMIN.SAVE_AS"|t }} {{ langName[:1]|upper ~ langName[1:] }}</button></li>
+                                    <li><button class="button success task" name="task" value="saveas" lang="{{langCode}}" form="blueprints" type="submit">{{ "PLUGIN_ADMIN.SAVE_AS"|tu }} {{ langName[:1]|upper ~ langName[1:] }}</button></li>
                                 {% endif %}
                             {% endfor %}
                         </ul>
@@ -290,7 +290,7 @@
                     <div id="admin-lang-toggle" class="button-group">
                         <button type="button" class="button disabled">
                             {% if exists %}
-                                {{ page_lang ?? "PLUGIN_ADMIN.DEFAULT"|t }}
+                                {{ page_lang ?? "PLUGIN_ADMIN.DEFAULT"|tu }}
                             {% else %}
                                 {{ admin.language }}
                             {% endif %}
@@ -315,8 +315,8 @@
                 {% endif %}
 
                 {% if context.blueprints.fields and user.authorize('admin.super') %}
-                {% set normalText = "PLUGIN_ADMIN.NORMAL"|t %}
-                {% set expertText = "PLUGIN_ADMIN.EXPERT"|t %}
+                {% set normalText = "PLUGIN_ADMIN.NORMAL"|tu %}
+                {% set expertText = "PLUGIN_ADMIN.EXPERT"|tu %}
                 {% set maxLen = max([normalText|length, expertText|length]) %}
                 {% set normalText = macro.spanToggle(normalText, maxLen) %}
                 {% set expertText = macro.spanToggle(expertText, maxLen) %}
@@ -400,8 +400,8 @@
             <div class="grav-loading"><div class="grav-loader">Loading...</div></div>
             <div class="parents-content"></div>
             <div class="button-bar">
-                <a class="button secondary remodal-cancel" data-remodal-action="cancel" href="#"><i class="fa fa-fw fa-close"></i> {{ "PLUGIN_ADMIN.CANCEL"|t }}</a>
-                <a class="button" data-parents-select href="#"><i class="fa fa-fw fa-check"></i> {{ "PLUGIN_ADMIN.CONTINUE"|t }}</a>
+                <a class="button secondary remodal-cancel" data-remodal-action="cancel" href="#"><i class="fa fa-fw fa-close"></i> {{ "PLUGIN_ADMIN.CANCEL"|tu }}</a>
+                <a class="button" data-parents-select href="#"><i class="fa fa-fw fa-check"></i> {{ "PLUGIN_ADMIN.CONTINUE"|tu }}</a>
             </div>
         </form>
     </div>

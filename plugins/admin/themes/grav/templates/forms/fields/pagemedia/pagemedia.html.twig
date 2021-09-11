@@ -42,7 +42,7 @@
              data-dropzone-field="{{ (scope ~ field.name)|fieldName }}"></div>
 
         {% if admin.session.expert == '0' or not user.authorize('admin.super') %}
-        <input type="hidden" name="{{ (scope ~ field.name)|fieldName }}" value="{{ value }}" />
+        <input type="hidden" name="{{ (scope ~ field.name)|fieldName }}" value="{{ value|e }}" />
         {% endif %}
     </div>
 </div>

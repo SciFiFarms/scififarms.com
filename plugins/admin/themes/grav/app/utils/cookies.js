@@ -13,6 +13,7 @@ const factory = function(window) {
     }
 
     const Cookies = (key, value, options) => {
+        alert('a');
         return arguments.length === 1
             ? Cookies.get(key)
             : Cookies.set(key, value, options);

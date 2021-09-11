@@ -18,7 +18,7 @@
         {% else %}
             {% set percent_used = 100 %}
         {% endif %}
-        {% set bar_msg = "PLUGIN_ADMIN.BACKUPS_PURGE_NUMBER"|t(count, purge_config.max_backups_count) %}
+        {% set bar_msg = "PLUGIN_ADMIN.BACKUPS_PURGE_NUMBER"|tu([count, purge_config.max_backups_count]) %}
     {% case 'time' %}
         {% set last = backups|last %}
         {% set days = last == null ? 0 : (date('now')).diff(last.time).days %}

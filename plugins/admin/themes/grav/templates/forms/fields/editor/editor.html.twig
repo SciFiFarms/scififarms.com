@@ -4,7 +4,7 @@
 {% set theme = whitelabel.codemirror_theme ?? 'paper.css' %}
 {% set fontsize = whitelabel.codemirror_fontsize ?? 'lg' %}
 
-{% set value = value ?? field.default|t %}
+{% set value = value ?? field.default|tu %}
 {% if not codemirrorOptions %}
     {% set codemirrorOptions = {'mode': 'gfm', 'theme': theme, 'ignore': ['code', 'preview'], 'font': 'mono'}|merge(field.codemirror|default({})) %}
 {% endif %}
@@ -43,7 +43,7 @@
                     {% if field.readonly in ['on', 'true', 1] %}readonly="readonly"{% endif %}
                     {% if field.validate.required in ['on', 'true', 1] %}required="required"{% endif %}
                     {% if 'preview' not in codemirrorOptions.ignore %}data-grav-urlpreview="{{ base_url }}/media/{{ admin.route|trim('/') }}.json"{% endif %}
-                >{{ input_value }}</textarea>
+                >{{ input_value|e('html') }}</textarea>
             </div>
             {% if field.resizer is not defined or field.resizer not in ['off', 'false', 0] %}<div class="grav-editor-resizer"></div>{% endif %}
             {% if field.description %}

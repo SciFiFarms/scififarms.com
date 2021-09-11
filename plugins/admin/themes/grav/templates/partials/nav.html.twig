@@ -23,7 +23,7 @@
                         <li class="{{ nav_route|starts_with(location) ? 'selected' : '' }}">
                             <a href="{{ admin_route(route) }}">
                                 <i class="fa fa-fw {{ item.icon }}"></i>
-                                <em>{{ label|t }}</em>
+                                <em>{{ label|tu }}</em>
                                 {% set badge = item.badge ?? null %}
                                 {% if badge %}
                                 <span class="badges {% if badge.updates %}with-updates{% endif %}">

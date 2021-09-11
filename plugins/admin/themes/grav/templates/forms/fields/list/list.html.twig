@@ -59,7 +59,7 @@
                     <button class="button" type="button" data-action="add"
                             data-action-add="{{ field.placement is same as('position') ? 'top' : field.placement|default('bottom') }}"
                             {% if field.disabled or isDisabledToggleable %}disabled="disabled"{% endif %}
-                    ><i class="fa fa-plus"></i> {{ btnLabel|t }}</button>
+                    ><i class="fa fa-plus"></i> {{ btnLabel|e|tu }}</button>
                 </div>
             {% endif %}
             <ul  {% if field.classes is defined %}class="{{ field.classes }}"{% endif %} data-collection-holder="{{ name }}"
@@ -69,28 +69,28 @@
                 {% if field.fields %}
                 {% set collapsible = field.fields|length > 1 and (field.collapsible is not defined or field.collapsible)  %}
                 {% for key, val in value %}
-                    {% set item_name = name ? name ~ '.' ~ key : key %}
-                    <li data-collection-item="{{ item_name }}"
+                    {% set itemName = name ? name ~ '.' ~ key : key %}
+                    <li data-collection-item="{{ itemName }}"
                         data-collection-key="{{ key }}"
                         class="{{ collapsible and field.collapsed ? 'collection-collapsed' : '' }}"
                         {% if field.min_height %}style="min-height:{{ field.min_height }};"{% endif %}>
                         <div class="collection-sort"><i class="fa fa-fw fa-bars"></i></div>
-                            {%- for child_name, child in field.fields -%}
-                                {% set child = prepare_form_field(child, child_name, item_name) %}
-                                {% if child %}
-                                    {% set child = child|merge({ '_list_index': item_name }) %}
-                                    {% set default_layout = 'text' %}
-                                    {% if child.type == 'key' or (child.key == true and child.type != 'list') %}
-                                        {# Special handling for the key field #}
-                                        {% set default_layout = 'key' %}
-                                        {% set child_value = key %}
-                                    {% elseif child.name == 'value' %}
-                                        {# Special handling for the value field #}
-                                        {% set child = child|merge({ name: item_name }) %}
-                                        {% set child_value = value %}
-                                    {% else %}
-                                        {% set child_value = form ? form.value(child.name) : data.value(child.name) %}
-                                    {% endif %}
+                        {% for childName, child in field.fields %}
+                            {% set child = child|merge({ '_list_index': itemName }) %}
+                            {%- if childName == 'value' -%}
+                                {% set childKey = '' %}
+                                {% set childValue = val %}
+                                {% set childName = itemName -%}
+                            {%- elseif childName starts with '.' -%}
+                                {% set childKey = childName|trim('.') %}
+                                {% set childValue = val|nested(childName) %}
+                                {% set childName = itemName ~ childName %}
+                            {% else %}
+                                {% set childKey = childName %}
+                                {% set childValue = data.value(childName) %}
+                                {% set childName = childName|replace({'*': key}) %}
+                            {% endif %}
+                            {% set child = child|merge({ name: childName }) %}
 
                                     {% set field_templates = include_form_field(child.type, field_layout, default_layout) %}
                                     {% set template_data = { field: child, value: child_value } %}
@@ -130,7 +130,7 @@
                 <button class="button" type="button" data-action="add"
                         data-action-add="{{ field.placement is same as('position') ? 'bottom' : field.placement|default('bottom') }}"
                         {% if field.disabled or isDisabledToggleable %}disabled="disabled"{% endif %}
-                ><i class="fa fa-plus"></i> {{ btnLabel|t }}</button>
+                ><i class="fa fa-plus"></i> {{ btnLabel|e|tu }}</button>
             </div>
             {% endif %}
 

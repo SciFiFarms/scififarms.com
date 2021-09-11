@@ -29,7 +29,7 @@
             {% set name = tool|last %}
             {% if authorize(perms) %}
             <a href="{{ admin_route('/tools/' ~ slug|hyphenize) }}" {% if tools_slug == slug|hyphenize %}class="active"{% endif %}>
-                {{ name|t|capitalize }}
+                {{ name|tu|capitalize }}
             </a>
             {% endif %}
         {% endfor %}

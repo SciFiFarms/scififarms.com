@@ -303,7 +303,24 @@ class LoginPlugin extends Plugin
      */
     public function addLoginPage(): void
     {
-        $this->login->addPage('login');
+        /** @var Pages $pages */
+        $pages = $this->grav['pages'];
+        $page = $pages->dispatch($this->route);
+
+        if (!$page) {
+            // Only add login page if it hasn't already been defined.
+            $page = new Page();
+            $page->init(new \SplFileInfo(__DIR__ . '/pages/login.md'));
+            $page->slug(basename($this->route));
+
+            $pages->addPage($page, $this->route);
+        }
+
+        // Login page may not have the correct Cache-Control header set, force no-store for the proxies.
+        $cacheControl = $page->cacheControl();
+        if (!$cacheControl) {
+            $page->cacheControl('private, no-cache, must-revalidate');
+        }
     }
 
     /**
@@ -311,7 +328,25 @@ class LoginPlugin extends Plugin
      */
     public function addForgotPage(): void
     {
-        $this->login->addPage('forgot');
+        $route = $this->config->get('plugins.login.route_forgot');
+        /** @var Pages $pages */
+        $pages = $this->grav['pages'];
+        $page = $pages->dispatch($route);
+
+        if (!$page) {
+            // Only add forgot page if it hasn't already been defined.
+            $page = new Page();
+            $page->init(new \SplFileInfo(__DIR__ . '/pages/forgot.md'));
+            $page->slug(basename($route));
+
+            $pages->addPage($page, $route);
+        }
+
+        // Forgot page may not have the correct Cache-Control header set, force no-store for the proxies.
+        $cacheControl = $page->cacheControl();
+        if (!$cacheControl) {
+            $page->cacheControl('private, no-cache, must-revalidate');
+        }
     }
 
     /**
@@ -328,7 +363,24 @@ class LoginPlugin extends Plugin
             return;
         }
 
-        $this->login->addPage('reset');
+        /** @var Pages $pages */
+        $pages = $this->grav['pages'];
+        $page = $pages->dispatch($route);
+
+        if (!$page) {
+            // Only add login page if it hasn't already been defined.
+            $page = new Page();
+            $page->init(new \SplFileInfo(__DIR__ . '/pages/reset.md'));
+            $page->slug(basename($route));
+
+            $pages->addPage($page, $route);
+        }
+
+        // Reset page may not have the correct Cache-Control header set, force no-store for the proxies.
+        $cacheControl = $page->cacheControl();
+        if (!$cacheControl) {
+            $page->cacheControl('private, no-cache, must-revalidate');
+        }
     }
 
     /**
@@ -356,8 +408,11 @@ class LoginPlugin extends Plugin
     {
         $page = $this->login->addPage('unauthorized');
 
-        unset($this->grav['page']);
-        $this->grav['page'] = $page;
+        // Register page may not have the correct Cache-Control header set, force no-store for the proxies.
+        $cacheControl = $page->cacheControl();
+        if (!$cacheControl) {
+            $page->cacheControl('private, no-cache, must-revalidate');
+        }
     }
 
     /**
@@ -438,6 +493,64 @@ class LoginPlugin extends Plugin
         }
 
         $this->grav->redirectLangSafe($redirect_route ?: '/', $redirect_code);
+    }
+
+    /**
+     * Add Profile page
+     */
+    public function addProfilePage()
+    {
+        $route = $this->config->get('plugins.login.route_profile');
+        /** @var Pages $pages */
+        $pages = $this->grav['pages'];
+        $page = $pages->dispatch($route);
+
+        if (!$page) {
+            // Only add forgot page if it hasn't already been defined.
+            $page = new Page();
+            $page->init(new \SplFileInfo(__DIR__ . '/pages/profile.md'));
+            $page->slug(basename($route));
+
+            $pages->addPage($page, $route);
+        }
+
+        // Profile page may not have the correct Cache-Control header set, force no-store for the proxies.
+        $cacheControl = $page->cacheControl();
+        if (!$cacheControl) {
+            $page->cacheControl('private, no-cache, must-revalidate');
+        }
+
+        $this->storeReferrerPage();
+    }
+
+    /**
+     * Set Unauthorized page
+     * @throws \Exception
+     */
+    public function setUnauthorizedPage()
+    {
+        $route = $this->config->get('plugins.login.route_unauthorized');
+
+        /** @var Pages $pages */
+        $pages = $this->grav['pages'];
+        $page = $pages->dispatch($route);
+
+        if (!$page) {
+            $page = new Page();
+            $page->init(new \SplFileInfo(__DIR__ . '/pages/unauthorized.md'));
+            $page->slug(basename($route));
+
+            $pages->addPage($page, $route);
+        }
+
+        // Unauthorized page may not have the correct Cache-Control header set, force no-store for the proxies.
+        $cacheControl = $page->cacheControl();
+        if (!$cacheControl) {
+            $page->cacheControl('private, no-cache, must-revalidate');
+        }
+
+        unset($this->grav['page']);
+        $this->grav['page'] = $page;
     }
 
     /**
@@ -561,7 +674,11 @@ class LoginPlugin extends Plugin
         if (!$authenticated) {
             $this->authenticated = false;
 
-            $login_page = $this->login->addPage('login', $this->login->getRoute('login') ?? '/login');
+            // Login page may not have the correct Cache-Control header set, force no-store for the proxies.
+            $cacheControl = $page->cacheControl();
+            if (!$cacheControl) {
+                $page->cacheControl('private, no-cache, must-revalidate');
+            }
 
             unset($this->grav['page']);
             $this->grav['page'] = $login_page;

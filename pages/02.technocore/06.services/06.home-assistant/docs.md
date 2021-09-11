@@ -5,6 +5,16 @@ taxonomy:
         - docs
 ---
 
+## Signal API
+```
+./tc signal-api register
+./tc signal-api register --captcha 03AGdBq26AYmopm_6OKfDPlswsF4ZEsBfNDncoSnaF2onVyh_f0PZgtB1t_lNPDYHkiSxfPeIMSIYaBm-pZO5k7-C34bvQl5ZMj5Ynt5SyjbiJ_H_88yNzgD19P6LpFAcu1r7_n6a4yfWrGb-iF31NGenCSVtScCKDLAgj67DZTXQJmpyz_ZdGD5HmTJTNbYOGEM4d3JFqLGyc6DAHM8OwOTgQf-lUahZ_uGgZ2tLOfqBLS7Ws72JUqiBARcI370efJw71cdZkmh-yk_eB4FmMlOzfJTS5SHyV9JSydyW0AcRtiwnJgl-U2SDFvnmwGYL-PbWHtv7r44MUo_qOfUtsV3IDMyT0QSVkn8Xcd921w-u0mVvDOcm3rgxgDKAfpuOGtxJcxf_RSQLQOq2SuOzpmf1VgErnskUS8dYwAsdvW4_epWoM02KGK3QDNSmOV8a6tmljjNqVA51BKnz9rMQ3ETya-6Aw-QfVcQ
+./tc signal-api verify 180-643
+./tc signal-api verify 180-643 --pin <YOUR_PIN>
+# Not sure about this command!
+./tc signal-api setPin --pin <YOUR_PIN>
+```
+
 ## Projects
 ### NHL Sensor
 https://github.com/JayBlackedOut/hass-nhlapi
@@ -83,7 +93,7 @@ https://github.com/renemarc/home-assistant-config
 https://github.com/JoshuaGarrison27/Home-Assistant-Configuration
 https://www.reddit.com/r/homeassistant/comments/bq3l7v/featurescomponents_in_home_assistant_you_wish/
 
-### Influx 
+### Influx
 https://www.home-assistant.io/integrations/influxdb/
 
 ### Home Assistant sensors in InFluxdb
@@ -127,7 +137,7 @@ Example of MQTT discovery: https://github.com/stelgenhof/AiLight/wiki/Home-Assis
 ### HA_Homie repo. Checkout Dev branch!
 https://github.com/nerdfirefighter/HA_Homie
 
-### I had trouble using symlinks in www when remapped to /local/ in the browser. 
+### I had trouble using symlinks in www when remapped to /local/ in the browser.
 https://github.com/home-assistant/home-assistant/issues/15778
 https://github.com/home-assistant/home-assistant/pull/8413
 
@@ -152,10 +162,10 @@ https://github.com/home-assistant/home-assistant/blob/48af5116b34f1d19c5be2f913a
 https://github.com/home-assistant/home-assistant/blob/39843a73de1b8e2a42be1e9300580726baecd18f/homeassistant/components/xiaomi_aqara.py
 https://github.com/home-assistant/home-assistant/blob/ea2ff6aae32821b8faaa7e5eb00efce779ebac73/homeassistant/components/velux.py
 
-### Settings and examples for sensors:    
+### Settings and examples for sensors:
 https://www.home-assistant.io/components/sensor.mqtt/
 
-### Setting icons and stuff 
+### Setting icons and stuff
 https://www.home-assistant.io/docs/configuration/customizing-devices/
 https://materialdesignicons.com/
 https://cdn.materialdesignicons.com/2.3.54/
@@ -167,7 +177,7 @@ https://www.home-assistant.io/components/logger/
 https://github.com/maartenpaauw/home-assistant-community-themes
 https://community.home-assistant.io/t/share-your-themes/22018
 
-### How to pop up a dismissible notification. 
+### How to pop up a dismissible notification.
 https://www.home-assistant.io/components/persistent_notification/
 
 ### Data Entry flow?
@@ -182,7 +192,7 @@ https://www.home-assistant.io/lovelace/
 https://www.home-assistant.io/integrations/recorder/
 
 ### Plant card
-https://www.home-assistant.io/lovelace/plant-status/ 
+https://www.home-assistant.io/lovelace/plant-status/
 
 ### Lovelace entity card documentation:
 https://www.home-assistant.io/lovelace/entities/
@@ -211,7 +221,7 @@ https://github.com/home-assistant/architecture/issues
 ### Image processing
 https://www.home-assistant.io/components/image_processing/
 
-### Coroutines were used in the MQTT start up. 
+### Coroutines were used in the MQTT start up.
 http://dabeaz.com/coroutines/
 https://stackoverflow.com/questions/9708902/in-practice-what-are-the-main-uses-for-the-new-yield-from-syntax-in-python-3
 
