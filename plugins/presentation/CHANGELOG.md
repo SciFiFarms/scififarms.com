@@ -1,3 +1,15 @@
+# v4.0.3
+## 10-04-2021
+
+1. [](#improved)
+   - More theme-select redundancy
+
+# v4.0.2
+## 20-01-2021
+
+1. [](#improved)
+   - Theme-select redundancy
+
 # v4.0.1
 ## 19-07-2020
 

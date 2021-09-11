@@ -1,8 +1,44 @@
+# v1.6.5
+## 03/21/2021
+
+1. [](#improved)
+    * Updated demo pages in theme '_demo' folder
+
+# v1.6.4
+## 02/28/2021
+
+1. [](#improved)
+    * Reduced plugin dependencies, thanks to the new Grav Skeleton build process
+
+# v1.6.3
+## 02/15/2021
+
+1. [](#bugfix)
+    * Removed tab characters from comment indent (thanks @holehan)
+
+# v1.6.2
+## 01/26/2021
+
+1. [](#improved)
+    * Updated theme blueprints for Grav 1.7
+
+# v1.6.1
+## 01/15/2021
+
+1. [](#new)
+    * GoogleSlides shortcode updated to handle double `_` characters in URL (thanks @GeorgesPapas)
+
+# v1.6.0
+## 01/05/2021
+
+1. [](#new)
+    * Initial NextGen Editor support for GoogleSlides, H5P and PDF shortcodes
+
 # v1.5.9
 ## 05/19/2020
 
 1. [](#improved)
-    * Updated inherited theme file paths for multisite compatibility (thanks to @tituspijean for the PR!)
+    * Updated inherited theme file paths for multisite compatibility (thanks to @tituspijean for the PR and @mahagr for the debugging!)
 
 # v1.5.8
 ## 12/05/2019

@@ -1,3 +1,62 @@
+# v3.5.1
+## 08/31/2021
+
+1. [](#bugfix)
+   * Fixed white-page during new install with admin 
+
+# v3.5.0
+## 08/31/2021
+
+1. [](#new)
+   * Require **Grav 1.7.19**, **Form 5.1.0** and **Email 3.1.0**
+   * Added support for adding login pages by `$grav['login']->addPage()`
+   * Added support for getting all login routes by `$grav['login']->getRoute()`
+   * Added support for form layouts
+   * Deprecated methods `LoginPlugin::defaultRedirectAfterLogin()` and `LoginPlugin::defaultRedirectAfterLogout()`
+1. [](#improved)
+   * Speed up `visibility_requires_access` checks by restricting full check to only visible pages
+1. [](#bugfix)
+   * Fixed login pages with redirect breaking the site
+
+# v3.4.4
+## 06/16/2021
+
+1. [](#new)
+   * Updated 2FA library
+1. [](#bugfix)
+   * Fixed missing email conflict check when calling `Login::register()`
+
+# v3.4.3
+## 05/19/2021
+
+1. [](#bugfix)
+    * Fixed failing Flex User validation if user has changed in the filesystem (requires Grav 1.7.13) [#278](https://github.com/getgrav/grav-plugin-login/issues/278)
+
+# v3.4.2
+## 04/06/2021
+
+1. [](#improved)
+   * `Login::register()` now validates all the provided built-in user fields, not just username
+   * Improved user field validation
+   * Do not validate optional `fullname` field, it's already handled in the registration form
+
+# v3.4.1
+## 02/17/2021
+
+1. [](#new)
+  * Added Lithuanian translation [#270](https://github.com/getgrav/grav-plugin-login/pull/270)
+  * Added Chinese Translation [#245](https://github.com/getgrav/grav-plugin-login/pull/345)
+  * Added Brazillian Portuguese [#222](https://github.com/getgrav/grav-plugin-login/pull/222)
+
+# v3.4.0
+## 01/31/2021
+
+1. [](#new)
+   * Prevent information leak on every ACL protected page by always setting Cache-Control [#264](https://github.com/getgrav/grav-plugin-login/issues/264))
+1. [](#improved)
+   * Allow browser caching for all login/profile pages
+   * Composer update 
+
 # v3.3.8
 ## 12/11/2020
 
