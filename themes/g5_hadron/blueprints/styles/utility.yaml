@@ -1,0 +1,15 @@
+name: Utility Colors
+description: Utility colors for the Hadron theme
+type: section
+
+form:
+  fields:
+
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "#1f2022"
+    text-color:
+      type: input.colorpicker
+      label: Text
+      default: "#bbbbbb"

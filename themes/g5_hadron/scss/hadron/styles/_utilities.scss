@@ -1,0 +1,150 @@
+$css_properties: "margin", "padding";
+$css_directions: "left", "right", "top", "bottom", "all";
+$css_size: "small", "med", "large", "xlarge";
+@each $prop in $css_properties {
+    @each $dir in $css_directions {
+        @each $size in $css_size {
+            .#{$size}#{$prop}#{$dir} {
+                &, > .g-content {   
+                    @if ($size == "small") {
+                        @if ($dir != "all") {
+                            #{$prop}-#{$dir}: 5px;
+                        } @else {
+                            #{$prop}: 5px;
+                        }
+                    } @else if ($size == "med") {
+                        @if ($dir != "all") {
+                            #{$prop}-#{$dir}: 10px;
+                        } @else {
+                            #{$prop}: 10px;
+                        }
+                    } @else if ($size == "large") {
+                        @if ($dir != "all") {
+                            #{$prop}-#{$dir}: 15px;
+                        } @else {
+                            #{$prop}: 15px;
+                        }
+                    } @else if ($size == "xlarge") {
+                        @if ($dir != "all") {
+                            #{$prop}-#{$dir}: 25px;
+                        } @else {
+                            #{$prop}: 25px;
+                        }
+                    }
+                }    
+            }
+        }
+    }
+}
+
+.subsmallmarginbottom {
+    margin-bottom: -5px;
+}
+.subsmallmargintop {
+    margin-top: -5px;
+}
+.subsmallmarginleft {
+    margin-left: -5px;
+}
+.subsmallmarginright {
+    margin-right: -5px;
+}
+.subsmallmarginall {
+    margin: -5px;
+}
+.submedmarginbottom {
+    margin-bottom: -10px;
+}
+.submedmargintop {
+    margin-top: -10px;
+}
+.submedmarginleft {
+    margin-left: -10px;
+}
+.submedmarginright {
+    margin-right: -10px;
+}
+.submedmarginall {
+    margin: -10px;
+}
+.sublargemarginbottom {
+    margin-bottom: -15px;
+}
+.sublargemargintop {
+    margin-top: -15px;
+}
+.sublargemarginleft {
+    margin-left: -15px;
+}
+.sublargemarginright {
+    margin-right: -15px;
+}
+.sublargemarginall {
+    margin: -15px;
+}
+
+// Section Horizontal Paddings
+.section-horizontal-paddings {
+    padding-left: 10%;
+    padding-right: 10%;
+
+    @include breakpoint(tablet-range) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @include breakpoint(mobile-only) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+// Section Horizontal Paddings
+.section-horizontal-paddings-small {
+    padding-left: 5%;
+    padding-right: 5%;
+
+    @include breakpoint(tablet-range) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @include breakpoint(mobile-only) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+// Section Horizontal Paddings
+.section-horizontal-paddings-large {
+    padding-left: 15%;
+    padding-right: 15%;
+
+    @include breakpoint(tablet-range) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @include breakpoint(mobile-only) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+// Section Vertical Paddings
+.section-vertical-paddings {
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+}
+
+// Section Vertical Paddings Small
+.section-vertical-paddings-small {
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+
+// Section Vertical Paddings Large
+.section-vertical-paddings-large {
+    padding-top: 6vw;
+    padding-bottom: 6vw;
+}

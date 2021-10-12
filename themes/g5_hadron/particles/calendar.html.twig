@@ -1,0 +1,111 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% set language = gantry.page.language %}
+
+{% block particle %}
+    <div class="g-calendar-particle {{ particle.class|e }}">
+
+        {% if particle.title %}<h2 class="g-title">{{ particle.title|raw }}</h2>{% endif %}
+
+        <div id="g-{{ id }}" class="g-calendar">
+            <script id="g-{{ id }}-flux-clndr-template" type="text/template">
+
+                <div class="controls">
+                    <div class="clndr-previous-button"><i class="fa fa-fw fa-arrow-circle-left"></i></div><div class="month-year"><%= month %> <%= year %></div><div class="clndr-next-button"><i class="fa fa-fw fa-arrow-circle-right"></i></div>
+                </div>
+
+                <div class="days-container">
+                    <div class="days">
+                        <div class="headers">
+                            <% _.each(daysOfTheWeek, function(day) { %><div class="day-header"><%= day %></div><% }); %>
+                        </div>
+                        <% _.each(days, function(day) { %><div class="<%= day.classes %>" id="<%= day.id %>"><%= day.day %></div><% }); %>
+                    </div>
+                    <div class="events">
+                        <div class="headers">
+                            <div class="x-button"><i class="fa fa-fw fa-close"></i></div>
+                            <div class="event-header">{{ particle.eventsheader|default('Events') }}</div>
+                        </div>
+                        <div class="events-list">
+                            <% _.each(eventsThisMonth, function(event) { %>
+                            <div id="<%= event.id %>" class="event hidden">
+                                <%
+                                    var date_format = 'MMMM Do';
+                                    var event_dates = moment(event.startDate).format(date_format);
+                                    if (event.endDate !== '' && event.endDate !== event.startDate) {
+                                        event_dates += ' - ' + moment(event.endDate).format(date_format);
+                                    }
+                                %>
+                                <% if (event.url !== '') { %>
+                                <a target="<%= event.target %>" class="event-link" href=<%= event.url %>><%= event_dates %>: <%= event.title %></a>
+                                <% } else { %>
+                                <%= event_dates %>: <%= event.title %>
+                                <% } %>
+                                <span class="event-desc"><%= event.desc %></span>
+                            </div>
+                            <% }); %>
+                        </div>
+                    </div>
+                </div>
+
+            </script>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript_footer %}
+    {% do gantry.load('jquery') %}
+    <script src="{{ url('gantry-theme://js/moment-with-locales.min.js') }}"></script>
+    <script src="{{ url('gantry-theme://js/clndr.js') }}"></script>
+    <script>
+        jQuery(document).ready(function () {
+            moment.locale('{{ language }}');
+            var weekdayNames = Array.apply(null, Array(7)).map(
+                function (_, i) {
+                    return moment(i, 'e').format('ddd');
+                });
+
+            var events = [
+                {% for event in particle.events %}
+                    { id: 'g-{{ id }}-event-{{ loop.index }}', startDate: '{{ event.begin }}', endDate: '{{ event.end }}', title: '{{ event.title|e('js') }}', url: '{{ event.link|e }}', target: '{{ event.target|default('_blank') }}', desc: '{{ event.description|e('js') }}' },
+                {% endfor %}
+            ];
+
+            jQuery("#g-{{ id }}").clndr({
+                template: jQuery('#g-{{ id }}-flux-clndr-template').html(),
+                moment: moment,
+                daysOfTheWeek: weekdayNames,
+                adjacentDaysChangeMonth: true,
+                events: events,
+                multiDayEvents: {
+                    singleDay: 'startDate',
+                    endDate: 'endDate',
+                    startDate: 'startDate'
+                },
+                clickEvents: {
+                    click: function(target) {
+                        if(target.events.length) {
+                            var eventContainer;
+                            var daysContainer = jQuery("#g-{{ id }}").find('.days-container');
+                            daysContainer.toggleClass('show-events', true);
+
+                            target.events.forEach(function(event) {
+                                eventContainer = jQuery("#g-{{ id }}").find('#' + event.id);
+                                eventContainer.removeClass('hidden', false);
+                            });
+
+                            jQuery("#g-{{ id }}").find('.x-button').click( function() {
+                                daysContainer.toggleClass('show-events', false);
+
+                                target.events.forEach(function(event) {
+                                    eventContainer = jQuery("#g-{{ id }}").find('#' + event.id);
+                                    eventContainer.addClass('hidden', false);
+                                });
+                            });
+                        }
+                    }
+                },
+            });
+        });
+    </script>
+{% endblock %}

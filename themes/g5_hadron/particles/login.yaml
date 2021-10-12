@@ -1,0 +1,27 @@
+name: Login
+description: Login Particle
+type: particle
+icon: fa-sign-in
+
+form:
+  overrideable: false  
+  fields:
+    enabled:
+      type: checkbox
+      label: Enabled
+      description: Globally enable login particles.
+      default: true
+
+    title:
+      type: input.text
+      label: Title
+      description: Customize the title text.      
+
+    forgot:
+      type: select.select
+      label: Recover/Reset Button
+      description: Enable or disable recover credentials button.
+      default: disabled
+      options:
+        enabled: Enabled
+        disabled: Disabled    

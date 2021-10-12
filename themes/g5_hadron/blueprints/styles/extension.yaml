@@ -1,0 +1,15 @@
+name: Extension Colors
+description: Extension colors for the Hadron theme
+type: section
+
+form:
+  fields:
+
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "#27292b"
+    text-color:
+      type: input.colorpicker
+      label: Text
+      default: "#bbbbbb"

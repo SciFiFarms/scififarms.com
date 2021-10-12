@@ -1,0 +1,192 @@
+#mc_embed_signup input.mce_inline_error {
+    border-color: $accent-color-1 !important;
+}
+
+.g-newsletter-particle {
+    .g-newsletter {
+        .g-newsletter-headtext {
+            font-size: $base-font-size;
+            margin-bottom: 15px;
+        }
+
+        .g-newsletter-inputbox {
+            position: relative;
+            border: none;
+
+            input {
+                text-align: left;
+                padding: ($content-margin + 0.9) ($content-margin * 2.5);
+                font-weight: $font-weight-regular;
+                border-radius: $base-border-radius;
+                margin-bottom: 0;
+                height: 45px;
+
+                &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                    color: #999;
+                }
+                &::-moz-placeholder { /* Firefox 19+ */
+                    color: #999;
+                }
+                &:-ms-input-placeholder { /* IE 10+ */
+                    color: #999;
+                }
+                &:-moz-placeholder { /* Firefox 18- */
+                    color: #999;
+                }
+
+                @include breakpoint(mobile-only) {
+                    margin-bottom: 5px;
+                }
+
+                .dir-rtl & {
+                    text-align: right;
+                }
+            }
+        }
+
+        .g-newsletter-button {
+            .g-newsletter-button-submit {
+                white-space: nowrap;
+                border-radius: $base-border-radius;
+
+                &:focus {
+                    outline: none;
+                }
+
+                @include breakpoint(desktop-range) {
+                    text-align: center;
+                }
+
+                @include breakpoint(tablet-range) {
+                    text-align: center;
+                }
+            }
+
+            .g-newsletter-button-text {
+                vertical-align: middle;
+            }
+        }
+
+        &.g-newsletter-square {
+            .g-newsletter-inputbox, .g-newsletter-button {
+                input {
+                    border-radius: 0 !important;
+                }
+            }
+        }
+
+        &.g-newsletter-stack-fullwidth {       
+            .g-newsletter-form-wrapper {
+                text-align: center;
+
+                .g-newsletter-inputbox {
+                    width: 100%;
+                    margin-right: 0;
+                    padding: 0;
+
+                    input {
+                        width: 100%;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .g-newsletter-button {
+                    width: 100%;
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        &.g-newsletter-stack-compact {       
+            .g-newsletter-form-wrapper {
+                text-align: center;
+
+                .g-newsletter-inputbox {
+                    margin-right: 0;
+                    padding: 0;
+
+                    input {
+                        width: auto;
+                        margin-bottom: 10px;
+                    }
+
+                    div.mce_inline_error {
+                        width: 50%;
+                        margin: 0 auto 10px !important;
+
+                        @include breakpoint(mobile-only) {
+                            width: 75%;
+                        }
+                    }
+                }
+
+                .g-newsletter-button {
+                    width: auto;
+                    display: block;
+
+                    input {
+                        width: auto;
+                    }
+                }
+            }
+        }
+
+        &.g-newsletter-aside {
+            .g-newsletter-form-wrapper {
+                @include display(flex);
+                @include flex-direction(row);
+                @include justify-content(center);
+                @include align-items(center);
+
+                .g-newsletter-inputbox,
+                .g-newsletter-button {
+                    @include flex(0 1 auto);
+                    min-width: 0;
+                    min-height: 0;
+                    margin: 0;
+
+                    @include breakpoint(mobile-only) {
+                        margin: 1rem 0 0;
+                    }
+
+                    input,
+                    .g-newsletter-button-submit {
+                        margin: 0;
+                    }
+                }
+
+                .g-newsletter-button {
+                    width: auto;
+
+                    @include breakpoint(mobile-only) {
+                        width: 100%;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .g-newsletter-inputbox {
+                    width: 65%;
+                    margin-right: 10px;
+
+                    @include breakpoint(mobile-only) {
+                        width: 100%;
+                        margin-right: 0;
+                    }
+                    input {
+                        width: 100%;
+
+                    }
+                }
+
+                @include breakpoint(mobile-only) {
+                    @include flex-direction(column);
+                }
+            }
+        }
+    }
+}

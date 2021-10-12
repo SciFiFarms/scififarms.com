@@ -1,0 +1,324 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1556907571
+layout:
+  /navigation/:
+    -
+      - logo-5679
+    -
+      - 'menu-2875 70'
+      - 'social-3723 15'
+      - 'search-1307 15'
+  /showcase/:
+    -
+      - 'position-position-2621 25'
+      - 'position-position-4680 25'
+      - 'position-position-4839 25'
+      - 'position-position-1217 25'
+  /utility/:
+    -
+      - 'position-position-3724 25'
+      - 'position-position-2653 25'
+      - 'position-position-3401 25'
+      - 'position-position-1491 25'
+  /feature/:
+    -
+      - 'position-position-4543 25'
+      - 'position-position-5434 25'
+      - 'position-position-5489 25'
+      - 'position-position-8898 25'
+  /maintop/:
+    -
+      - 'position-position-2723 25'
+      - 'position-position-7137 25'
+      - 'position-position-3102 25'
+      - 'position-position-1823 25'
+  /container-main/:
+    -
+      -
+        'sidebar 33':
+          -
+            - position-position-7684
+      -
+        'main 34':
+          -
+            - system-content-6489
+      -
+        'aside 33':
+          -
+            - position-position-2410
+  /mainbottom/:
+    -
+      - 'position-position-7827 25'
+      - 'position-position-4155 25'
+      - 'position-position-2697 25'
+      - 'position-position-1720 25'
+  /extension/:
+    -
+      - 'position-position-3769 25'
+      - 'position-position-2063 25'
+      - 'position-position-6577 25'
+      - 'position-position-1027 25'
+  /bottom/:
+    -
+      - 'position-position-2796 25'
+      - 'position-position-7267 25'
+      - 'position-position-5690 25'
+      - 'position-position-7655 25'
+  /footer/:
+    -
+      - 'position-position-4077 25'
+      - 'position-position-4480 25'
+      - 'position-position-9100 25'
+      - 'position-position-6570 25'
+  /copyright/:
+    -
+      - custom-3335
+  offcanvas:
+    -
+      - mobile-menu-4892
+structure:
+  navigation:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  showcase:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  utility:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  feature:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  maintop:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  sidebar:
+    type: section
+  container-main:
+    attributes:
+      boxed: ''
+  mainbottom:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  extension:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  bottom:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  footer:
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  copyright:
+    type: section
+    attributes:
+      boxed: ''
+      class: center
+      variations: ''
+  offcanvas:
+    attributes:
+      position: g-offcanvas-left
+      class: ''
+      extra: {  }
+      swipe: '0'
+      css3animation: '1'
+content:
+  logo-5679:
+    attributes:
+      image: 'gantry-media://logo/preset1/logo.png'
+      link: '1'
+      class: g-logo
+  menu-2875:
+    block:
+      class: g-hadron-menu
+      variations: 'center nomarginall nopaddingall'
+  social-3723:
+    block:
+      class: 'nav-social hidden-phone'
+      variations: 'nopaddingall nomarginall'
+  search-1307:
+    attributes:
+      title: ''
+      placeholder: Search...
+    block:
+      class: 'nav-search hidden-phone'
+      variations: 'nopaddingall nomarginall'
+  position-position-2621:
+    title: 'Showcase A'
+    attributes:
+      key: showcase-a
+  position-position-4680:
+    title: 'Showcase B'
+    attributes:
+      key: showcase-b
+  position-position-4839:
+    title: 'Showcase C'
+    attributes:
+      key: showcase-c
+  position-position-1217:
+    title: 'Showcase D'
+    attributes:
+      key: showcase-d
+  position-position-3724:
+    title: 'Utility A'
+    attributes:
+      key: utility-a
+  position-position-2653:
+    title: 'Utility B'
+    attributes:
+      key: utility-b
+  position-position-3401:
+    title: 'Utility C'
+    attributes:
+      key: utility-c
+  position-position-1491:
+    title: 'Utility D'
+    attributes:
+      key: utility-d
+  position-position-4543:
+    title: 'Feature A'
+    attributes:
+      key: feature-a
+  position-position-5434:
+    title: 'Feature B'
+    attributes:
+      key: feature-b
+  position-position-5489:
+    title: 'Feature C'
+    attributes:
+      key: feature-c
+  position-position-8898:
+    title: 'Feature D'
+    attributes:
+      key: feature-d
+  position-position-2723:
+    title: 'Maintop A'
+    attributes:
+      key: maintop-a
+  position-position-7137:
+    title: 'MainTop B'
+    attributes:
+      key: maintop-b
+  position-position-3102:
+    title: 'MainTop C'
+    attributes:
+      key: maintop-c
+  position-position-1823:
+    title: 'MainTop D'
+    attributes:
+      key: maintop-d
+  position-position-7684:
+    title: 'Sidebar A'
+    attributes:
+      key: sidebar-a
+  position-position-2410:
+    title: Aside
+    attributes:
+      key: aside
+  position-position-7827:
+    title: 'MainBottom A'
+    attributes:
+      key: mainbottom-a
+  position-position-4155:
+    title: 'MainBottom B'
+    attributes:
+      key: mainbottom-b
+  position-position-2697:
+    title: 'MainBottom C'
+    attributes:
+      key: mainbottom-c
+  position-position-1720:
+    title: 'MainBottom D'
+    attributes:
+      key: mainbottom-d
+  position-position-3769:
+    title: 'Extension A'
+    attributes:
+      key: extension-a
+  position-position-2063:
+    title: 'Extension B'
+    attributes:
+      key: extension-b
+  position-position-6577:
+    title: 'Extension C'
+    attributes:
+      key: extension-c
+  position-position-1027:
+    title: 'Extension D'
+    attributes:
+      key: extension-d
+  position-position-2796:
+    title: 'Bottom A'
+    attributes:
+      key: bottom-a
+  position-position-7267:
+    title: 'Bottom B'
+    attributes:
+      key: bottom-b
+  position-position-5690:
+    title: 'Bottom C'
+    attributes:
+      key: bottom-c
+  position-position-7655:
+    title: 'Bottom D'
+    attributes:
+      key: bottom-d
+  position-position-4077:
+    title: 'Footer A'
+    attributes:
+      key: footer-a
+  position-position-4480:
+    title: 'Footer B'
+    attributes:
+      key: footer-b
+  position-position-9100:
+    title: 'Footer C'
+    attributes:
+      key: footer-c
+  position-position-6570:
+    title: 'Footer D'
+    attributes:
+      key: footer-d
+  custom-3335:
+    title: 'Copyright'
+    attributes:
+      title: ''
+      titletag: ''
+      html: '<div class="rt-small-text">© Copyright 2019. Powered by <a href="https://rockettheme.com">RocketTheme</a>.</div>'
+      twig: '0'
+      filter: '0'
+    block:
+      variations: nopaddingtop
+  mobile-menu-4892:
+    title: 'Mobile Menu'
+    block:
+      variations: nopaddingtop

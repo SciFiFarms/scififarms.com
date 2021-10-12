@@ -1,0 +1,125 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: comingsoon
+  timestamp: 1523567954
+layout:
+  /header/:
+    -
+      - logo-9204
+    -
+      - 'spacer-8199 20'
+      - 'simplecounter-2192 60'
+      - 'spacer-2663 20'
+  /subscription-form/:
+    -
+      - 'spacer-2764 33.3'
+      - 'mailchimp-2304 33.3'
+      - 'spacer-5894 33.3'
+  /authorized-form/:
+    -
+      - custom-4776
+    -
+      - login-5002
+  /copyright/:
+    -
+      - branding-4327
+    -
+      - custom-3335
+  offcanvas: {  }
+structure:
+  header:
+    attributes:
+      boxed: ''
+  subscription-form:
+    type: section
+    title: 'Subscription Form'
+    attributes:
+      boxed: '3'
+      class: ''
+      variations: nomarginall
+  authorized-form:
+    type: section
+    title: 'Authorized Form'
+    attributes:
+      boxed: '3'
+      class: rt-authorized-form
+      variations: nomarginall
+  copyright:
+    type: section
+    attributes:
+      boxed: ''
+      class: center
+      variations: ''
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+content:
+  logo-9204:
+    attributes:
+      image: 'gantry-media://logo/preset1/logo.png'
+      class: g-logo
+    block:
+      variations: 'center nomarginbottom'
+  simplecounter-2192:
+    title: 'Simple Counter'
+    attributes:
+      title: ''
+      desc: "<h2 class=\"title\">Our Website is Coming Soon</h2>\n\nHadron supports a simple coming soon or offline style page with a time counter. It has been specifically styled to match the template. This feature can be enabled and the page customized in the Layout manager.  Please visit <a href=\"http://www.rockettheme.com/docs/grav/themes/hadron/comingsoon.md\">this tutorial</a> for more information."
+      date: '1'
+      month: '1'
+      year: '2020'
+      daytext: Day
+      daystext: Days
+      hourtext: Hour
+      hourstext: Hours
+      minutetext: Minutes
+      minutestext: Minutes
+      secondtext: Second
+      secondstext: Seconds
+    block:
+      variations: 'center nopaddingtop nomargintop'
+  mailchimp-2304:
+    title: MailChimp
+    attributes:
+      layout: g-newsletter-aside
+      title: 'Get Notified When We Release'
+      inputboxtext: 'Email Address'
+    block:
+      variations: 'center nopaddingall'
+  custom-4776:
+    title: 'Custom HTML'
+    attributes:
+      title: 'Authorized Login'
+      titletag: ''
+      html: "<p class=\"rt-authorized-login-message\">\nThis feature hides your Grav site behind the Coming Soon page with its Countdown timer. You can still access the frontend of the site by logging in as an administrator below. You can customize this message in the Layout Manager.\t\t\t\t\t\t\t</p>"
+      twig: '0'
+      filter: '0'
+    block:
+      class: 'nopaddingbottom rt-authorized-form-title nopaddingtop'
+      variations: center
+  login-5002:
+    attributes:
+      title: ''
+      forgot: disabled
+    block:
+      id: rt-authorized-form
+      variations: nopaddingtop
+  branding-4327:
+    attributes:
+      content: '<a href="#" class="rt-powered-by"></a>'
+    block:
+      variations: 'center nomarginall nopaddingall'
+  custom-3335:
+    title: 'Copyright'
+    attributes:
+      title: ''
+      titletag: ''
+      html: '<div class="rt-small-text">© Copyright 2019. Powered by <a href="https://rockettheme.com">RocketTheme</a>.</div>'
+      twig: '0'
+      filter: '0'
+    block:
+      variations: nopaddingtop

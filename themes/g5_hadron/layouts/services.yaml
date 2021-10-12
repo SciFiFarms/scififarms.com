@@ -1,0 +1,280 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: services
+  timestamp: 1527098404
+layout:
+  navigation: {  }
+  /showcase/:
+    -
+      - custom-3952
+  /utility/: {  }
+  /feature/: {  }
+  /maintop/:
+    -
+      - 'custom-8424 33.3'
+      - 'custom-6350 33.3'
+      - 'custom-5276 33.3'
+    -
+      - 'custom-7545 33.3'
+      - 'custom-7409 33.3'
+      - 'custom-3195 33.3'
+  /container-main/:
+    -
+      -
+        'sidebar 15': {  }
+      -
+        'main 56':
+          -
+            - custom-6423
+      -
+        'aside 29':
+          -
+            - custom-6248
+          -
+            - custom-8325
+          -
+            - custom-1967
+  /mainbottom/:
+    -
+      - custom-8113
+  extension: {  }
+  /bottom/:
+    -
+      - custom-2272
+  /footer/:
+    -
+      - 'custom-3219 50'
+      - 'custom-5072 50'
+  copyright: {  }
+  offcanvas: {  }
+structure:
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  showcase:
+    type: section
+    attributes:
+      boxed: ''
+  utility:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  feature:
+    type: section
+    attributes:
+      boxed: ''
+  maintop:
+    type: section
+    attributes:
+      boxed: ''
+      class: services-maintop
+      variations: ''
+  sidebar:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  main:
+    attributes:
+      class: ''
+      variations: ''
+  aside:
+    attributes:
+      class: ''
+      variations: ''
+  container-main:
+    attributes:
+      boxed: ''
+  mainbottom:
+    type: section
+    attributes:
+      boxed: ''
+  extension:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  bottom:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  footer:
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  copyright:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+content:
+  custom-3952:
+    title: 'Custom HTML'
+    attributes:
+      title: Services
+      titletag: 'What We Can Do for You'
+      html: ''
+      twig: '0'
+      filter: '0'
+    block:
+      class: rt-big-title
+      variations: center
+  custom-8424:
+    title: 'Web Design'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<span class=\"rt-icon\"><span class=\"fa fa-gears title\"></span></span>\n<h1 class=\"title rt-capitalize\">Web Development</h1>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n<a class=\"readon\" href=\"#\">Read More</a>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: center
+  custom-6350:
+    title: 'Graphic Design'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<span class=\"rt-icon\"><span class=\"fa fa-bar-chart title\"></span></span>\n<h1 class=\"title rt-capitalize\">Graphic Design</h1>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n<a class=\"readon\" href=\"#\">Read More</a>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: center
+  custom-5276:
+    title: 'Web Hosting'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<span class=\"rt-icon\"><span class=\"fa fa-cloud title\"></span></span>\n<h1 class=\"title rt-capitalize\">Web Hosting</h1>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n<a class=\"readon\" href=\"#\">Read More</a>"
+      twig: '0'
+      filter: '0'
+    block:
+      class: center
+  custom-7545:
+    title: 'Movie Maker'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<span class=\"rt-icon\"><span class=\"fa fa-film title\"></span></span>\n<h1 class=\"title rt-capitalize\">Movie Maker</h1>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n<a class=\"readon\" href=\"#\">Read More</a>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: center
+  custom-7409:
+    title: 'Music Studio'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<span class=\"rt-icon\"><span class=\"fa fa-music title\"></span></span>\n<h1 class=\"title rt-capitalize\">Music Studio</h1>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n<a class=\"readon\" href=\"#\">Read More</a>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: center
+  custom-3195:
+    title: 'Custom HTML'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<span class=\"rt-icon\"><span class=\"fa fa-comments title\"></span></span>\n<h1 class=\"title rt-capitalize\">Web Translator</h1>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n<a class=\"readon\" href=\"#\">Read More</a>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: center
+  custom-6423:
+    title: 'Custom HTML'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<div class=\"gantry-width-block gantry-width-50\">\n\t<div class=\"gantry-width-spacer\">\n\t\t<span class=\"rt-image\">\n\t\t\t<img src=\"gantry-media://pages/services/img-01.jpg\" alt=\"image\" />\n\t\t</span>\n\t</div>\n</div>\n\n<div class=\"gantry-width-block gantry-width-50\">\n\t<div class=\"gantry-width-spacer\">\n\t\t<h3>Freelance Services</h3>\n\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, odio, enim quam temporibus ratione dolor iusto animi similique possimus at? <span class=\"hidden-tablet hidden-phone\">Veritatis, a atque odio nam quisquam perferendis magnam necessitatibus laboriosam!</span></p>\n\t\t<ul>\n\t\t\t<li>Lorem ipsum dolor sit amet.</li>\n\t\t\t<li>Aliquam tincidunt mauris eu risus.</li>\n\t\t\t<li>Sitque odio nam quisquam risus.</li>\n\t\t</ul>\t\n\t\t<a href=\"#\" class=\"readon\">Learn More</a>\t\n\t</div>\n</div>\n\n<div class=\"clear\"></div><hr />\n\n<div class=\"gantry-width-block gantry-width-50\">\n\t<div class=\"gantry-width-spacer\">\n\t\t<h3>Team Collaboration</h3>\n\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, odio, enim quam temporibus ratione dolor iusto animi similique possimus at? <span class=\"hidden-tablet hidden-phone\">Veritatis, a atque odio nam quisquam perferendis magnam necessitatibus laboriosam!</span></p>\t\n\t\t<ul>\n\t\t\t<li>Lorem ipsum dolor sit amet.</li>\n\t\t\t<li>Aliquam tincidunt mauris eu risus.</li>\n\t\t\t<li>Sitque odio nam quisquam risus.</li>\n\t\t</ul>\t\n\t\t<a href=\"#\" class=\"readon\">Learn More</a>\t\t\n\t</div>\t\t\n</div>\n\n<div class=\"gantry-width-block gantry-width-50\">\n\t<div class=\"gantry-width-spacer\">\n\t\t<span class=\"rt-image\">\n\t\t\t<img src=\"gantry-media://pages/services/img-01.jpg\" alt=\"image\" />\n\t\t</span>\n\t</div>\n</div>\n\n<div class=\"clear\"></div>"
+      twig: '0'
+      filter: '0'
+  custom-6248:
+    title: 'Cloud Services'
+    attributes:
+      title: '<span class="fa fa-cloud-download"></span> Cloud Services'
+      titletag: ''
+      html: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate pariatur officia accusantium sapiente expedita eius fugiat</p>\n<a href=\"#\" class=\"readon\">Learn More</a>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: 'box3 nomarginbottom'
+  custom-8325:
+    title: 'Secured Data'
+    attributes:
+      title: '<span class="fa fa-shield"></span> Secured Data'
+      titletag: ''
+      html: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate pariatur officia accusantium sapiente expedita eius fugiat</p>\n<a href=\"#\" class=\"readon\">Learn More</a>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: 'box3 nomarginbottom'
+  custom-1967:
+    title: '24/7 Support'
+    attributes:
+      title: '<span class="fa fa-road"></span> 24/7 Support'
+      titletag: ''
+      html: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate pariatur officia accusantium sapiente expedita eius fugiat</p>\n<a href=\"#\" class=\"readon\">Learn More</a>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: box3
+  custom-8113:
+    title: 'Custom HTML'
+    attributes:
+      title: 'Want to Work With Us?'
+      titletag: ''
+      html: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate pariatur officia accusantium sapiente expedita eius fugiat ea distinctio et rem sed quo amet atque dignissimos autem quos asperiores dolorum!</p>\n\n<div class=\"rt-readon-row\">\n\t<a href=\"#\" class=\"readon rt-large-button\"><span class=\"fa fa-file-text\"></span> Contact Us</a>\n</div>\t"
+      twig: '0'
+      filter: '0'
+    block:
+      class: rt-big-title
+      variations: center
+  custom-2272:
+    title: 'More Details'
+    attributes:
+      title: 'More Details'
+      titletag: 'Help guides are available to assist'
+      html: ''
+      twig: '0'
+      filter: '0'
+    block:
+      class: 'rt-big-title rt-pages-bottom'
+      variations: center
+  custom-3219:
+    title: 'Custom HTML'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<p>All demo content is for sample purpose only, intended to show a live site. Use the <a href=\"#\">Hadron RocketLauncher</a> to install an equivalent of the demo onto your site.</p>\n<p>Hadron is only available as part of the Club Subscription.</p>\n\n<div class=\"gantry-width-block gantry-width-50\">\n\t<div class=\"gantry-width-spacer\">\n\t\t<div class=\"rt-footer-logo\"></div>\n\t</div>\n</div>\n\n<div class=\"gantry-width-block gantry-width-50\">\n\t<div class=\"gantry-width-spacer nomarginleft\">\n\t\t<span>+1-(678)-123-6789</span><br />\n\t\t<span>Hadron Center, LLC</span><br />\n\t\t<span>123 Joomla! Boulevard</span><br />\n\t\t<span>Seattle, WA 00000, USA</span><br />\n\t\t<span><a href=\"#\">hello@hadron.com</a></span>\n\t</div>\n</div>\n\n<div class=\"clear\"></div>"
+      twig: '0'
+      filter: '0'
+  custom-5072:
+    title: 'Custom HTML'
+    attributes:
+      title: ''
+      titletag: ''
+      html: "<div class=\"rt-email-form\">\n\t<form action=\"#\">\n\t\t<input type=\"text\" placeholder=\"Full Name\" size=\"18\" alt=\"fullname\" class=\"inputbox\" name=\"fullname\">\n\t\t<input type=\"text\" placeholder=\"Your Email\" size=\"28\" alt=\"email\" class=\"inputbox\" name=\"email\">\n\t\t<textarea placeholder=\"Your Message\" name=\"message\" cols=\"30\" rows=\"5\"></textarea>\n\t\t<input type=\"submit\" value=\"Send Message\" class=\"button\" name=\"send\">\n\t</form>\t\n</div>"
+      twig: '0'
+      filter: '0'
