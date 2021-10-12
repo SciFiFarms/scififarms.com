@@ -1,0 +1,49 @@
+.g-contact {
+	.g-contact-item {
+		position: relative;
+        padding-left: 50px;
+        margin-bottom: 1.5rem;
+		.dir-rtl & {
+			padding-left: 0;
+			padding-right: 50px;
+		}
+	}
+    .g-contact-icon {
+        position: absolute;
+        left: 0;
+        font-size: 1.25rem;
+        border-right: 1px solid rgba(255, 255, 255, 0.15);
+        width: 35px;
+        height: 45px;
+        line-height: 45px;
+		.dir-rtl & {
+			left: auto;
+			right: 0;
+			border-left: 1px solid rgba(255, 255, 255, 0.15);
+			border-right: 0;
+		}
+    }
+    .g-contact-label {
+        text-transform: uppercase;
+        font-size: $base-font-size - 0.2;
+        font-weight: bold;
+        opacity: 0.5;
+    }
+    .g-contact-text {
+        font-family: get-font-family($font-family-default);
+        font-weight: $font-weight-bold;
+    }    
+}
+
+.contact-title {
+    font-size: 1.5em;
+    border-bottom: none;
+    margin-bottom: 0;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.rt-contact-info hr {
+    border-color: lighten($grey, 25%);
+    border-top: none;
+}

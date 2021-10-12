@@ -1,0 +1,23 @@
+name: Search
+description: Display search icon with link to search page.
+type: particle
+icon: fa-search
+
+form:
+  overrideable: false
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable particle.
+      default: true
+    title:
+      type: input.text
+      label: Title
+      description: Customize the title text.
+      default: Search Form
+    placeholder:
+      type: input.text
+      label: Placeholder
+      description: Input your custom placeholder
+      placeholder: 'Your keyword...'

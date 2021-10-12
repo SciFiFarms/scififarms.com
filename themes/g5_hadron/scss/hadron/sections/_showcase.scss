@@ -1,0 +1,70 @@
+#g-showcase {
+    color: $showcase-text-color;
+    position: relative;
+    background: $showcase-background; 
+}
+
+.fp-showcase {
+    .g-content {
+        margin: 15px -30px 0 -30px;
+        padding: 0;
+
+        @include breakpoint(mobile-only) {
+            margin-top: 0;
+        }
+    }
+    .rt-bold {
+        display: block;
+    }
+    .g-owlcarousel-item-title {
+        a {
+            .rt-overlay-dark & {
+                color: $white;
+            }
+            .rt-overlay-light & {
+                color: $dark-grey;
+            }
+            &:hover {
+                color: $accent-color-1;
+            }
+        }    
+    }
+    .readon2 {
+        width: 160px;
+        margin-top: 30px;
+        text-align: center;
+
+        @include breakpoint(mobile-only) {
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media only screen and (min-width: 1195px) and (max-width: 1350px),
+    only screen and (min-width: 960px) and (max-width: 1120px),
+    only screen and (min-width: 768px) and (max-width: 925px),
+    only screen and (min-width: 482px) and (max-width: 640px),
+    only screen and (max-width: 480px) {
+        .g-owlcarousel-slider .g-owlcarousel .owl-nav {
+            button.owl-prev, button.owl-next {
+                top: 0;
+                margin-top: 30px;
+            }    
+
+            .owl-prev {
+                left: inherit;
+                right: 50px;
+            }
+            .owl-next {
+                right: -15px;
+            }   
+        }
+    }
+}
+
+@media print {
+	#g-showcase {
+		background: #fff !important;
+		color: #000 !important;
+	}
+}

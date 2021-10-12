@@ -1,0 +1,11 @@
+#g-mainbottom {
+    color: $mainbottom-text-color; 
+	background: $mainbottom-background;
+}
+
+@media print {
+	#g-mainbottom {
+		background: #fff !important;
+		color: #000 !important;
+	}
+}

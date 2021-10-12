@@ -1,0 +1,57 @@
+.g-offline {
+
+    #g-header {
+        padding: 100px 0;
+
+        .title {
+            margin: 30px 0;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+    }
+
+    div[id*="logo"] {
+        width: 240px;
+        margin: 0 auto 50px auto;
+    }
+    .g-logo {
+        margin: 0 auto;
+        position: relative;
+    }
+    #g-subscription-form {
+        color: $white;
+        background: darken($accent-color-1, 35%);
+        padding: 80px 0;
+
+        @include breakpoint(mobile-only) {
+            padding: 80px 25px;
+        }
+
+        .g-newsletter-particle {
+            .title {
+                font-size: 160%;
+                margin-bottom: 25px;
+                text-align: center;
+                text-transform: none;
+                font-weight: normal;
+                color: $white !important;
+            }
+            input[type="email"] {
+                background-color: $white;
+            }
+        }       
+    }
+
+    .rt-authorized-form-title {
+        .title {
+            text-transform: none;
+            margin-bottom: 25px;
+        }
+    }
+
+    #g-authorized-form {
+        color: $footer-text-color;
+        background: $footer-background;
+        padding: 50px 0;
+    }
+}

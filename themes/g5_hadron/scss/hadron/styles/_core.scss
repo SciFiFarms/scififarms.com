@@ -1,0 +1,22 @@
+body {
+	color: $base-text-color;
+	background: $base-background;
+	line-height: $base-line-height;
+	font-size: $base-font-size;
+
+	.g-content {
+		margin: 25px 10px;
+	}
+
+	p {
+		margin: 0 0 15px 0;
+	}
+}
+
+a {
+	color: $accent-color-1;
+	@include transition(all 0.2s ease-out);
+	&:hover {
+		color: $accent-color-2;
+	}
+}

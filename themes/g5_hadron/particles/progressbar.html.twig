@@ -1,0 +1,14 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+
+{% for item in particle.progressbar %}
+<div>{{ item.title}}</div>
+<div class="progress">
+  <div class="progress-bar progress-bar-default" role="progressbar" aria-valuenow="{{ item.progress }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ item.progress }}%">
+    <span class="s-only">{{ item.progress }}%</span>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}

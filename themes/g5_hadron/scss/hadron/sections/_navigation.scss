@@ -1,0 +1,234 @@
+#g-navigation {
+    background: $navigation-background;
+    color: $navigation-text-color;
+    position: relative;
+    z-index: 100;
+}
+
+// Main Navigation
+
+#g-navigation {
+
+	// g-container
+	> .g-container {
+		position: relative;
+	}
+
+	// Menu Styling
+	.g-main-nav {
+		.g-toplevel {
+
+			> li {
+				margin-right: 15px;
+
+				@include breakpoint (desktop-range) {
+					margin-right: 10px;
+				}
+
+				@include breakpoint (tablet-range) {
+					margin-right: 3px;
+				}
+
+				> .g-menu-item-container {
+					height: 44px;
+					line-height: 21px;
+					color: fadeout($navigation-text-color, 50%);
+					padding: 0 20px;
+					display: table-cell;
+					vertical-align: middle;	
+					@include transition(none);	
+
+					@include breakpoint (desktop-range) {
+						padding: 0 10px;	
+					}
+
+					@include breakpoint (tablet-range) {
+						padding: 0 5px;	
+					}		
+
+					> i {
+						opacity: 1;
+						margin-right: 3px;
+						margin-top: -2px;
+					}
+				}
+				&:hover, &:focus {
+					background: $accent-color-1;
+					border: 2px solid $accent-color-1 !important;
+					> .g-menu-item-container {
+						color: $button-text-color !important;		
+					}
+				}
+				&.active {
+					border: 2px solid $navigation-text-color;
+					> .g-menu-item-container {
+						color: $navigation-text-color;				
+					}
+				}
+
+				&.g-parent {
+					> .g-menu-item-container {
+						position: relative;
+						padding-right: 35px;
+
+						@include breakpoint (desktop-range) {
+							padding-right: 25px;
+						}
+
+						@include breakpoint (tablet-range) {
+							padding-right: 20px;
+						}
+					}
+				}
+
+				&.g-parent .g-menu-parent-indicator {
+					width: 100%;
+    				display: inline;
+    				z-index: 100;
+					&:after {
+						position: absolute;
+					    right: 15px;
+					    top: 50%;
+					    margin-top: -8px;
+					    font-family: FontAwesome;
+					    content: "\f107";
+					    font-size: 18px;
+					    opacity: 0.5;
+
+					    @include breakpoint(desktop-range) {
+					    	right: 10px;
+					    }
+
+					    @include breakpoint(tablet-range) {
+					    	right: 5px;
+					    }
+					}
+				}
+			}
+		}
+
+		.g-dropdown {
+			background: fadeout(darken($navigation-background, 5%), 10%);
+			border: 2px solid lighten($navigation-background, 10%);
+			border-radius: $base-border-radius;
+			margin-top: 6px;
+
+			> .g-dropdown-column {
+				border: 1px solid transparent;
+			}
+		}
+
+		.g-sublevel {
+
+			.g-dropdown {
+				margin-top: 0;
+			}
+
+			.g-go-back {
+				.g-menu-item-container {
+					font-size: 15px;
+					padding: 0;
+					margin: 0;
+				}
+				+ li {
+					.g-dropdown {
+						margin-top: -3px;
+					}
+				}
+			}
+
+
+			> li {
+				margin: 5px 0;
+				padding: 0 5px;
+
+				> .g-menu-item-container {
+					color: textcolor-tint($navigation-background, 50%);
+
+					> i {
+						opacity: 1;
+						margin-left: 8px;
+						margin-top: -3px;
+
+						+ .g-menu-item-content {
+							padding-left: 0;
+						}
+					}
+				}
+
+				&.g-parent {
+					.g-menu-parent-indicator {
+						width: auto;
+
+						&:after {
+							display: block;
+							content: "\f054";
+	    					text-align: center;
+	    					margin-top: 4px;
+	    					font-size: 12px;
+						}
+					}	
+					.g-menu-item-content {
+						margin-right: 0;
+					}	
+				}
+
+				&:hover, &:focus {
+					> .g-menu-item-container {
+						color: $accent-color-2;	
+					}
+				}
+				&.active {
+					> .g-menu-item-container {
+						color: $accent-color-2;		
+					}
+				}
+
+				&.g-menu-item-type-particle {
+					&:before {
+						content: none;
+					}
+
+					> .g-menu-item-container {
+						padding: 0;
+					}	
+
+					&:hover {
+						> .g-menu-item-container {
+							background: inherit;
+						}	
+					}
+				}
+			}
+		}
+		.g-fullwidth {
+			.g-sublevel {
+				> li {
+					position: relative;
+				}
+				.g-dropdown {
+					border: none;
+				}
+			} 
+		} 
+	}	
+	.g-menu-block {
+		@include breakpoint(mobile-only) {
+			display: none;
+		}		
+	}	
+	.g-menu-item-subtitle {
+		text-transform: lowercase;
+		font-size: 0.85rem;
+		font-weight: bold;
+		opacity: 0.8;
+		padding-top: 2px;
+	}
+}
+
+@media print {
+	#g-navigation {
+		background: #fff !important;
+		color: #000 !important;
+	}
+}

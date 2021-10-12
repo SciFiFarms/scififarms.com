@@ -1,0 +1,25 @@
+enabled: '1'
+css:
+  class: social-items
+target: _blank
+items:
+  -
+    icon: 'fa fa-twitter fa-fw'
+    text: ''
+    link: 'http://twitter.com/rockettheme'
+    name: Twitter
+  -
+    icon: 'fa fa-facebook fa-fw'
+    text: ''
+    link: 'http://facebook.com/rockettheme'
+    name: Facebook
+  -
+    icon: 'fa fa-google fa-fw'
+    text: ''
+    link: 'http://plus.google.com/+rockettheme'
+    name: Google
+  -
+    icon: 'fa fa-rss fa-fw'
+    text: ''
+    link: 'http://www.rockettheme.com/product-updates?rss'
+    name: RSS

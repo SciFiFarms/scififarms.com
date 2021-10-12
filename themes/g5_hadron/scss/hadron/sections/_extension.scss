@@ -1,0 +1,11 @@
+#g-extension {
+    color: $extension-text-color; 
+	background: $extension-background;
+}
+
+@media print {
+	#g-extension {
+		background: #fff !important;
+		color: #000 !important;
+	}
+}

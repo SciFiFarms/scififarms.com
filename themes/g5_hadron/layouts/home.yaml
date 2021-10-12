@@ -1,0 +1,399 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/home.png'
+  name: home
+  timestamp: 1556907571
+layout:
+  navigation: {  }
+  /showcase/:
+    -
+      - slider-8827
+  /utility/:
+    -
+      - custom-2645
+  /feature/:
+    -
+      - custom-8450
+    -
+      - stripsslider-3165
+  /maintop/:
+    -
+      - 'contenttabs-2781 65'
+      - 'lists-4300 35'
+  /container-main/:
+    -
+      -
+        'sidebar 33': {  }
+      -
+        'main 34': {  }
+      -
+        'aside 33': {  }
+  mainbottom: {  }
+  extension: {  }
+  /bottom/:
+    -
+      - 'spacer-3366 20'
+      - 'custom-1725 60'
+      - 'totop-1910 20'
+  /footer/:
+    -
+      - 'spacer-3314 20'
+      - 'mailchimp-4805 60'
+      - 'spacer-5240 20'
+  /copyright/:
+    -
+      - branding-4327
+    -
+      - custom-3335
+  offcanvas: {  }
+structure:
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  showcase:
+    type: section
+    attributes:
+      boxed: ''
+      class: fp-showcase
+      variations: ''
+  utility:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  feature:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  maintop:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  sidebar:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  main:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  aside:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  container-main:
+    attributes:
+      boxed: ''
+  mainbottom:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  extension:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  bottom:
+    type: section
+    attributes:
+      boxed: ''
+      class: fp-bottom
+      variations: ''
+  footer:
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  copyright:
+    type: section
+    attributes:
+      boxed: ''
+      class: center
+      variations: ''
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+content:
+  slider-8827:
+    attributes:
+      class: ''
+      title: ''
+      description: ''
+      animateIn: fadeIn
+      animateOut: fadeOut
+      nav: enabled
+      dots: disabled
+      loop: enabled
+      autoplay: disabled
+      autoplaySpeed: ''
+      pauseOnHover: enabled
+      items:
+        -
+          image: 'gantry-media://home/showcase/img-01.png'
+          title: '<span class="rt-bold hidden-tablet">Flexible Layouts</span> Gantry 5'
+          desc: 'Gantry provides unlimited positions and blocks, each with configurable widths.<span class="hidden-tablet"> There are multiple sections and grids available, providing you with ultimate flexibility.</span><br />'
+          link: '#'
+          linktext: 'Read More'
+          buttontarget: _self
+          buttonclass: readon2
+          name: 'Item 1'
+        -
+          image: 'gantry-media://home/showcase/img-02.png'
+          title: '<span class="rt-bold hidden-tablet">Versatile</span> Particles <span class="hidden-tablet">System</span>'
+          desc: '<span class="hidden-tablet">Particles are powerful content blocks, such as Slider and Content Tabs, that form the flesh of the frontend, from placeholders to self contained content and functions.</span><span class="visible-tablet">Particles are powerful content blocks such as Strips, Slider, and Content Tabs.</span>'
+          link: '#'
+          linktext: 'Read More'
+          buttontarget: _self
+          buttonclass: readon2
+          name: 'Item 2'
+        -
+          image: 'gantry-media://home/showcase/img-03.png'
+          title: '<span class="rt-bold hidden-tablet">Advanced</span> Menu Editor'
+          desc: 'Dropdown is a <span class="hidden-tablet">CSS based</span> menu system with advanced features such as <span class="hidden-tablet">multiple columns, inline icons,</span> inline particles and positions<span class="hidden-tablet">, on a per menu item basis</span>.<br />'
+          link: '#'
+          linktext: 'Read More'
+          buttontarget: _self
+          buttonclass: readon2
+          name: 'Item 3'
+  custom-2645:
+    title: 'Contemporary Design'
+    attributes:
+      title: 'A contemporary and flat design approach with rich animations'
+      titletag: ''
+      html: "<p>Flat visuals are the central design feature of Hadron, providing a modern, corporate approach to template construction.</p>\n\n<div class=\"rt-readon-group\">\n\t<a href=\"#\" class=\"readon\">Purchase Now</a>\n\t<a href=\"#\" class=\"readon2\">Read Features</a>\n</div>\n"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: center
+  custom-8450:
+    title: 'Custom HTML'
+    attributes:
+      title: 'Latest Featured Works'
+      titletag: ''
+      html: "<p class=\"fp-feature-content\">The template also supports a simple coming soon or offline style page with a time counter.</p>\n<p class=\"fp-feature-content\">It has been specifically styled to match Hadron.</p>\n"
+      twig: '0'
+      filter: '0'
+    block:
+      class: fp-feature
+      variations: nomarginbottom
+  stripsslider-3165:
+    title: 'Strips Slider'
+    attributes:
+      class: ''
+      title: ''
+      description: ''
+      displayitems: '3'
+      mobiledisplayitems: '2'
+      nav: enabled
+      dots: disabled
+      loop: enabled
+      autoplay: disabled
+      autoplaySpeed: ''
+      pauseOnHover: disabled
+      overlay: enabled
+      items:
+        -
+          image: 'gantry-media://home/feature/img-01.jpg'
+          title: Paradigm
+          desc: ''
+          link: '#'
+          name: 'Item 1'
+        -
+          image: 'gantry-media://home/feature/img-02.jpg'
+          title: Spectral
+          desc: ''
+          link: '#'
+          name: 'Item 2'
+        -
+          image: 'gantry-media://home/feature/img-03.jpg'
+          title: Acacia
+          desc: ''
+          link: '#'
+          name: 'Item 3'
+        -
+          image: 'gantry-media://home/feature/img-04.jpg'
+          title: Corvus
+          desc: ''
+          link: '#'
+          name: 'Item 4'
+        -
+          image: 'gantry-media://home/feature/img-05.jpg'
+          title: Praxis
+          desc: ''
+          link: '#'
+          name: 'Item 5'
+        -
+          image: 'gantry-media://home/feature/img-06.jpg'
+          title: Stratos
+          desc: ''
+          link: '#'
+          name: 'Item 6'
+        -
+          image: 'gantry-media://home/feature/img-07.jpg'
+          title: Oculus
+          desc: ''
+          link: '#'
+          name: 'Item 7'
+        -
+          image: 'gantry-media://home/feature/img-08.jpg'
+          title: Hexeris
+          desc: ''
+          link: '#'
+          name: 'Item 8'
+        -
+          image: 'gantry-media://home/feature/img-09.jpg'
+          title: Alerion
+          desc: ''
+          link: '#'
+          name: 'Item 9'
+    block:
+      class: fp-strips
+  contenttabs-2781:
+    title: 'Content Tabs'
+    attributes:
+      items:
+        -
+          image: 'gantry-media://home/maintop/img-01.jpg'
+          content: "<h3 class=\"title nomargintop nomarginbottom\">About Hadron</h3>\t\t\t\t<p class=\"rt-large-text nomargintop\">A contemporary and corporate visual frame.</p>\t\t\t\t<p class=\"hidden-tablet\">Hadron has a selection of preset styles with a diverse array of different background colors and shades to dramatically change the overall appearance.</p>\t\t\t<p class=\"visible-large\">Subtle animations on the various template elements provide enrichment to the site, such as the read more buttons or the unveil mechanism for the search input.</p>\t\t\t\t<p>The template places content as the primary focus.</p>"
+          linklabel: 'Read more'
+          link: '#'
+          buttontarget: _self
+          buttonclass: readon2
+          title: Intro
+        -
+          image: 'gantry-media://home/maintop/img-01.jpg'
+          content: "<h3 class=\"title nomargintop nomarginbottom\">Particles</h3>\t\t\t\t<p class=\"rt-large-text nomargintop\">Create and control  content with articles.</p>\t\t\t\t<p class=\"hidden-tablet\">There are many particles available to you, each with Hadron specific styling, such as for Lists, Tabs or Strips. Each particle is a different content display model.</p>\t\t\t<p class=\"visible-large\">A custom administrative interface is available via the Layout manager, providing a rich and intuitive experience for controlling extensive aspects of the particle.</p>\t\t\t\t<p>A revolutionary approach to controlling site content and images.</p>"
+          linklabel: 'Read more'
+          link: '#'
+          buttontarget: _self
+          buttonclass: readon2
+          title: Particles
+        -
+          image: 'gantry-media://home/maintop/img-01.jpg'
+          content: "<h3 class=\"title nomargintop nomarginbottom\">Menu</h3>\t\t\t\t<p class=\"rt-large-text nomargintop\">Extended and Simple Menu Options.</p>\t\t\t\t<p class=\"hidden-tablet\">The Simple Menu is CSS based, with a selection of advanced features such as inline icons, module positions, custom item distributions and multiple columns.</p>\t\t\t<p class=\"visible-large\">The Extended Menu navigation is a menu with the same features but it also allows the menu items to be placed in multiple columns giving you greater control.</p>\t\t\t\t<p>Menu options are configurable on a per-menu-item basis.</p>"
+          linklabel: 'Read more'
+          link: '#'
+          buttontarget: _self
+          buttonclass: readon2
+          title: Menu
+        -
+          image: 'gantry-media://home/maintop/img-01.jpg'
+          content: "<h3 class=\"title nomargintop nomarginbottom\">Styling</h3>\t\t\t\t<p class=\"rt-large-text nomargintop\">There are eight preset style variations.</p>\t\t\t\t<p class=\"hidden-tablet\">The extensive style controls allow you to set the background and text colors, as well as overlay style of each section, in addition to button/accent colors.</p>\t\t\t<p class=\"visible-large\">Additionally, you can control different border types: square, semi-rounded or rounded; as well as font size and family settings.</p>\t\t\t\t<p>Amended style options can be saved as custom presets.</p>"
+          linklabel: 'Read more'
+          link: '#'
+          buttontarget: _self
+          buttonclass: readon2
+          title: Styling
+    block:
+      class: fp-tabs
+  lists-4300:
+    attributes:
+      class: ''
+      title: 'Gantry Extras'
+      description: ''
+      displayitems: '3'
+      accordion: enabled
+      active: '0'
+      nav: disabled
+      dots: disabled
+      autoplay: disabled
+      autoplaySpeed: ''
+      pauseOnHover: enabled
+      items:
+        -
+          title: 'Grid System'
+          desc: 'Gantry allows for unlimited positions and particles on one grid...'
+          linklabel: 'Read More'
+          link: '#'
+          buttontarget: _self
+          buttonclass: readon
+          name: 'Item 1'
+        -
+          title: 'Custom Interface'
+          desc: 'Gantry based templates are controlled via an advanced user interface, with tabs...'
+          linklabel: 'Read More'
+          link: '#'
+          buttontarget: _self
+          buttonclass: readon
+          name: 'Item 2'
+        -
+          title: 'Built-in Features'
+          desc: 'Features are self contained elements of functionality. They can easily hook into...'
+          linklabel: 'Read More'
+          link: '#'
+          buttontarget: _self
+          buttonclass: readon
+          name: 'Item 3'
+    block:
+      class: fp-lists
+  custom-1725:
+    title: 'Custom HTML'
+    attributes:
+      title: 'Get in Touch'
+      titletag: ''
+      html: "<p>All demo content is for sample purpose only, intended to show a live site.</p>\n<p>Use the Hadron RocketLauncher to install an equivalent of the demo onto your site.</p>"
+      twig: '0'
+      filter: '0'
+    block:
+      variations: center
+  totop-1910:
+    title: 'To Top'
+    block:
+      class: fp-totop
+      variations: 'center nomarginleft nomarginright'
+  mailchimp-4805:
+    title: MailChimp
+    attributes:
+      layout: g-newsletter-aside
+      style: g-newsletter-rounded
+      headtext: '<p class="rt-small-text">Hadron is available as part of the Club Subscription</p>'
+      inputboxtext: 'Your email address here...'
+    block:
+      class: fp-footer
+      variations: center
+  branding-4327:
+    attributes:
+      content: '<a href="#" class="rt-powered-by"></a>'
+    block:
+      variations: 'center nomarginall nopaddingall'
+  custom-3335:
+    title: 'Copyright'
+    attributes:
+      title: ''
+      titletag: ''
+      html: '<div class="rt-small-text">© Copyright 2019. Powered by <a href="https://rockettheme.com">RocketTheme</a>.</div>'
+      twig: '0'
+      filter: '0'
+    block:
+      variations: nopaddingtop
